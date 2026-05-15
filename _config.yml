@@ -64,7 +64,6 @@ defaults:
       lang: en
   - scope:
       path: "_posts/en/posts"
-      type: posts
     values:
       lang: en
       permalink: /en/:year/:month/:day/:title/
