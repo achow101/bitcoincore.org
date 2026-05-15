@@ -1,0 +1,259 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2018-09-20-notice.md' -->
+<!-- name: 'cve-2018-17144-full-disclosure' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: CVE-2018-17144 披露</title>
+<meta name="description" content="CVE-2018-17144 披露">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2018/09/20/notice/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="CVE-2018-17144 披露">
+<meta name="twitter:description" content="CVE-2018-17144 披露">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2018-17144 披露">
+<meta property="og:description" content="CVE-2018-17144 披露">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2018/09/20/notice/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2018/09/20/notice/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/2018/09/20/notice/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2018/09/20/notice/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2018/09/20/notice/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2018/09/20/notice/">English</option>
+                        <option value="/ja/2018/09/20/notice/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2018/09/20/notice/" rel="bookmark" title="CVE-2018-17144 披露">CVE-2018-17144 披露</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <h1 id="完整披露">完整披露</h1>
+<p>CVE-2018-17144 的修復程式於 9 月 18 日在 Bitcoin Core 版本 0.16.3 和 0.17.0rc4 中發布，包括阻斷服務元件和關鍵的通膨漏洞。它最初於 9 月 17 日僅作為阻斷服務錯誤報告給多位從事 Bitcoin Core 工作的開發者，以及支援其他加密貨幣的專案，包括 ABC 和 Unlimited，但我們很快確定該問題也是一個通膨漏洞，具有相同的根本原因和修復方法。</p>
+
+<p>為了鼓勵快速升級，決定立即修補並披露較不嚴重的阻斷服務漏洞，同時聯繫礦工、企業和其他受影響的系統，同時延遲發布完整問題以給系統時間升級。9 月 20 日，一個公共論壇中的貼文報告了完整影響，儘管它很快被撤回，但該聲稱被進一步傳播。</p>
+
+<p>目前我們相信超過一半的 Bitcoin 算力已升級到已修補的節點。我們不知道有任何試圖利用此漏洞的嘗試。</p>
+
+<p>然而，受影響的使用者升級並應用最新的修補程式仍然至關重要，以確保不會發生大規模重組、挖掘無效區塊或接受無效交易的可能性。</p>
+
+<h1 id="技術細節">技術細節</h1>
+
+<p>在 Bitcoin Core 0.14 中，新增了一個最佳化（Bitcoin Core PR #9049），它避免了在初始預中繼區塊驗證期間進行昂貴的檢查，該檢查是在 2012 年新增的（PR #443），用於檢查單個交易中的多個輸入沒有花費相同的輸入兩次。雖然 UTXO 更新邏輯有足夠的知識來檢查在 0.14 中沒有違反這種情況，但它僅在完整性檢查斷言中這樣做，而不是使用完整的錯誤處理（然而，它確實在 0.8 之前完全處理了這種情況兩次）。</p>
+
+<p>因此，在 Bitcoin Core 0.14.X 中，任何在區塊內的單個交易中重複花費交易輸出的嘗試都將導致斷言失敗和崩潰，正如最初報告的那樣。</p>
+
+<p>在 Bitcoin Core 0.15 中，作為更大的重新設計的一部分，以簡化未花費交易輸出追蹤並更正資源耗盡攻擊，斷言被巧妙地更改了。它不是斷言被標記為已花費的輸出先前是未花費的，而是僅斷言它存在。</p>
+
+<p>因此，在 Bitcoin Core 0.15.X、0.16.0、0.16.1 和 0.16.2 中，任何在區塊內的單個交易中重複花費交易輸出的嘗試，其中被花費的輸出是在同一區塊中建立的，將發生相同的斷言失敗（如 0.16.3 修補程式中包含的測試案例所示）。然而，如果被重複花費的輸出是在前一個區塊中建立的，CCoin 映射中仍將保留一個條目，設定了 DIRTY 標誌並被標記為已花費，不會導致這樣的斷言。這可能允許礦工增加 Bitcoin 的供應量，因為他們將能夠聲稱被花費的價值兩次。</p>
+
+<h1 id="時間表">時間表</h1>
+
+<p>2018 年 9 月 17 日的時間表：（所有時間均為 UTC）</p>
+
+<ul>
+  <li>14:57 匿名報告者向以下人員報告崩潰錯誤：Bitcoin Core 的 Pieter Wuille、Greg Maxwell、Wladimir Van Der Laan，Bitcoin ABC 的 deadalnix 和 Bitcoin Unlimited 的 sickpig。</li>
+  <li>15:15 Greg Maxwell 與 Cory Fields、Suhas Daftuar、Alex Morcos 和 Matt Corallo 分享原始報告</li>
+  <li>17:47 Matt Corallo 識別通膨錯誤</li>
+  <li>19:15 Matt Corallo 首次嘗試聯繫 slushpool CEO 以建立溝通線路快速應用修補程式</li>
+  <li>19:29 Greg Maxwell 為展示通膨漏洞的測試案例的雜湊加上時間戳記（a47344b7dceddff6c6cc1c7e97f1588d99e6dba706011b6ccc2e615b88fe4350）</li>
+  <li>20:15 John Newbery 和 James O’Beirne 被告知該漏洞，以便他們可以協助警告公司即將發布的 DoS 漏洞修補程式</li>
+  <li>20:30 Matt Corallo 與 slushpool CTO 和 CEO 交談，並分享修補程式並披露阻斷服務</li>
+  <li>20:48 slushpool 確認已升級</li>
+  <li>21:08 向 Bitcoin ABC 傳送警告，修補程式將在 22:00 前公開發布</li>
+  <li>21:30（大約）回覆原始報告者並確認</li>
+  <li>21:57 Bitcoin Core PR 14247 發布，包含修補程式和展示阻斷服務錯誤的測試</li>
+  <li>21:58 Bitcoin ABC 發布其修補程式</li>
+  <li>22:07 諮詢電子郵件與 Bitcoin Core PR 和修補程式的連結傳送給 Optech 成員等</li>
+  <li>23:21 Bitcoin Core 版本 0.17.0rc4 標記</li>
+</ul>
+
+<p>2018 年 9 月 18 日：</p>
+
+<ul>
+  <li>00:24 Bitcoin Core 版本 0.16.3 標記</li>
+  <li>20:44 Bitcoin Core 發布二進位檔案和發布公告可用</li>
+  <li>21:47 Bitcointalk 和 reddit 有公開橫幅敦促人們升級</li>
+</ul>
+
+<p>2018 年 9 月 19 日：</p>
+
+<ul>
+  <li>14:06 郵件列表由 Pieter Wuille 分發額外訊息敦促人們升級</li>
+</ul>
+
+<p>2018 年 9 月 20 日：</p>
+
+<ul>
+  <li>19:50 David Jaenson 獨立發現該漏洞，並向 Bitcoin Core 安全聯絡電子郵件報告。</li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>CVE-2018-17144 披露</strong>
+          was published on
+          <time class="dt-published" datetime="2018-09-20T00:00:00+00:00">
+            September 20, 2018</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

@@ -82,16 +82,17 @@
     <div class="top-navigation">
         <nav role="navigation" id="site-nav" class="nav">
             <ul>
-                    <li><a href="/en/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
                     <li><a href="/zh_TW/blog/">網誌</a></li>
-                    <li><a href="/zh_TW/releases/">軟件發行</a></li>
-                    <li><a href="/en/security-advisories/">Security Advisories</a></li>
-                    <li><a href="javascript:;">Development</a>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
                             <ul>
                                 <li><a href="/zh_TW/contribute/">貢獻</a></li>
-                                <li><a href="/en/faq/contributing-code/">contributing code</a></li>
-                                <li><a href="/en/meetings/">meetings</a></li>
-                                <li><a href="/en/lifecycle/">Lifecycle</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
                             <li>
                                         <a href="/en/doc/">RPC Docs</a>
                                 <ul>
@@ -117,10 +118,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="javascript:;">Contact</a>
+                    <li><a href="javascript:;">聯絡</a>
                             <ul>
-                                <li><a href="/en/contact/">Contact Us</a></li>
-                                <li><a href="/en/list/announcements/join/">Announcements</a></li>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
                         </ul>
                     </li>
 
@@ -157,7 +159,7 @@
         <section id="table-of-contents" class="toc">
   <header>
     
-    <h3 class="toc-header"><i class="fa fa-book"></i> Overview</h3>
+    <h3 class="toc-header"><i class="fa fa-book"></i> 概覽</h3>
   </header>
 <div class="toc-drawer">
 <ul id="markdown-toc">
@@ -180,7 +182,7 @@
 
 <ol>
   <li>
-    <p>你必須在區塊419328號產出以前，檢查你的所有節點，確保皆已升級至 Bitcoin Core 0.12.1 或相容軟件。</p>
+    <p>你必須在區塊419328號產出以前，檢查你的所有節點，確保皆已升級至 Bitcoin Core 0.12.1 或相容軟體。</p>
   </li>
   <li>
     <p>如果你正在手動設定區塊版本號，你必在區塊419328號產出以前把版本號的0號位元去除。最好的做法是由 bitcoind 自動設定。</p>
@@ -199,15 +201,15 @@
 
 <h2 id="所有礦工請留意">所有礦工請留意</h2>
 
-<p>在寬限期內，所有礦工必須升級至 Bitcoin Core 0.12.1 或任何支持 CSV 軟分叉的相容軟件。實際上，在編寫本文的時間，Bitcoin Core 0.12.1 是唯一支持 CSV 軟分叉的版本。礦工必須再三確認所有負責挖礦的節點以及備用節點皆已升級。</p>
+<p>在寬限期內，所有礦工必須升級至 Bitcoin Core 0.12.1 或任何支持 CSV 軟分叉的相容軟體。實際上，在編寫本文的時間，Bitcoin Core 0.12.1 是唯一支持 CSV 軟分叉的版本。礦工必須再三確認所有負責挖礦的節點以及備用節點皆已升級。</p>
 
 <p>不依從以上指引者可能會產出無效區塊，或會延長無效的區塊鏈，造成區塊鏈分叉，令有關礦工和廣大比特幣使用者蒙受經濟損失。</p>
 
 <h2 id="手動設定區塊版本號的礦工請注意">手動設定區塊版本號的礦工請注意</h2>
 
-<p>Bitcoin Core 的默認設定會自動按 BIP9 的要求設定區塊版本，然而我們留意到有些礦工會手動設定區塊版本號，我們強烈建議不要手動設定區塊版本號，因為這會對比特幣系統帶來風險。</p>
+<p>Bitcoin Core 的預設設定會自動按 BIP9 的要求設定區塊版本，然而我們留意到有些礦工會手動設定區塊版本號，我們強烈建議不要手動設定區塊版本號，因為這會對比特幣系統帶來風險。</p>
 
-<p>如果有礦工設定了一個版本編號，卻沒有實施對應的規則，便可能會產出無效區塊，並會延長無效的區塊鏈。簡單而言，不使用由 bitcoind 提供的默認版本值，可能會令版本編號與實際運作的規則不相符。</p>
+<p>如果有礦工設定了一個版本編號，卻沒有實施對應的規則，便可能會產出無效區塊，並會延長無效的區塊鏈。簡單而言，不使用由 bitcoind 提供的預設版本值，可能會令版本編號與實際運作的規則不相符。</p>
 
 <p>和 BIP33/66/65 所使用的 IsSuperMajority 軟分叉不同，在 BIP9 的設計中，沒有區塊會因為不當版本號而被視作無效（根據 BIP65，最低有效版本號為4）。因此，礦工並無誘因去手動設定區塊版本號，因為這只會帶來不必要的維護工作與人為出錯的風險。</p>
 
@@ -227,7 +229,7 @@
 
 <p>不依從以上指引者可能會產出無效區塊，造成區塊鏈分叉，令有關礦工和廣大比特幣使用者蒙受經濟損失。</p>
 
-<p>使用 bitcoind 提供的默認 Coinbase 交易 nSequence 和 nVersion 值的礦工無需採取任何行動。</p>
+<p>使用 bitcoind 提供的預設 Coinbase 交易 nSequence 和 nVersion 值的礦工無需採取任何行動。</p>
 
 <h2 id="使用或手動設定-coinbase-交易內-nlocktime-參數的礦工請注意">使用或手動設定 Coinbase 交易內 nLockTime 參數的礦工請注意</h2>
 
@@ -239,7 +241,7 @@
 
 <p>不依從以上指引者可能會產出無效區塊，造成區塊鏈分叉，令有關礦工和廣大比特幣使用者蒙受經濟損失。</p>
 
-<p>使用 bitcoind 提供的默認 Coinbase 交易 nLockTime 值的礦工無需採取任何行動。</p>
+<p>使用 bitcoind 提供的預設 Coinbase 交易 nLockTime 值的礦工無需採取任何行動。</p>
 
 
       </div>

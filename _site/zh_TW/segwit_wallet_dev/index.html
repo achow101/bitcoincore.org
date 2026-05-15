@@ -1,0 +1,435 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/pages/2016-01-18-segwit-wallet-dev.md' -->
+<!-- name: 'segwit-wallet-dev' -->
+<!-- version: 4 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 隔離見證錢包開發指南</title>
+<meta name="description" content="隔離見證錢包開發指南">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/segwit_wallet_dev/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="隔離見證錢包開發指南">
+<meta name="twitter:description" content="隔離見證錢包開發指南">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隔離見證錢包開發指南">
+<meta property="og:description" content="隔離見證錢包開發指南">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/segwit_wallet_dev/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/segwit_wallet_dev/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/segwit_wallet_dev/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/segwit_wallet_dev/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/segwit_wallet_dev/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/segwit_wallet_dev/">English</option>
+                        <option value="/ja/segwit_wallet_dev/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>隔離見證錢包開發指南</h1>
+    <div class="article-wrap">
+      <section id="table-of-contents" class="toc">
+  <header>
+    
+    <h3 class="toc-header"><i class="fa fa-book"></i> 概覽</h3>
+  </header>
+<div class="toc-drawer">
+<ul id="markdown-toc">
+  <li><a href="#基本隔離見證支援" id="markdown-toc-基本隔離見證支援">基本隔離見證支援</a>    <ul>
+      <li><a href="#發送至-p2sh" id="markdown-toc-發送至-p2sh">發送至 P2SH</a></li>
+      <li><a href="#建立-p2sh-p2wpkh-位址" id="markdown-toc-建立-p2sh-p2wpkh-位址">建立 P2SH-P2WPKH 位址</a></li>
+      <li><a href="#交易序列化" id="markdown-toc-交易序列化">交易序列化</a></li>
+      <li><a href="#交易-id" id="markdown-toc-交易-id">交易 ID</a></li>
+      <li><a href="#p2sh-p2wpkh-的簽名產生和驗證" id="markdown-toc-p2sh-p2wpkh-的簽名產生和驗證">P2SH-P2WPKH 的簽名產生和驗證</a></li>
+      <li><a href="#網路服務可選" id="markdown-toc-網路服務可選">網路服務（可選）</a></li>
+      <li><a href="#使用者隱私" id="markdown-toc-使用者隱私">使用者隱私</a></li>
+      <li><a href="#交易手續費估算" id="markdown-toc-交易手續費估算">交易手續費估算</a></li>
+      <li><a href="#upgrade-safety" id="markdown-toc-upgrade-safety">啟動</a></li>
+      <li><a href="#向後相容性" id="markdown-toc-向後相容性">向後相容性</a></li>
+    </ul>
+  </li>
+  <li><a href="#複雜腳本支援" id="markdown-toc-複雜腳本支援">複雜腳本支援</a>    <ul>
+      <li><a href="#建立-p2sh-p2wsh-位址" id="markdown-toc-建立-p2sh-p2wsh-位址">建立 P2SH-P2WSH 位址</a></li>
+      <li><a href="#p2sh-p2wsh-的簽名產生和驗證" id="markdown-toc-p2sh-p2wsh-的簽名產生和驗證">P2SH-P2WSH 的簽名產生和驗證</a></li>
+    </ul>
+  </li>
+  <li><a href="#segwit-原生位址可選advanced-designs" id="markdown-toc-segwit-原生位址可選advanced-designs">Segwit 原生位址（可選）{#advanced-designs}</a>    <ul>
+      <li><a href="#原生-pay-to-witness-public-key-hash-p2wpkh" id="markdown-toc-原生-pay-to-witness-public-key-hash-p2wpkh">原生 Pay-to-Witness-Public-Key-Hash (P2WPKH)</a></li>
+      <li><a href="#原生-pay-to-witness-script-hash-p2wsh" id="markdown-toc-原生-pay-to-witness-script-hash-p2wsh">原生 Pay-to-Witness-Script-Hash (P2WSH)</a></li>
+      <li><a href="#為什麼以及如何使用原生bech32p2wpkh-和-p2wsh" id="markdown-toc-為什麼以及如何使用原生bech32p2wpkh-和-p2wsh">為什麼以及如何使用原生（Bech32）P2WPKH 和 P2WSH？</a></li>
+    </ul>
+  </li>
+  <li><a href="#腳本和交易範例" id="markdown-toc-腳本和交易範例">腳本和交易範例</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<p>本文件的大部分內容可在與隔離見證相關的 BIP 中找到，包括 <a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a>、<a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a>、<a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki">BIP144</a> 和 <a href="https://github.com/bitcoin/bips/blob/master/bip-0145.mediawiki">BIP145</a>。請將此視為其他相關文件的首要參考點，以及應該做和不應該做的檢查清單。</p>
+
+<h3 id="基本隔離見證支援">基本隔離見證支援</h3>
+
+<p>為了被視為基本層級的 segwit 相容，錢包必須實作本節中的所有功能：</p>
+
+<h4 id="發送至-p2sh">發送至 P2SH</h4>
+
+<ul>
+  <li>segwit 相容錢包必須支援 pay-to-script-hash（<a href="https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki">BIP16</a>）及其位址格式（<a href="https://github.com/bitcoin/bips/blob/master/bip-0013.mediawiki">BIP13</a>）。</li>
+  <li>對於進行支付，錢包必須能夠正確地將給定的 P2SH 位址轉換為 <code>scriptPubKey</code>，並建立交易。</li>
+  <li>對於接收支付，錢包必須能夠基於 P2WPKH 腳本（如下定義）建立 P2SH 位址，並能夠識別支付至此類位址的款項。</li>
+  <li>這是強制性要求，即使錢包僅接受單一簽名支付。</li>
+</ul>
+
+<h4 id="建立-p2sh-p2wpkh-位址">建立 P2SH-P2WPKH 位址</h4>
+
+<ul>
+  <li>P2SH-P2WPKH 位址可與 Bitcoin 原始的單一簽名 P2PKH 位址（前綴為 1 的位址）相比較。</li>
+  <li>與任何其他 P2SH 位址一樣，P2SH-P2WPKH 位址的前綴為 3。</li>
+  <li>在 P2SH-P2WPKH UTXO 被花費且 <code>redeemScript</code> 被揭露之前，P2SH-P2WPKH 位址與非 segwit P2SH 位址（例如非 segwit 多重簽名位址）無法區分。</li>
+  <li>當僅使用 1 個公鑰接收支付時（類似 P2PKH），應使用 P2SH-P2WPKH 位址。</li>
+  <li>P2SH-P2WPKH 使用與 P2PKH 相同的公鑰格式，但有一個非常重要的例外：P2SH-P2WPKH 中使用的公鑰必須是壓縮的，即大小為 33 位元組，並以 <code>0x02</code> 或 <code>0x03</code> 開頭。使用任何其他格式（如未壓縮的公鑰）可能導致資金永久損失。</li>
+  <li>建立 P2SH-P2WPKH 位址：
+    <ol>
+      <li>計算公鑰的 SHA256 的 RIPEMD160（<code>keyhash</code>）。儘管 <code>keyhash</code> 公式與 P2PKH 相同，但為了更好的隱私和防止意外使用未壓縮金鑰，應避免重複使用 <code>keyhash</code>。</li>
+      <li>P2SH <code>redeemScript</code> 總是 22 位元組。它以 <code>OP_0</code> 開頭，後接 <code>keyhash</code> 的標準推送（即 <code>0x0014{20-byte keyhash}</code>）。</li>
+      <li>與任何其他 P2SH 相同，<code>scriptPubKey</code> 是 <code>OP_HASH160 hash160(redeemScript) OP_EQUAL</code>，位址是對應的前綴為 3 的 P2SH 位址。</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="交易序列化">交易序列化</h4>
+
+<ul>
+  <li>segwit 相容錢包必須支援原始交易格式，即 <code>nVersion|txins|txouts|nLockTime</code>。</li>
+  <li>segwit 相容錢包也必須支援新的序列化格式，即 <code>nVersion|marker|flag|txins|txouts|witness|nLockTime</code>。
+    <ul>
+      <li><code>nVersion</code>、<code>txins</code>、<code>txouts</code> 和 <code>nLockTime</code> 的格式與原始格式相同。</li>
+      <li><code>marker</code> 必須為 <code>0x00</code>。</li>
+      <li><code>flag</code> 必須為 <code>0x01</code>。</li>
+      <li><code>witness</code> 是交易所有見證資料的序列化。
+        <ul>
+          <li>每個 txin 都關聯一個見證欄位。因此，沒有見證欄位數量的指示，因為它由 <code>txins</code> 的數量暗示。</li>
+          <li>每個見證欄位以一個 <code>compactSize</code> <a href="https://bitcoin.org/en/developer-reference#compactsize-unsigned-integers">整數</a>開頭，以指示對應 <code>txin</code> 的堆疊項目數量。然後是對應 <code>txin</code> 的見證堆疊項目（如果有）。</li>
+          <li>每個見證堆疊項目以一個 <code>compactSize</code> 整數開頭，以指示項目的位元組數。</li>
+          <li>如果 <code>txin</code> 未與任何見證資料關聯，則其對應的見證欄位是確切的 <code>0x00</code>，表示見證堆疊項目數量為零。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>如果交易中的所有 <code>txins</code> 都未與任何見證資料關聯，則交易必須以原始交易格式序列化，不包含 <code>marker</code>、<code>flag</code> 和 <code>witness</code>。例如，如果沒有任何 <code>txins</code> 來自 segwit UTXO，則必須以原始交易格式序列化。（例外：coinbase 交易）</li>
+  <li>交易序列化的範例可在 BIP143 的範例章節中找到。錢包開發者可使用這些範例來測試其實作是否正確解析新的序列化格式。</li>
+</ul>
+
+<h4 id="交易-id">交易 ID</h4>
+
+<ul>
+  <li>在 segwit 下，每個交易將有 2 個 ID。</li>
+  <li><code>txid</code> 的定義保持不變：原始序列化格式的雙 SHA256。</li>
+  <li>定義了一個新的 <code>wtxid</code>，它是包含見證資料的新序列化格式的雙 SHA256。</li>
+  <li>如果交易沒有任何見證資料，則其 <code>wtxid</code> 與 <code>txid</code> 相同。</li>
+  <li><code>txid</code> 仍然是交易的主要識別碼：
+    <ul>
+      <li>在引用先前輸出時，它必須在 <code>txin</code> 中使用。</li>
+      <li>如果錢包或服務目前使用 <code>txid</code> 識別交易，預期在 segwit 中繼續使用。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="p2sh-p2wpkh-的簽名產生和驗證">P2SH-P2WPKH 的簽名產生和驗證</h4>
+
+<ul>
+  <li>對於花費非 segwit UTXO，簽名產生演算法保持不變。</li>
+  <li>對於花費 P2SH-P2WPKH：
+    <ul>
+      <li><code>scriptSig</code> 必須僅包含 <code>redeemScript</code> 的推送。</li>
+      <li>對應的見證欄位必須恰好包含 2 個項目：簽名後接公鑰。</li>
+      <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> 中描述了 segwit 腳本的新簽名產生演算法。開發者應仔細遵循說明，並利用 <a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki#P2SHP2WPKH">BIP143</a> 中的 P2SH-P2WPKH 範例來確保能夠重現 <code>sighash</code>。</li>
+      <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> 簽名產生演算法涵蓋了被花費輸入的值，這簡化了氣隙輕量級錢包和硬體錢包的設計。</li>
+      <li>請注意，對於 P2SH-P2WPKH，<code>scriptCode</code> 總是 26 位元組（包括前導大小位元組），即 <code>0x1976a914{20-byte keyhash}88ac</code>，而不是 <code>redeemScript</code> 或 <code>scriptPubKey</code>。</li>
+      <li><a href="https://blockchainprogramming.azurewebsites.net/checktx?txid=8139979112e894a14f8370438a471d23984061ff83a9eba0bc7a34433327ec21">範例</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="網路服務可選">網路服務（可選）</h4>
+
+<ul>
+  <li>如果錢包將透過點對點網路發送和接收交易，則需要網路服務。</li>
+  <li>具有 segwit 能力的節點將透過服務位元廣告它們可以提供見證：<code>NODE_WITNESS = (1 &lt;&lt; 3)</code>。</li>
+  <li>沒有任何見證資料（因此以原始格式序列化）的交易可以發送到具有或不具有 <code>NODE_WITNESS</code> 支援的節點。</li>
+  <li>花費 segwit UTXO 的交易（因此以新格式序列化）只能發送到具有 <code>NODE_WITNESS</code> 支援的節點。</li>
+  <li>花費 segwit UTXO 但見證資料被剝離（因此以原始格式序列化）的交易可以發送到不具有 <code>NODE_WITNESS</code> 支援的節點。但是，此類交易在 segwit 啟動後無效，不會被區塊接受。</li>
+  <li>網路服務的詳細資訊可在 <a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki">BIP144</a> 中找到。</li>
+</ul>
+
+<h4 id="使用者隱私">使用者隱私</h4>
+
+<ul>
+  <li>在 segwit 交易變得普遍之前，此交易類型可能使 Bitcoin 追蹤更容易。</li>
+  <li>使用 P2SH-P2WPKH 作為預設找零輸出也可能對隱私產生影響。</li>
+</ul>
+
+<h4 id="交易手續費估算">交易手續費估算</h4>
+
+<ul>
+  <li>不使用交易大小，而是定義了一個新的指標，稱為「虛擬大小」（<code>vsize</code>）。</li>
+  <li>交易的 <code>vsize</code> 等於原始序列化大小的 3 倍，加上新序列化的大小，將結果除以 4 並向上取整到下一個整數。例如，如果交易使用新序列化為 200 位元組，並在移除 <code>marker</code>、<code>flag</code> 和 <code>witness</code> 後變為 99 位元組，則 <code>vsize</code> 為 (99 * 3 + 200) / 4 = 125（向上取整）。</li>
+  <li>非 segwit 交易的 <code>vsize</code> 就是其大小。</li>
+  <li>交易手續費應透過將 <code>vsize</code> 與其他交易比較來估算，而不是大小。</li>
+  <li>開發者應小心避免在手續費估算中出現 4 倍的錯誤。</li>
+</ul>
+
+<h4 id="upgrade-safety">啟動</h4>
+
+<ul>
+  <li>從區塊高度 481824 開始，所有 SegWit 就緒節點開始強制執行新的 SegWit 共識規則。</li>
+</ul>
+
+<h4 id="向後相容性">向後相容性</h4>
+
+<ul>
+  <li>應繼續支援發送和接收舊版 P2PKH 支付（前綴為 1 的位址）。</li>
+</ul>
+
+<h3 id="複雜腳本支援">複雜腳本支援</h3>
+
+<p>如果錢包支援單一簽名以外的腳本類型（例如多重簽名），則必須滿足基本要求以外的更多要求：</p>
+
+<h4 id="建立-p2sh-p2wsh-位址">建立 P2SH-P2WSH 位址</h4>
+
+<ul>
+  <li>P2SH-P2WSH 位址可與 Bitcoin 原始的 P2SH 位址相比較，它允許用固定大小的位址表示任意複雜的腳本。</li>
+  <li>與任何其他 P2SH 和 P2SH-P2WPKH 位址一樣，P2SH-P2WSH 位址的前綴為 3。在 UTXO 被花費之前，它們無法區分。</li>
+  <li>建立 P2SH-P2WSH 位址：
+    <ol>
+      <li>定義一個腳本，稱為（<code>witnessScript</code>）。</li>
+      <li>計算 <code>witnessScript</code> 的 SHA256（<code>scripthash</code>）。請注意使用單一 SHA256，而不是雙 SHA256 或 RIPEMD160(SHA256)。</li>
+      <li>P2SH <code>redeemScript</code> 總是 34 位元組。它以 <code>OP_0</code> 開頭，後接 <code>scripthash</code> 的標準推送（即 <code>0x0020{32-byte scripthash}</code>）。</li>
+      <li>與任何其他 P2SH 相同，<code>scriptPubKey</code> 是 <code>OP_HASH160 hash160(redeemScript) OP_EQUAL</code>，位址是對應的前綴為 3 的 P2SH 位址。</li>
+    </ol>
+  </li>
+  <li>腳本限制
+    <ul>
+      <li>腳本評估不得失敗，並且必須在評估後僅留下一個且僅一個 TRUE 堆疊項目。否則，評估失敗。</li>
+      <li>P2SH-P2WSH 腳本內的任何公鑰必須是壓縮金鑰，否則資金可能永久損失。</li>
+      <li>如果使用 OP_IF 或 OP_NOTIF，其參數必須是空向量（表示 false）或 <code>0x01</code>（表示 true）。使用其他值可能導致資金永久損失。（<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-August/013014.html">BIP 草案</a>）</li>
+      <li>如果 OP_CHECKSIG 或 OP_CHECKMULTISIG 返回失敗，則所有簽名必須是空向量。否則，資金可能永久損失。（<a href="https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki">BIP146</a>）</li>
+      <li><code>witnessScript</code> 有 3600 位元組的預設政策限制。除了 <code>witnessScript</code>，最多可以有 100 個見證堆疊項目，每個最多 80 位元組。超過這些限制的交易可能不會被中繼或包含在區塊中。</li>
+      <li>許多原始腳本共識限制，例如 10000 位元組腳本大小、201 <code>nOpCount</code>，仍然適用於 P2SH-P2WSH。</li>
+      <li>P2SH 的 520 位元組腳本大小限制不適用於 P2SH-P2WSH。它被 3600 位元組政策限制和 10000 位元組共識限制取代。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="p2sh-p2wsh-的簽名產生和驗證">P2SH-P2WSH 的簽名產生和驗證</h4>
+
+<ul>
+  <li>對於花費 P2SH-P2WSH：
+    <ul>
+      <li><code>scriptSig</code> 必須僅包含 <code>redeemScript</code> 的推送。</li>
+      <li>對應見證欄位的最後一個見證項目必須是 <code>witnessScript</code>。</li>
+      <li>應用新的 <a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> 簽名產生演算法：
+        <ul>
+          <li>在不使用任何 OP_CODESEPARATOR 的情況下，<code>scriptCode</code> 是前面帶有 <code>witnessScript</code> 大小的 <code>compactSize</code> 整數的 <code>witnessScript</code>。例如，如果腳本是 OP_1（<code>0x51</code>），則序列化的 <code>scriptCode</code> 是（<code>0x0151</code>）。</li>
+          <li>對於任何包含 OP_CODESEPARATOR 的不尋常腳本，請參閱 <a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> 以了解確切的語義。</li>
+        </ul>
+      </li>
+      <li><code>witnessScript</code> 之前的任何見證堆疊項目都用作腳本評估的輸入堆疊。輸入堆疊不會被解釋為腳本。例如，不需要使用 <code>0x4c</code>（OP_PUSHDATA1）來「推送」大項目。</li>
+      <li>要驗證簽名產生和堆疊序列化的正確性，請始終針對 <a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a> 中的範例進行測試。</li>
+      <li><a href="https://blockchainprogramming.azurewebsites.net/checktx?txid=954f43dbb30ad8024981c07d1f5eb6c9fd461e2cf1760dd1283f052af746fc88">範例</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="segwit-原生位址可選advanced-designs">Segwit 原生位址（可選）{#advanced-designs}</h3>
+
+<p>以下功能對於初始 segwit 支援不是必需的。</p>
+
+<h4 id="原生-pay-to-witness-public-key-hash-p2wpkh">原生 Pay-to-Witness-Public-Key-Hash (P2WPKH)</h4>
+
+<ul>
+  <li>原生 P2WPKH 是 22 位元組的 <code>scriptPubKey</code>。它以 <code>OP_0</code> 開頭，後接 <code>keyhash</code> 的標準推送（即 <code>0x0014{20-byte keyhash}</code>）。</li>
+  <li>與 P2SH-P2WPKH 相同，<code>keyhash</code> 是壓縮公鑰的 RIPEMD160(SHA256)。</li>
+  <li>花費原生 P2WPKH 時，<code>scriptSig</code> 必須為空，見證堆疊格式和簽名產生規則與 P2SH-P2WPKH 相同（包括使用壓縮公鑰的要求）。</li>
+  <li><a href="https://blockchainprogramming.azurewebsites.net/checktx?txid=d869f854e1f8788bcff294cc83b280942a8c728de71eb709a2c29d10bfe21b7c">範例</a></li>
+</ul>
+
+<h4 id="原生-pay-to-witness-script-hash-p2wsh">原生 Pay-to-Witness-Script-Hash (P2WSH)</h4>
+
+<ul>
+  <li>原生 P2WSH 是 34 位元組的 <code>scriptPubKey</code>。它以 <code>OP_0</code> 開頭，後接 <code>scripthash</code> 的標準推送（即 <code>0x0020{32-byte scripthash}</code>）。</li>
+  <li>與 P2SH-P2WSH 相同，<code>scripthash</code> 是 <code>witnessScript</code> 的 SHA256。</li>
+  <li>花費原生 P2WSH 時，<code>scriptSig</code> 必須為空，見證堆疊格式和簽名產生規則與 P2SH-P2WSH 相同（包括使用壓縮公鑰的要求）。</li>
+  <li><a href="https://blockchainprogramming.azurewebsites.net/checktx?txid=78457666f82c28aa37b74b506745a7c7684dc7842a52a457b09f09446721e11c">範例</a></li>
+</ul>
+
+<h4 id="為什麼以及如何使用原生bech32p2wpkh-和-p2wsh">為什麼以及如何使用原生（Bech32）P2WPKH 和 P2WSH？</h4>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki">BIP173</a> 為原生 P2WPKH 和 P2WSH 位址提出了一個帶校驗和的 base32 格式（Bech32）。</li>
+  <li>Bitcoin Core v0.16.0 中包含了對 Bech32 位址的支援。</li>
+  <li>與 P2SH 版本相比，原生版本的交易 <code>vsize</code> 在大多數情況下較小，因此可能需要較少的手續費。</li>
+  <li>原生 P2WPKH 和 P2WSH 可與原始 <code>scriptPubKey</code> 協議一起使用，例如支付協議（BIP70）。但是，這可能影響付款人和收款人的隱私（見下文）。</li>
+  <li>原生 P2WPKH 和 P2WSH 可用作預設找零位址，但這可能讓其他人輕易識別找零（見下文）。</li>
+  <li>在原生 P2WPKH 和 P2WSH 廣泛使用之前，這些位址類型可能在使用者中引起隱私問題。</li>
+</ul>
+
+<h3 id="腳本和交易範例">腳本和交易範例</h3>
+
+<ul>
+  <li><a href="https://blockchainprogramming.azurewebsites.net/checktx">不同見證交易類型的範例和交易有效性檢查工具</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki">BIP173</a></li>
+  <li><a href="https://github.com/bitcoin/bitcoin/blob/master/src/test/data/script_tests.json">腳本測試</a></li>
+  <li><a href="https://github.com/bitcoin/bitcoin/blob/master/src/test/data/tx_valid.json">有效交易測試</a></li>
+  <li><a href="https://github.com/bitcoin/bitcoin/blob/master/src/test/data/tx_invalid.json">無效交易測試</a></li>
+</ul>
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

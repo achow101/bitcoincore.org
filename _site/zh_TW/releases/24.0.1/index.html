@@ -1,0 +1,493 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2022-12-12-release-24.0.1.md' -->
+<!-- name: 'release-24.0.1' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 24.0.1</title>
+<meta name="description" content="Bitcoin Core 24.0.1">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/24.0.1/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 24.0.1">
+<meta name="twitter:description" content="Bitcoin Core 24.0.1">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 24.0.1">
+<meta property="og:description" content="Bitcoin Core 24.0.1">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/24.0.1/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/24.0.1/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/releases/24.0.1/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/24.0.1/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/ja/releases/24.0.1/">日本語</option>
+                        <option value="/en/releases/24.0.1/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 24.0.1</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<h1 id="2401-版本說明">24.0.1 版本說明</h1>
+
+<p>由於最後關頭的問題 (<a href="https://github.com/bitcoin/bitcoin/pull/26616">#26616</a>)，24.0 版本雖然已標記，但從未完全公告或發布。</p>
+
+<p>Bitcoin Core 24.0.1 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-24.0.1/">https://bitcoincore.org/bin/bitcoin-core-24.0.1/</a></p>
+
+<p>此版本包含新功能、各種錯誤修正和效能改善，以及更新的翻譯。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<p>如需接收安全性和更新通知，請訂閱：</p>
+
+<p><a href="https://bitcoincore.org/zh_TW/list/announcements/join/">https://bitcoincore.org/zh_TW/list/announcements/join/</a></p>
+
+<h1 id="如何升級">如何升級</h1>
+
+<p>如果您正在執行舊版本，請將其關閉。等待它完全關閉（在某些情況下可能需要幾分鐘），然後執行安裝程式（在 Windows 上）或直接複製 <code class="language-plaintext highlighter-rouge">/Applications/Bitcoin-Qt</code>（在 macOS 上）或 <code class="language-plaintext highlighter-rouge">bitcoind</code>/<code class="language-plaintext highlighter-rouge">bitcoin-qt</code>（在 Linux 上）。</p>
+
+<p>可以直接從已達到 EOL 的 Bitcoin Core 版本升級，但如果需要遷移資料目錄，可能需要一些時間。通常支援舊版本的 Bitcoin Core 錢包。</p>
+
+<h1 id="相容性">相容性</h1>
+
+<p>Bitcoin Core 在使用 Linux kernel、macOS 10.15+ 和 Windows 7 及更新版本的作業系統上受到支援和廣泛測試。Bitcoin Core 也應該可以在大多數其他類 Unix 系統上運作，但在這些系統上的測試頻率較低。不建議在不受支援的系統上使用 Bitcoin Core。</p>
+
+<h1 id="交易替換政策新選項公告">交易替換政策新選項公告</h1>
+
+<p>此版本的 Bitcoin Core 新增了一個新的 <code class="language-plaintext highlighter-rouge">mempoolfullrbf</code> 設定選項，允許使用者變更其個別節點用於中繼和挖礦未確認交易的政策。該選項預設為先前版本中使用的相同政策，如果每個人都使用預設值，則節點政策不會發生變更。</p>
+
+<p>目前某些 Bitcoin 服務期望它們看到的未確認交易的第一個版本將是最終被確認的版本 ─ 這種交易接受政策有時被稱為「first-seen」。</p>
+
+<p>Bitcoin 協定不會且無法保證特定節點看到的未確認交易的第一個版本將是被確認的版本。如果同一未確認交易有多個版本可用，只有在區塊中包含這些交易之一的礦工才能決定哪個版本的交易被確認。</p>
+
+<p>儘管缺乏這種保證，今天仍有多個商家和服務做出這種假設。</p>
+
+<p>移除這種 <em>first-seen</em> 簡化對使用者有幾個好處。一個關鍵好處是，交易的發送者能夠用支付更高費用的替代版本替換它，這在 <a href="https://bitcoincore.org/zh_TW/releases/0.12.0/#opt-in-replace-by-fee-transactions">Bitcoin Core 0.12.0</a>（2016 年 2 月）中透過引入 <a href="https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki">BIP125</a> 選擇加入的手續費替換 (RBF) 實現了。</p>
+
+<p>從那時起，一直有關於完全移除 first-seen 簡化並允許使用者用較新的交易替換任何較舊的未確認交易的討論，這一功能被稱為 <em>full-RBF</em>。此版本包含一個 <code class="language-plaintext highlighter-rouge">mempoolfullrbf</code> 設定選項，允許啟用 full-RBF，但預設為關閉（僅允許選擇加入的 RBF）。</p>
+
+<p>多個替代節點實作已經預設啟用 full-RBF 多年，並且有幾位 Bitcoin Core 貢獻者正在倡導在未來版本的 Bitcoin Core 中預設啟用 full-RBF。</p>
+
+<p>隨著越來越多參與中繼和挖礦的節點開始啟用 full-RBF，用提供更高費用的交易替換未確認交易可能會迅速變得更加可靠。</p>
+
+<p>該專案的貢獻者強烈建議商家和服務不要接受未確認的交易作為最終交易，如果他們堅持這樣做，則應採取適當步驟以確保在他們的假設不成立時有一些追索權或計畫。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h2 id="p2p-和網路變更">P2P 和網路變更</h2>
+
+<ul>
+  <li>
+    <p>為了解決潛在的阻斷服務攻擊，從對等節點下載區塊標頭的邏輯已經重新設計。這對於首次啟動的節點（或長時間離線後啟動的節點）特別相關。</p>
+
+    <p>每當從對等節點收到的區塊標頭的總鏈上工作量小於節點的 <code class="language-plaintext highlighter-rouge">-minimumchainwork</code> 值，或明顯低於節點頂端的工作量時，將開始「presync」階段，在此階段中，節點將下載對等節點的區塊標頭並驗證對等節點鏈上的累積工作量，然後才永久儲存這些區塊標頭。一旦該累積工作量被驗證為足夠高，將從該對等節點重新下載區塊標頭並完全驗證和儲存。</p>
+
+    <p>這可能導致新節點首次啟動時的初始區塊標頭同步時間更長，這是因為區塊標頭將被下載兩次，而且對等節點在 presync 階段（或當節點的最佳區塊標頭鏈的工作量少於 <code class="language-plaintext highlighter-rouge">-minimumchainwork</code> 時）斷開連線的影響將導致節點也需要對下一個對等節點使用區塊標頭 presync 機制（再次下載區塊標頭兩次）。(<a href="https://github.com/bitcoin/bitcoin/pull/25717">#25717</a>)</p>
+  </li>
+  <li>
+    <p>對於 I2P 連線，如果 <code class="language-plaintext highlighter-rouge">-i2pacceptincoming=0</code>，則每個對外連線都會使用一個新的臨時地址。(<a href="https://github.com/bitcoin/bitcoin/pull/25355">#25355</a>)</p>
+  </li>
+</ul>
+
+<h2 id="更新的-rpc">更新的 RPC</h2>
+
+<ul>
+  <li>
+    <p>已移除 <code class="language-plaintext highlighter-rouge">-deprecatedrpc=softforks</code> 設定選項。RPC <code class="language-plaintext highlighter-rouge">getblockchaininfo</code> 不再返回 <code class="language-plaintext highlighter-rouge">softforks</code> 欄位，該欄位先前在 23.0 中已被棄用。(<a href="https://github.com/bitcoin/bitcoin/pull/23508">#23508</a>) 現在只能透過 <code class="language-plaintext highlighter-rouge">getdeploymentinfo</code> RPC 獲取軟分叉狀態資訊。</p>
+  </li>
+  <li>
+    <p>已移除 <code class="language-plaintext highlighter-rouge">deprecatedrpc=exclude_coinbase</code> 設定選項。<code class="language-plaintext highlighter-rouge">receivedby</code> RPC（<code class="language-plaintext highlighter-rouge">listreceivedbyaddress</code>、<code class="language-plaintext highlighter-rouge">listreceivedbylabel</code>、<code class="language-plaintext highlighter-rouge">getreceivedbyaddress</code> 和 <code class="language-plaintext highlighter-rouge">getreceivedbylabel</code>）現在始終返回考慮從 coinbase 輸出收到的幣的結果，沒有改變該行為的選項。排除 coinbase 先前在 23.0 中已被棄用。(<a href="https://github.com/bitcoin/bitcoin/pull/25171">#25171</a>)</p>
+  </li>
+  <li>
+    <p>已移除 <code class="language-plaintext highlighter-rouge">deprecatedrpc=fees</code> 設定選項。頂層費用欄位 <code class="language-plaintext highlighter-rouge">fee</code>、<code class="language-plaintext highlighter-rouge">modifiedfee</code>、<code class="language-plaintext highlighter-rouge">ancestorfees</code> 和 <code class="language-plaintext highlighter-rouge">descendantfees</code> 不再由 RPC <code class="language-plaintext highlighter-rouge">getmempoolentry</code>、<code class="language-plaintext highlighter-rouge">getrawmempool(verbose=true)</code>、<code class="language-plaintext highlighter-rouge">getmempoolancestors(verbose=true)</code> 和 <code class="language-plaintext highlighter-rouge">getmempooldescendants(verbose=true)</code> 返回。相同的費用欄位可以透過結果中的 <code class="language-plaintext highlighter-rouge">fees</code> 物件存取。頂層費用欄位先前在 23.0 中已被棄用。(<a href="https://github.com/bitcoin/bitcoin/pull/25204">#25204</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">getpeerinfo</code> RPC 已更新，新增了一個 <code class="language-plaintext highlighter-rouge">presynced_headers</code> 欄位，指示上面「P2P 和網路變更」部分中提到的 presync 階段的進度。</p>
+  </li>
+</ul>
+
+<p>與錢包相關的 RPC 變更可以在下面的錢包部分找到。</p>
+
+<h2 id="新的-rpc">新的 RPC</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sendall</code> RPC 將特定的 UTXO 花費給一個或多個接收者，而不建立找零。預設情況下，<code class="language-plaintext highlighter-rouge">sendall</code> RPC 將花費錢包中的每個 UTXO。<code class="language-plaintext highlighter-rouge">sendall</code> 可用於清空錢包或從選定的 UTXO 建立無找零的支付。當從特定金額建立支付且接收者承擔交易費用時，請繼續透過 <code class="language-plaintext highlighter-rouge">send</code>、<code class="language-plaintext highlighter-rouge">sendtoaddress</code> 或 <code class="language-plaintext highlighter-rouge">sendmany</code> RPC 使用 <code class="language-plaintext highlighter-rouge">subtractfeefromamount</code> 選項。(<a href="https://github.com/bitcoin/bitcoin/pull/24118">#24118</a>)</p>
+  </li>
+  <li>
+    <p>已新增一個新的 <code class="language-plaintext highlighter-rouge">gettxspendingprevout</code> RPC，它會掃描 mempool 以尋找花費任何給定 outpoint 的交易。(<a href="https://github.com/bitcoin/bitcoin/pull/24408">#24408</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">simulaterawtransaction</code> RPC 會迭代給定交易的輸入和輸出，並統計給定錢包的餘額變化。例如，這可用於在驗證類似 coin join 的交易不包含錢包隨後會無意中簽署的意外輸入時。(<a href="https://github.com/bitcoin/bitcoin/pull/22751">#22751</a>)</p>
+  </li>
+</ul>
+
+<h2 id="更新的-rest-api">更新的 REST API</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">/headers/</code> 和 <code class="language-plaintext highlighter-rouge">/blockfilterheaders/</code> 端點已更新為使用查詢參數而不是路徑參數來指定結果計數。計數參數現在是可選的，兩個端點的預設值均為 5。舊端點仍然可用，並且沒有記錄的行為變更。</p>
+
+    <p>對於 <code class="language-plaintext highlighter-rouge">/headers</code>，使用
+<code class="language-plaintext highlighter-rouge">GET /rest/headers/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;?count=&lt;COUNT=5&gt;</code>
+而不是
+<code class="language-plaintext highlighter-rouge">GET /rest/headers/&lt;COUNT&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;</code> (已棄用)</p>
+
+    <p>對於 <code class="language-plaintext highlighter-rouge">/blockfilterheaders/</code>，使用
+<code class="language-plaintext highlighter-rouge">GET /rest/blockfilterheaders/&lt;FILTERTYPE&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;?count=&lt;COUNT=5&gt;</code>
+而不是
+<code class="language-plaintext highlighter-rouge">GET /rest/blockfilterheaders/&lt;FILTERTYPE&gt;/&lt;COUNT&gt;/&lt;BLOCK-HASH&gt;.&lt;bin|hex|json&gt;</code> (已棄用)</p>
+
+    <p>(<a href="https://github.com/bitcoin/bitcoin/pull/24098">#24098</a>)</p>
+  </li>
+</ul>
+
+<h2 id="建置系統">建置系統</h2>
+
+<ul>
+  <li>Guix 建置現在可以跨架構（x86_64 和 aarch64）重現。(<a href="https://github.com/bitcoin/bitcoin/pull/21194">#21194</a>)</li>
+</ul>
+
+<h2 id="新設定">新設定</h2>
+
+<ul>
+  <li>已新增一個新的 <code class="language-plaintext highlighter-rouge">mempoolfullrbf</code> 選項，它允許 mempool 接受交易替換而不強制執行 BIP125 可替換性訊號。(<a href="https://github.com/bitcoin/bitcoin/pull/25353">#25353</a>)</li>
+</ul>
+
+<h2 id="錢包">錢包</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-walletrbf</code> 啟動選項現在預設為 <code class="language-plaintext highlighter-rouge">true</code>。錢包現在預設在它建立的交易上選擇加入 RBF。(<a href="https://github.com/bitcoin/bitcoin/pull/25610">#25610</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">createrawtransaction</code> 和 <code class="language-plaintext highlighter-rouge">createpsbt</code> RPC 的 <code class="language-plaintext highlighter-rouge">replaceable</code> 選項現在預設為 <code class="language-plaintext highlighter-rouge">true</code>。使用這些 RPC 建立的交易將預設啟用選擇加入的 RBF。(<a href="https://github.com/bitcoin/bitcoin/pull/25610">#25610</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">wsh()</code> 輸出描述符已擴充支援 Miniscript。您可以在僅觀察錢包中匯入 P2WSH 的 Miniscript 描述符以追蹤幣，但您還不能使用 Bitcoin Core 錢包從它們花費。
+您可以在<a href="https://bitcoin.sipa.be/miniscript/">參考網站</a>上找到更多關於 Miniscript 的資訊。(<a href="https://github.com/bitcoin/bitcoin/pull/24148">#24148</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">tr()</code> 輸出描述符現在透過 <code class="language-plaintext highlighter-rouge">multi_a()</code> 和 <code class="language-plaintext highlighter-rouge">sortedmulti_a()</code> 函數支援多重簽名腳本。(<a href="https://github.com/bitcoin/bitcoin/pull/24043">#24043</a>)</p>
+  </li>
+  <li>
+    <p>為了幫助防止對 Bitcoin Core 錢包建立的交易進行指紋識別，找零輸出金額現在已隨機化。(<a href="https://github.com/bitcoin/bitcoin/pull/24494">#24494</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">listtransactions</code>、<code class="language-plaintext highlighter-rouge">gettransaction</code> 和 <code class="language-plaintext highlighter-rouge">listsinceblock</code> RPC 方法現在為每個交易包含一個 wtxid 欄位（序列化交易的雜湊，包括見證資料）。(<a href="https://github.com/bitcoin/bitcoin/pull/24198">#24198</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">listsinceblock</code>、<code class="language-plaintext highlighter-rouge">listtransactions</code> 和 <code class="language-plaintext highlighter-rouge">gettransaction</code> 輸出現在為每個「receive」條目包含一個新的 <code class="language-plaintext highlighter-rouge">parent_descs</code> 欄位。(<a href="https://github.com/bitcoin/bitcoin/pull/25504">#25504</a>)</p>
+  </li>
+  <li>
+    <p>已為 <code class="language-plaintext highlighter-rouge">listsinceblock</code> 命令新增一個新的可選 <code class="language-plaintext highlighter-rouge">include_change</code> 參數。</p>
+  </li>
+  <li>
+    <p>RPC <code class="language-plaintext highlighter-rouge">getreceivedbylabel</code> 現在如果標籤不在地址簿中，則返回錯誤「Label not found in wallet」(-4)。(<a href="https://github.com/bitcoin/bitcoin/pull/25122">#25122</a>)</p>
+  </li>
+</ul>
+
+<h2 id="將傳統錢包遷移到描述符錢包">將傳統錢包遷移到描述符錢包</h2>
+
+<p>已新增一個實驗性的 RPC <code class="language-plaintext highlighter-rouge">migratewallet</code>，用於將傳統（非描述符）錢包遷移到描述符錢包。有關遷移流程的更多資訊可以在<a href="https://github.com/bitcoin/bitcoin/blob/master/doc/managing-wallets.md#migrating-legacy-wallets-to-descriptor-wallets">文件</a>中找到。</p>
+
+<h2 id="gui-變更">GUI 變更</h2>
+
+<ul>
+  <li>
+    <p>已新增一個新的選單項目，用於從備份檔案復原錢包 (<a href="https://github.com/bitcoin-core/gui/pull/471">gui#471</a>)。</p>
+  </li>
+  <li>
+    <p>在 bitcoin GUI 中進行的設定變更（例如修剪設定、代理設定、UPNP 偏好設定）現在儲存到 <code class="language-plaintext highlighter-rouge">&lt;datadir&gt;/settings.json</code> 檔案，而不是 Qt 設定後端（Windows 登錄檔或 Unix 桌面設定檔），因此這些設定現在將應用於 bitcoind，而不是被忽略。(<a href="https://github.com/bitcoin/bitcoin/pull/15936">#15936</a>, <a href="https://github.com/bitcoin-core/gui/pull/602">gui#602</a>)</p>
+  </li>
+  <li>
+    <p>此外，GUI 設定和 <code class="language-plaintext highlighter-rouge">bitcoin.conf</code> 設定之間的互動已簡化。來自 <code class="language-plaintext highlighter-rouge">bitcoin.conf</code> 的設定現在在 GUI 設定對話框中正常顯示，而不是在單獨的警告訊息中（「在此對話框中設定的選項被設定檔覆蓋：-setting=value」）。並且這些設定現在可以編輯，因為 <code class="language-plaintext highlighter-rouge">settings.json</code> 值優先於 <code class="language-plaintext highlighter-rouge">bitcoin.conf</code> 值。(<a href="https://github.com/bitcoin/bitcoin/pull/15936">#15936</a>)</p>
+  </li>
+</ul>
+
+<h1 id="低階變更">低階變更</h1>
+
+<h2 id="rpc">RPC</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">deriveaddresses</code>、<code class="language-plaintext highlighter-rouge">getdescriptorinfo</code>、<code class="language-plaintext highlighter-rouge">importdescriptors</code> 和 <code class="language-plaintext highlighter-rouge">scantxoutset</code> 命令現在接受 <code class="language-plaintext highlighter-rouge">wsh()</code> 描述符中的 Miniscript 表達式。(<a href="https://github.com/bitcoin/bitcoin/pull/24148">#24148</a>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">getaddressinfo</code>、<code class="language-plaintext highlighter-rouge">decodescript</code>、<code class="language-plaintext highlighter-rouge">listdescriptors</code> 和 <code class="language-plaintext highlighter-rouge">listunspent</code> 命令現在可能會在 <code class="language-plaintext highlighter-rouge">wsh()</code> 中輸出 Miniscript 描述符，而先前返回的是 <code class="language-plaintext highlighter-rouge">wsh(raw())</code> 描述符。(<a href="https://github.com/bitcoin/bitcoin/pull/24148">#24148</a>)</p>
+  </li>
+</ul>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的人：</p>
+
+<ul>
+  <li>/dev/fd0</li>
+  <li>0xb10c</li>
+  <li>Adam Jonas</li>
+  <li>akankshakashyap</li>
+  <li>Ali Sherief</li>
+  <li>amadeuszpawlik</li>
+  <li>Andreas Kouloumos</li>
+  <li>Andrew Chow</li>
+  <li>Anthony Towns</li>
+  <li>Antoine Poinsot</li>
+  <li>Antoine Riard</li>
+  <li>Aurèle Oulès</li>
+  <li>avirgovi</li>
+  <li>Ayush Sharma</li>
+  <li>Baas</li>
+  <li>Ben Woosley</li>
+  <li>BrokenProgrammer</li>
+  <li>brunoerg</li>
+  <li>brydinh</li>
+  <li>Bushstar</li>
+  <li>Calvin Kim</li>
+  <li>CAnon</li>
+  <li>Carl Dong</li>
+  <li>chinggg</li>
+  <li>Cory Fields</li>
+  <li>Daniel Kraft</li>
+  <li>Daniela Brozzoni</li>
+  <li>darosior</li>
+  <li>Dave Scotese</li>
+  <li>David Bakin</li>
+  <li>dergoegge</li>
+  <li>dhruv</li>
+  <li>Dimitri</li>
+  <li>dontbyte</li>
+  <li>Duncan Dean</li>
+  <li>eugene</li>
+  <li>Eunoia</li>
+  <li>Fabian Jahr</li>
+  <li>furszy</li>
+  <li>Gleb Naumenko</li>
+  <li>glozow</li>
+  <li>Greg Weber</li>
+  <li>Gregory Sanders</li>
+  <li>gruve-p</li>
+  <li>Hennadii Stepanov</li>
+  <li>hiago</li>
+  <li>Igor Bubelov</li>
+  <li>ishaanam</li>
+  <li>Jacob P.</li>
+  <li>Jadi</li>
+  <li>James O’Beirne</li>
+  <li>Janna</li>
+  <li>Jarol Rodriguez</li>
+  <li>Jeremy Rand</li>
+  <li>Jeremy Rubin</li>
+  <li>jessebarton</li>
+  <li>João Barbosa</li>
+  <li>John Newbery</li>
+  <li>Jon Atack</li>
+  <li>Josiah Baker</li>
+  <li>Karl-Johan Alm</li>
+  <li>KevinMusgrave</li>
+  <li>Kiminuo</li>
+  <li>klementtan</li>
+  <li>Kolby Moroz</li>
+  <li>kouloumos</li>
+  <li>Kristaps Kaupe</li>
+  <li>Larry Ruane</li>
+  <li>Luke Dashjr</li>
+  <li>MarcoFalke</li>
+  <li>Marnix</li>
+  <li>Martin Leitner-Ankerl</li>
+  <li>Martin Zumsande</li>
+  <li>Michael Dietz</li>
+  <li>Michael Folkson</li>
+  <li>Michael Ford</li>
+  <li>Murch</li>
+  <li>mutatrum</li>
+  <li>muxator</li>
+  <li>Oskar Mendel</li>
+  <li>Pablo Greco</li>
+  <li>pasta</li>
+  <li>Patrick Strateman</li>
+  <li>Pavol Rusnak</li>
+  <li>Peter Bushnell</li>
+  <li>phyBrackets</li>
+  <li>Pieter Wuille</li>
+  <li>practicalswift</li>
+  <li>randymcmillan</li>
+  <li>Robert Spigler</li>
+  <li>Russell Yanofsky</li>
+  <li>S3RK</li>
+  <li>Samer Afach</li>
+  <li>Sebastian Falbesoner</li>
+  <li>Seibart Nedor</li>
+  <li>Shashwat</li>
+  <li>Sjors Provoost</li>
+  <li>Smlep</li>
+  <li>sogoagain</li>
+  <li>Stacie</li>
+  <li>Stéphan Vuylsteke</li>
+  <li>Suhail Saqan</li>
+  <li>Suhas Daftuar</li>
+  <li>t-bast</li>
+  <li>TakeshiMusgrave</li>
+  <li>Vasil Dimov</li>
+  <li>W. J. van der Laan</li>
+  <li>w0xlt</li>
+  <li>whiteh0rse</li>
+  <li>willcl-ark</li>
+  <li>William Casarin</li>
+  <li>Yancy Ribbens</li>
+</ul>
+
+<p>以及所有在 <a href="https://www.transifex.com/bitcoin/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

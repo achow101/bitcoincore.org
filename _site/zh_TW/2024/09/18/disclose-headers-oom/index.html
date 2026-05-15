@@ -1,0 +1,253 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2024-09-18-disclose-headers-oom.md' -->
+<!-- name: 'blog-disclose-headers-oom' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS</title>
+<meta name="description" content="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2024/09/18/disclose-headers-oom/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">
+<meta name="twitter:description" content="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">
+<meta property="og:description" content="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2024/09/18/disclose-headers-oom/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2024/09/18/disclose-headers-oom/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/2024/09/18/disclose-headers-oom/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2024/09/18/disclose-headers-oom/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2024/09/18/disclose-headers-oom/">English</option>
+                        <option value="/ja/2024/09/18/disclose-headers-oom/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2024/09/18/disclose-headers-oom/" rel="bookmark" title="CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS">CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <p>在 Bitcoin Core v24.0.1 之前，攻擊者可以向節點垃圾發送低難度標頭鏈，這可以被用來遠端崩潰對等節點。</p>
+
+<p>此問題被認為是<strong>高</strong>嚴重性。</p>
+
+<h2 id="細節">細節</h2>
+
+<p>Bitcoin Core 將區塊鏈標頭儲存在記憶體中。這使其容易受到 DoS 攻擊，透過讓它下載和儲存極長的標頭鏈，即使它們是低難度的。重要的是要注意，一旦製作完成，攻擊鏈可以被重複使用來崩潰網路上的任何節點。</p>
+
+<p>使用此方法攻擊節點的可能性早已為人所知，這是檢查點系統仍然存在的主要原因：讓攻擊者從最後一個檢查點開始攻擊，使其成本遠高於從創世區塊開始。然而，隨著時間推移，隨著算力成本的降低，即使這種緩解措施也變得不那麼有效。</p>
+
+<p>此攻擊於 2019 年 1 月由 David Jaenson 獨立發現並向 Bitcoin Core 專案報告，他建議引入更新的檢查點作為實用的緩解措施。然而：</p>
+<ol>
+  <li>這仍然使執行 IBD 的節點在收到檢查點區塊之前沒有保護。</li>
+  <li>它依賴於生態系統半定期採用包含新檢查點的更新軟體，這是 Bitcoin Core 貢獻者長期以來不太願意接受的做法。</li>
+</ol>
+
+<p>當 Braydon Fuller 於 2019 年 10 月在 bitcoin-dev 郵件列表上<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-October/017354.html">發布他的「鏈寬擴展」報告</a>時，它引起了更多關注。他之前已經負責任地向 Bitcoin Core 安全列表報告過。由於對限制平行鏈數量時網路收斂的擔憂，所建議的方法未被 Bitcoin Core 採用。</p>
+
+<p>當時，建立一個巨大的低難度標頭鏈的計算成本約等於在頂端挖掘一個區塊的 32.28%。這是約 4.12 BTC 的成本，因為當時的區塊獎勵約為 12.77 BTC。</p>
+
+<p>到 2022 年 2 月，攻擊成本進一步下降到挖掘一個區塊成本的約 14.73%，這促使對替代解決方案的調查。如果不加以解決，今天（2024 年 9 月）的成本將僅為一個區塊的 4.44%。考慮到這些日期的區塊獎勵，這些數字分別轉化為約 1.07 BTC 和 0.14 BTC 的成本。</p>
+
+<p>針對此 DoS 的保護措施在 Bitcoin Core PR <a href="https://github.com/bitcoin/bitcoin/pull/25717">#25717</a> 中實作，節點將首先驗證所呈現的鏈是否有足夠的工作量，然後再承諾儲存它。這樣，Bitcoin Core 不再依賴檢查點來防禦任何已知攻擊。</p>
+
+<h2 id="歸屬">歸屬</h2>
+
+<p>感謝 David Jaenson 和 Braydon Fuller 獨立重新發現該攻擊，估計其成本並建議修改。</p>
+
+<p>感謝 Suhas Daftuar 和 Pieter Wuille 研究令人滿意的修復程式並實作它。</p>
+
+<h2 id="時間表">時間表</h2>
+
+<ul>
+  <li>2010-07-17 - Bitcoin 0.3.2 發布，引入檢查點。它們保護包括低難度區塊垃圾在內的其他威脅。</li>
+  <li>2011-11-21 - Bitcoin 0.5.0 發布，跳過最後一個檢查點之前的區塊的腳本驗證。這使得檢查點的作用更加安全關鍵。</li>
+  <li>2014-04-09 - 區塊 295000 被挖掘，成為最後一個 Bitcoin Core 檢查點。隨著算力成本降低，檢查點對區塊垃圾的保護從這一點開始侵蝕。</li>
+  <li>2015-02-16 - Bitcoin Core 0.10.0 發布，具有標頭優先同步。這將低難度區塊垃圾攻擊弱化為區塊<em>標頭</em>垃圾攻擊。</li>
+  <li>2017-03-08 - Bitcoin Core 0.14.0 發布，將跳過腳本驗證與檢查點分離，使它們僅與防禦區塊標頭垃圾相關。</li>
+  <li>2019-01-28 - David Jaenson 向 Bitcoin Core 安全郵件列表報告此問題。</li>
+  <li>2019-09-18 - Braydon Fuller 向 Bitcoin Core 安全列表傳送電子郵件，標題為「<a href="https://bcoin.io/papers/bitcoin-chain-expansion.pdf">Bitcoin 鏈寬擴展拒絕服務攻擊</a>」，討論區塊和區塊標頭垃圾的危險、成本分析和建議的解決方案。</li>
+  <li>2019-09-26 - Suhas Daftuar 回覆 Braydon Fuller 這是一個已知問題，並邀請他將他的報告發布到 bitcoin-dev 郵件列表。</li>
+  <li>2019-10-04 - Braydon Fuller 將他的論文傳送到 bitcoin-dev 郵件列表。</li>
+  <li>2019-10-31 - 作為對上述事件的回應，Suhas Daftuar 開啟 PR <a href="https://github.com/bitcoin/bitcoin/pull/17332">#17332</a>，其中包含他早期但不實用的概念驗證，希望引起更多關於該主題的討論。</li>
+  <li>2022-02 - Suhas Daftuar 和 Pieter Wuille 討論此問題，並估計此攻擊的成本現在實際上已經變得如此之低，以至於需要立即採取行動，並需要避免公開談論它。</li>
+  <li>2022-06-22 - Suhas Daftuar 開啟 PR <a href="https://github.com/bitcoin/bitcoin/pull/25454">#25454</a> 作為實作修復程式的準備工作。</li>
+  <li>2022-06-22 - Suhas Daftuar 向一群長期貢獻者傳送訊息，詳細說明攻擊、其成本以及 Pieter Wuille 和他一直在研究的修復程式。</li>
+  <li>2022-07-26 - Suhas Daftuar 開啟 PR <a href="https://github.com/bitcoin/bitcoin/pull/25717">#25717</a>，與 Pieter Wuille 共同撰寫，實作修復程式。</li>
+  <li>2022-08-30 - PR #25717 被合併。</li>
+  <li>2022-10-21 - Niklas Gögge 的 PR <a href="https://github.com/bitcoin/bitcoin/pull/26355">#26355</a> 被合併，修復了 PR #25717 中引入的標頭預同步步驟中的錯誤。如果沒有這個，仍然可能垃圾發送區塊標頭。發現此錯誤以及可能存在未發現的錯誤的可能性，是舊檢查點尚未完全刪除的原因。</li>
+  <li>2022-12-12 - Bitcoin Core 24.0.1 發布，包含修復程式。</li>
+  <li>2023-12-07 - 最後一個易受影響的 Bitcoin Core 版本（23.2）終止支援。</li>
+  <li>2024-09-18 - 公開披露。</li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>CVE-2019-25220 - 由於標頭垃圾導致的記憶體 DoS</strong>
+          was published on
+          <time class="dt-published" datetime="2024-09-18T00:00:00+00:00">
+            September 18, 2024</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

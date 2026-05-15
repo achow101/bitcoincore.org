@@ -1,0 +1,518 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/pages/2017-01-01-download.md' -->
+<!-- name: 'download' -->
+<!-- version: 6 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 下載 - Bitcoin</title>
+<meta name="description" content="下載 - Bitcoin">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/download/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="下載 - Bitcoin">
+<meta name="twitter:description" content="下載 - Bitcoin">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="下載 - Bitcoin">
+<meta property="og:description" content="下載 - Bitcoin">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/download/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/download/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/download/" />
+<link rel="alternate" hreflang="es" href="https://btc-zhtw-review.achow101.com/es/download/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/download/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/download/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/download/">English</option>
+                        <option value="/es/download/">Español</option>
+                        <option value="/ja/download/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>下載 - Bitcoin</h1>
+    <div class="article-wrap">
+      
+<link rel="alternate" type="application/rss+xml" href="/en/releasesrss.xml" title="Bitcoin Core releases" />
+
+<div class="download">
+  <h2>最新版本： 31.0 <a type="application/rss+xml" href="/en/releasesrss.xml"><img src="/assets/images/icons/icon_rss.svg" alt="rss" class="rssicon" /></a></h2>
+  <div class="mainbutton"><a id="downloadbutton" href="/bin/bitcoin-core-31.0/bitcoin-31.0-win64-setup.exe"><img src="/assets/images/os/but_windows.svg" alt="icon" /><span>下載 Bitcoin Core</span></a></div>
+  <div class="downloadbox">
+    <p>或選擇您的作業系統</p>
+    <div>
+      <div>
+        <img src="/assets/images/os/med_win.png" alt="windows" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-win64-setup.exe" class="dl" id="downloadwinexe">Windows</a>
+          <span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-win64-setup.exe" class="dl" id="win64exe">exe</a> -
+            <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-win64.zip" class="dl" id="win64zip">zip</a></span>
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/med_osx.png" alt="osx" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-x86_64-apple-darwin.zip">macOS (x86_64)</a>
+          <span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-x86_64-apple-darwin.zip" class="dl" id="maczip">zip</a> -
+            <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-x86_64-apple-darwin.tar.gz" class="dl" id="mactar">tar.gz</a></span>
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/med_osx.png" alt="osx" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-arm64-apple-darwin.zip">macOS (arm64)</a>
+          <span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-arm64-apple-darwin.zip" class="dl" id="macarmzip">zip</a> -
+            <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-arm64-apple-darwin.tar.gz" class="dl" id="macarmtar">tar.gz</a></span>
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/med_linux.png" alt="linux" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-x86_64-linux-gnu.tar.gz" class="dl" id="lin64">Linux (tgz)</a>
+        </span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="/assets/images/os/arm.png" alt="ARM Linux" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-aarch64-linux-gnu.tar.gz" class="dl">ARM Linux</a>
+          	<span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-aarch64-linux-gnu.tar.gz" class="dl" id="lin64arm">64 bit</a> -
+            	<a href="/bin/bitcoin-core-31.0/bitcoin-31.0-arm-linux-gnueabihf.tar.gz" class="dl" id="lin32arm">32 bit</a></span>
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/but_riscv.svg" alt="RISC-V Linux" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-riscv64-linux-gnu.tar.gz" class="dl">RISC-V Linux</a>
+            <span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-riscv64-linux-gnu.tar.gz" class="dl" id="lin64riscv">64 bit</a></span>
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/med_linux.png" alt="linux" />
+        <span>
+          <a href="/bin/bitcoin-core-31.0/bitcoin-31.0-powerpc64-linux-gnu.tar.gz" class="dl">PPC64 Linux</a>
+            <span><a href="/bin/bitcoin-core-31.0/bitcoin-31.0-powerpc64-linux-gnu.tar.gz" class="dl" id="lin64ppc">64 bit</a></span>
+            <!-- PPC64LE Disabled for now due to guix build issue, removed from template as the binary availability check in CI doesn't ignore comments -->
+        </span>
+      </div>
+      <div>
+        <img src="/assets/images/os/med_snap.svg" alt="Snap Store Linux" />
+        <span>
+          <a href="https://snapcraft.io/bitcoin-core" class="dl">Snap Store Linux</a>
+        </span>
+      </div>
+    </div>
+    <p class="downloadmore">
+      <a href="/bin/bitcoin-core-31.0/SHA256SUMS" class="dl">SHA256 二進位雜湊值</a><br />
+      <a href="/bin/bitcoin-core-31.0/SHA256SUMS.asc" class="dl">SHA256 雜湊簽名</a><br />
+      <a href="/bin/bitcoin-core-31.0/bitcoin-31.0.torrent" class="dl">下載種子檔案</a>
+         <a href="magnet:?xt=urn:btih:89755a660dfc966343cd5e6ef5696a2b1236d0cc&amp;dn=bitcoin-core-31.0&amp;xl=5525989992&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.bitcoin.sprovoost.nl%3A6969&amp;ws=http://bitcoincore.org/bin/" class="magnetlink" data-proofer-ignore=""></a><br />
+      <a href="/bin/bitcoin-core-31.0/bitcoin-31.0.tar.gz" class="dl">原始碼</a><br />
+      <a href="/en/releases">顯示版本歷史</a>
+    </p>
+    <p class="downloadkeys">
+      <i>使用以下命令更新過期的金鑰：</i><br /><code>gpg --keyserver hkps://keys.openpgp.org --refresh-keys</code>
+    </p>
+  </div>
+
+</div>
+
+<h2 style="text-align: center">檢查您的頻寬和儲存空間</h2>
+<p>Bitcoin Core 需要一次性下載約 600GB 的資料， 之後每月額外增加約 5-10GB。預設情況下， 您需要儲存所有這些資料，但如果您<a href="https://bitcoin.org/en/full-node#reduce-storage">啟用修剪功能</a>， 在不犧牲任何安全性的情況下，總共只需儲存少至 10GB。
+ 關於設定 Bitcoin Core 的更多資訊，請閱讀<a href="https://bitcoin.org/en/full-node">全節點指南</a>。</p>
+
+<h2 style="text-align: center"></h2>
+<p></p>
+
+<h2 style="text-align: center" id="驗證您的下載">驗證您的下載</h2>
+<p>下載驗證是可選的，但強烈建議執行。執行此處的驗證步驟可確保您下載的不是 意外或被竄改的 Bitcoin 版本，這可能導致資金損失。</p>
+<p>點擊下方其中一行以查看該平台的驗證說明。</p>
+
+<details>
+  
+    <summary><strong>Windows 驗證說明</strong></summary>
+    <ol>
+      <li><p>點擊上方清單中的連結以下載適用於您平台的版本，並等待檔案下載完成。</p></li>
+
+      <li><p>下載加密雜湊值清單： <a href="/bin/bitcoin-core-31.0/SHA256SUMS">SHA256SUMS</a></p></li>
+
+      <li><p>下載證明雜湊值有效性的簽名： <a href="/bin/bitcoin-core-31.0/SHA256SUMS.asc">SHA256SUMS.asc</a></p></li>
+
+      <li><p>開啟終端機（命令列提示字元）並切換目錄（cd）到您用於下載的資料夾。例如：</p>
+
+        <pre class="highlight"><code>cd %UserProfile%\Downloads
+</code></pre>
+
+        </li>
+
+      
+      <li><p>執行以下命令以產生您下載的版本檔案的雜湊值。將 'bitcoin-31.0-win64-setup.exe' 替換為您實際下載的檔案名稱。</p>
+
+        <pre class="highlight"><code>certUtil -hashfile bitcoin-31.0-win64-setup.exe SHA256</code></pre></li>
+
+      <li><p>確保上述命令產生的雜湊值與您先前下載的雜湊值檔案中列出的其中一個雜湊值相符。 我們建議您檢查兩個雜湊值的每個字元以確保它們相符。 您可以透過執行以下命令來查看您下載的雜湊值：
+</p>
+
+        <pre class="highlight"><code>type SHA256SUMS</code></pre></li>
+
+      <li><p>如果您之前未在系統上安裝 GNU Privacy Guard (GPG)， <a href="https://gpg4win.org/download.html">請立即安裝</a>
+      或查看其他安裝
+      <a href="https://www.gnupg.org/download/index.en.html#binary">選項。</a></p></li>
+
+      <li>
+  <p>Bitcoin 版本由多位人員簽名，每位都有獨特的公鑰。為了識別簽名的有效性， 您必須使用 GPG 在本地載入這些公鑰。您可以在 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys">bitcoin-core/guix.sigs 儲存庫</a>中找到許多開發者的金鑰， 然後可以將它們載入到您的 GPG 金鑰資料庫中。</p>
+<p>例如，您可以下載 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys/fanquake.gpg"><code> builder-keys/fanquake.gpg</code></a> 檔案並使用此命令載入金鑰：</p>
+
+
+
+        <pre class="highlight"><code>C:\Program Files (x86)\GnuPG\bin\gpg.exe --import fanquake.gpg</code></pre>
+
+        <p>上述命令的輸出應顯示已匯入、更新、具有新簽名或保持不變的一個金鑰。</p></li>
+
+      <li><p>建議您從此清單中選擇幾位您認為值得信任的人並如上所述匯入他們的金鑰。 稍後您將使用他們的金鑰來檢查證明雜湊值有效性的簽名，而這些雜湊值用於檢查二進位檔案。 您可以透過複製儲存庫並匯入目錄來一次匯入所有金鑰：
+</p></li>
+
+      <li>驗證雜湊值檔案已由足夠數量您信任且已匯入到您金鑰鏈中的金鑰進行 PGP 簽名：
+
+        <pre class="highlight"><code>C:\Program Files (x86)\GnuPG\bin\gpg.exe --verify SHA256SUMS.asc</code></pre></li>
+
+      <li><p>上述命令將為每個簽署雜湊值的公鑰輸出一系列簽名檢查。每個有效的簽名將顯示以下文字：
+</p>
+        <ol><li><p>開頭為： <code>gpg: Good signature</code></p></li>
+          <li><p>完整行顯示： <code>Primary key fingerprint: 
+  E777&nbsp;299F&nbsp;C265&nbsp;DD04&nbsp;7930&nbsp;&nbsp;70EB&nbsp;944D&nbsp;35F9&nbsp;AC3D&nbsp;B76A
+</code></p></li>
+        </ol>
+
+        <p>驗證命令的輸出可能包含公鑰不可用的警告。只要您擁有所有您信任的簽署者的公鑰， 此警告即可忽略。可能還會有額外的警告，指出「金鑰未經可信簽名認證」。 這意味著要完全驗證您的下載，您需要確認簽署金鑰的指紋（例如 <code>
+  E777  299F..
+.</code>）與您對簽署者公鑰的預期相符。
+</p></li>
+
+    </ol>
+  </details>
+<details>
+    
+    <summary><strong>MacOS 驗證說明</strong></summary>
+    <ol>
+      <li><p>點擊上方清單中的連結以下載適用於您平台的版本，並等待檔案下載完成。</p></li>
+
+      <li><p>下載加密雜湊值清單： <a href="/bin/bitcoin-core-31.0/SHA256SUMS">SHA256SUMS</a></p></li>
+
+      <li><p>下載證明雜湊值有效性的簽名： <a href="/bin/bitcoin-core-31.0/SHA256SUMS.asc">SHA256SUMS.asc</a></p></li>
+
+      <li><p>開啟終端機（命令列提示字元）並切換目錄（cd）到您用於下載的資料夾。例如：</p>
+
+        <pre class="highlight"><code>cd Downloads/</code></pre>
+
+        </li>
+
+      <li><p>使用以下命令驗證版本檔案的雜湊值是否列在雜湊值檔案中：</p>
+
+        <pre class="highlight"><code>shasum -a 256 --ignore-missing --check SHA256SUMS</code></pre>
+
+        <p>在上述命令產生的輸出中，確保輸出在您下載的版本檔案名稱後列出「OK」。例如： <code>bitcoin-31.0-x86_64-apple-darwin.zip: OK</code></p></li>
+
+      <li><p>如果您之前未在系統上安裝 GNU Privacy Guard (GPG)， <a href="https://gpgtools.org/">請立即安裝</a>
+      或查看其他安裝
+      <a href="https://www.gnupg.org/download/index.en.html#binary">選項。</a></p></li>
+
+      <li>
+  <p>Bitcoin 版本由多位人員簽名，每位都有獨特的公鑰。為了識別簽名的有效性， 您必須使用 GPG 在本地載入這些公鑰。您可以在 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys">bitcoin-core/guix.sigs 儲存庫</a>中找到許多開發者的金鑰， 然後可以將它們載入到您的 GPG 金鑰資料庫中。</p>
+<p>例如，您可以下載 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys/fanquake.gpg"><code> builder-keys/fanquake.gpg</code></a> 檔案並使用此命令載入金鑰：</p>
+
+
+
+        <pre class="highlight"><code>gpg --import fanquake.gpg</code></pre>
+
+        <p>上述命令的輸出應顯示已匯入、更新、具有新簽名或保持不變的一個金鑰。</p></li>
+
+      <li>建議您從此清單中選擇幾位您認為值得信任的人並如上所述匯入他們的金鑰。 稍後您將使用他們的金鑰來檢查證明雜湊值有效性的簽名，而這些雜湊值用於檢查二進位檔案。 您可以透過複製儲存庫並匯入目錄來一次匯入所有金鑰：
+
+
+        <pre class="highlight"><code>git clone https://github.com/bitcoin-core/guix.sigs</code><br /><code>gpg --import guix.sigs/builder-keys/*</code></pre></li>
+
+      <li>驗證雜湊值檔案已由足夠數量您信任且已匯入到您金鑰鏈中的金鑰進行 PGP 簽名：
+
+        <pre class="highlight"><code>gpg --verify SHA256SUMS.asc</code></pre></li>
+
+      <li><p>上述命令將為每個簽署雜湊值的公鑰輸出一系列簽名檢查。每個有效的簽名將顯示以下文字：
+</p>
+        <ol><li><p>開頭為： <code>gpg: Good signature</code></p></li>
+          <li><p>完整行顯示： <code>Primary key fingerprint: 
+  E777&nbsp;299F&nbsp;C265&nbsp;DD04&nbsp;7930&nbsp;&nbsp;70EB&nbsp;944D&nbsp;35F9&nbsp;AC3D&nbsp;B76A
+</code></p></li>
+        </ol>
+
+        <p>驗證命令的輸出可能包含公鑰不可用的警告。只要您擁有所有您信任的簽署者的公鑰， 此警告即可忽略。可能還會有額外的警告，指出「金鑰未經可信簽名認證」。 這意味著要完全驗證您的下載，您需要確認簽署金鑰的指紋（例如 <code>
+  E777  299F..
+.</code>）與您對簽署者公鑰的預期相符。
+
+           <a href="https://www.gnupg.org/gph/en/manual/x334.html">有關金鑰管理的更多詳細資訊，請參閱 GNU 手冊的相關章節。</a>
+        </p></li>
+    </ol>
+  </details>
+
+<details>
+    <summary><strong>Linux 驗證說明</strong></summary>
+    <ol>
+      <li><p>點擊上方清單中的連結以下載適用於您平台的版本，並等待檔案下載完成。</p></li>
+
+      <li><p>下載加密雜湊值清單： <a href="/bin/bitcoin-core-31.0/SHA256SUMS">SHA256SUMS</a></p></li>
+
+      <li><p>下載證明雜湊值有效性的簽名： <a href="/bin/bitcoin-core-31.0/SHA256SUMS.asc">SHA256SUMS.asc</a></p></li>
+
+      <li><p>開啟終端機（命令列提示字元）並切換目錄（cd）到您用於下載的資料夾。例如：</p>
+
+        <pre class="highlight"><code>cd Downloads/</code></pre>
+
+        </li>
+
+      <li><p>使用以下命令驗證版本檔案的雜湊值是否列在雜湊值檔案中：</p>
+
+        <pre class="highlight"><code>sha256sum --ignore-missing --check SHA256SUMS</code></pre>
+
+        <p>在上述命令產生的輸出中，確保輸出在您下載的版本檔案名稱後列出「OK」。例如： <code>bitcoin-31.0-x86_64-linux-gnu.tar.gz: OK</code></p></li>
+
+      <li>
+  <p>Bitcoin 版本由多位人員簽名，每位都有獨特的公鑰。為了識別簽名的有效性， 您必須使用 GPG 在本地載入這些公鑰。您可以在 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys">bitcoin-core/guix.sigs 儲存庫</a>中找到許多開發者的金鑰， 然後可以將它們載入到您的 GPG 金鑰資料庫中。</p>
+<p>例如，您可以下載 <a href="https://github.com/bitcoin-core/guix.sigs/tree/main/builder-keys/fanquake.gpg"><code> builder-keys/fanquake.gpg</code></a> 檔案並使用此命令載入金鑰：</p>
+
+
+
+        <pre class="highlight"><code>gpg --import fanquake.gpg</code></pre>
+
+        <p>上述命令的輸出應顯示已匯入、更新、具有新簽名或保持不變的一個金鑰。</p></li>
+
+      <li>建議您從此清單中選擇幾位您認為值得信任的人並如上所述匯入他們的金鑰。 稍後您將使用他們的金鑰來檢查證明雜湊值有效性的簽名，而這些雜湊值用於檢查二進位檔案。 您可以透過複製儲存庫並匯入目錄來一次匯入所有金鑰：
+
+
+        <pre class="highlight"><code>git clone https://github.com/bitcoin-core/guix.sigs</code><br /><code>gpg --import guix.sigs/builder-keys/*</code></pre></li>
+
+      <li>驗證雜湊值檔案已由足夠數量您信任且已匯入到您金鑰鏈中的金鑰進行 PGP 簽名：
+
+        <pre class="highlight"><code>gpg --verify SHA256SUMS.asc</code></pre></li>
+
+      <li><p>上述命令將為每個簽署雜湊值的公鑰輸出一系列簽名檢查。每個有效的簽名將顯示以下文字：
+</p>
+        <ol><li><p>開頭為： <code>gpg: Good signature</code></p></li>
+          <li><p>完整行顯示： <code>Primary key fingerprint: 
+  E777&nbsp;299F&nbsp;C265&nbsp;DD04&nbsp;7930&nbsp;&nbsp;70EB&nbsp;944D&nbsp;35F9&nbsp;AC3D&nbsp;B76A
+</code></p></li>
+        </ol>
+
+        <p>驗證命令的輸出可能包含公鑰不可用的警告。只要您擁有所有您信任的簽署者的公鑰， 此警告即可忽略。可能還會有額外的警告，指出「金鑰未經可信簽名認證」。 這意味著要完全驗證您的下載，您需要確認簽署金鑰的指紋（例如 <code>
+  E777  299F..
+.</code>）與您對簽署者公鑰的預期相符。
+
+           <a href="https://www.gnupg.org/gph/en/manual/x334.html">有關金鑰管理的更多詳細資訊，請參閱 GNU 手冊的相關章節。</a>
+        </p></li>
+    </ol>
+  </details>
+
+<details>
+    <summary><strong>Snap 套件驗證說明</strong></summary>
+
+    <p>雖然 Snap 套件使用確定性產生的可執行檔，但 Snap 工具本身並未提供 簡化的方式來顯示 Snap 套件的內容。因此，Bitcoin Core 專案沒有 必要的資訊來協助您驗證 Bitcoin Core Snap 套件。
+</p>
+
+  </details>
+
+<h2 style="text-align: center">透過可重現建置進行額外驗證</h2>
+
+<p>不介意執行額外步驟的有經驗使用者可以利用 Bitcoin Core 的可重現建置 以及執行這些建置的貢獻者所產生的已簽名雜湊值。
+</p>
+
+<ul>
+    <li><p><em>可重現建置</em> 允許任何擁有 Bitcoin Core MIT 授權原始碼副本的人建置與本網站 分發的二進位檔案相同的檔案（意味著二進位檔案將具有與本網站 提供的相同加密雜湊值）。
+</p></li>
+
+    <li><p><em>已驗證的重現</em> 是多位 Bitcoin Core 貢獻者各自獨立重現如上所述的相同二進位檔案的結果。 這些貢獻者以密碼學方式簽署並發布他們產生的二進位檔案的雜湊值。
+</p></li>
+  </ul>
+
+<p>前述的驗證說明將驗證您信任的幾位貢獻者都簽署了版本雜湊值檔案中 分發的相同雜湊值。此外，自行重現二進位檔案將為您提供目前可用的 最高等級保證。有關更多資訊，請造訪專案的
+ <a href="https://github.com/bitcoin-core/guix.sigs">可信建置流程簽名</a>.</p>
+
+<hr />
+
+<p>Bitcoin Core 是一個由社群驅動的<a href="https://www.fsf.org/about/what-is-free-software">自由軟體</a>專案，以開源 <a href="http://opensource.org/licenses/mit-license.php">MIT 授權</a>發布。</p>
+
+<script type="text/javascript">
+var os = 'windows64';
+if (navigator.userAgent.indexOf('Mac') != -1) var os = 'mac'
+else if (navigator.userAgent.indexOf('Linux') != -1) var os = 'linux64'
+else if (navigator.userAgent.indexOf('WOW64') != -1 || navigator.userAgent.indexOf('Win64') != -1) var os='windows64';
+var but = document.getElementById('downloadbutton');
+var linkwinexe = document.getElementById('downloadwinexe');
+var linkwinzip = document.getElementById('downloadwinzip');
+var hrefwin64exe = document.getElementById('win64exe').href;
+var hrefwin64zip = document.getElementById('win64zip').href;
+var hrefmaczip = document.getElementById('macarmzip').href;
+var hreflin64 = document.getElementById('lin64').href;
+switch (os) {
+case 'windows64':
+	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_windows.svg';
+	but.href = hrefwin64exe;
+	linkwinexe.href = hrefwin64exe;
+	linkwinzip.href = hrefwin64zip;
+break;
+case 'linux64':
+	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_linux.png';
+	but.href = hreflin64;
+	linklin.href = hreflin64;
+break;
+case 'mac':
+	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_mac.svg';
+	but.href = hrefmaczip;
+break;
+}
+
+</script>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

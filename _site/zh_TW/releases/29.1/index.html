@@ -1,0 +1,410 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2025-09-04-release-29.1.md' -->
+<!-- name: 'release-29.1' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 29.1</title>
+<meta name="description" content="Bitcoin Core 29.1">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/29.1/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 29.1">
+<meta name="twitter:description" content="Bitcoin Core 29.1">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 29.1">
+<meta property="og:description" content="Bitcoin Core 29.1">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/29.1/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/29.1/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/releases/29.1/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/29.1/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/ja/releases/29.1/">日本語</option>
+                        <option value="/en/releases/29.1/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 29.1</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<h1 id="291-版本說明">29.1 版本說明</h1>
+<p>Bitcoin Core 29.1 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-29.1/">https://bitcoincore.org/bin/bitcoin-core-29.1/</a></p>
+
+<p>此版本包含各種錯誤修正和效能改善，以及更新的翻譯。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<p>如需接收安全性和更新通知，請訂閱：</p>
+
+<p><a href="https://bitcoincore.org/zh_TW/list/announcements/join/">https://bitcoincore.org/zh_TW/list/announcements/join/</a></p>
+
+<h1 id="如何升級">如何升級</h1>
+
+<p>如果您正在執行舊版本，請將其關閉。等待它完全關閉（在某些情況下可能需要幾分鐘），然後執行安裝程式（在 Windows 上）或直接複製 <code class="language-plaintext highlighter-rouge">/Applications/Bitcoin-Qt</code>（在 macOS 上）或 <code class="language-plaintext highlighter-rouge">bitcoind</code>/<code class="language-plaintext highlighter-rouge">bitcoin-qt</code>（在 Linux 上）。</p>
+
+<p>可以直接從已達到 EOL 的 Bitcoin Core 版本升級，但如果需要遷移資料目錄，可能需要一些時間。通常支援舊版本的 Bitcoin Core 錢包。</p>
+
+<h1 id="相容性">相容性</h1>
+
+<p>Bitcoin Core 在使用 Linux Kernel 3.17+、macOS 13+ 和 Windows 10+ 的作業系統上受到支援和測試。Bitcoin Core 也應該可以在大多數其他類 Unix 系統上運作，但在這些系統上的測試頻率較低。不建議在不受支援的系統上使用 Bitcoin Core。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h3 id="mempool-policy">Mempool Policy</h3>
+
+<ul>
+  <li>
+    <p>單一標準交易中可能執行的 legacy signature operations 的最大數量現在限制為 2500。所有先前輸出腳本、所有輸入腳本，以及所有 P2SH redeem scripts（如果有）中的 signature operations 都會計入此限制。假設此新限制不會影響任何已知的典型標準交易。此變更是為未來可能部署 BIP54 做準備。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/bitcoin/bitcoin/pull/32521">#32521</a> policy: make pathological transactions packed with legacy sigops non-standard</p>
+  </li>
+  <li>
+    <p>最小區塊費率（<code class="language-plaintext highlighter-rouge">-blockmintxfee</code>）已更改為每 kvB 1 satoshi。仍可使用設定選項進行更改。</p>
+  </li>
+  <li>預設最小中繼費率（<code class="language-plaintext highlighter-rouge">-minrelaytxfee</code>）和增量中繼費率（<code class="language-plaintext highlighter-rouge">-incrementalrelayfee</code>）已更改為每 kvB 100 satoshis。仍可使用各自的設定選項進行更改，但如果決定更改，建議同時更改兩者。
+    <ul>
+      <li>其他最小費率（例如 dust feerate、費用估算器返回的最小值，以及錢包使用的所有費率）保持不變。mempool 最小費率仍會根據高流量而變化。</li>
+      <li>請注意，除非這些較低的預設值在整個網路中被廣泛採用，否則不保證使用較低費率建立的交易能夠傳播或確認。錢包費率保持不變；在嘗試使用錢包建立較低費率的交易之前，必須更改 <code class="language-plaintext highlighter-rouge">-mintxfee</code>。</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33106">#33106</a> policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee</li>
+</ul>
+
+<h3 id="logging">Logging</h3>
+
+<p>無條件寫入磁碟的日誌現在透過給每個來源位置每小時 1MiB 的配額來進行速率限制。無條件日誌是指日誌級別高於 debug 的任何日誌，即 <code class="language-plaintext highlighter-rouge">info</code>、<code class="language-plaintext highlighter-rouge">warning</code> 和 <code class="language-plaintext highlighter-rouge">error</code>。如果至少有一個來源位置目前被抑制，所有日誌都將以 <code class="language-plaintext highlighter-rouge">[*]</code> 為前綴。(<a href="https://github.com/bitcoin/bitcoin/pull/32604">#32604</a>)</p>
+
+<p>當啟用 <code class="language-plaintext highlighter-rouge">-logsourcelocations</code> 時，日誌輸出現在包含整個函式簽名，而不僅僅是函式名稱。(<a href="https://github.com/bitcoin/bitcoin/pull/32604">#32604</a>)</p>
+
+<h3 id="rpc">RPC</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dumptxoutset</code> RPC 現在需要指定 <code class="language-plaintext highlighter-rouge">type</code> 參數。若要維持 v29.0 之前的行為，請使用 <code class="language-plaintext highlighter-rouge">latest</code> 參數。此變更在 v29.0 版本說明中遺漏記錄。(<a href="https://github.com/bitcoin/bitcoin/pull/30808">#30808</a>)</li>
+</ul>
+
+<h3 id="updated-settings">Updated Settings</h3>
+
+<ul>
+  <li>
+    <p>在 32 位元系統上，<code class="language-plaintext highlighter-rouge">-maxmempool</code> 和 <code class="language-plaintext highlighter-rouge">-dbcache</code> 啟動參數現在分別上限為 500MB 和 1GiB。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/bitcoin/bitcoin/pull/32530">#32530</a> node: cap -maxmempool and -dbcache values for 32-bit</p>
+  </li>
+</ul>
+
+<h3 id="wallet">Wallet</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/31757">#31757</a> wallet: fix crash on double block disconnection</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32553">#32553</a> wallet: Fix logging of wallet version</li>
+</ul>
+
+<h3 id="p2p">P2P</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32826">#32826</a> p2p: add more bad ports</li>
+</ul>
+
+<h3 id="test">Test</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32069">#32069</a> test: fix intermittent failure in wallet_reorgsrestore.py</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32286">#32286</a> test: Handle empty string returned by CLI as None in RPC tests</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32312">#32312</a> test: Fix feature_pruning test after nTime typo fix</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32336">#32336</a> test: Suppress upstream -Wduplicate-decl-specifier in bpfcc</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32463">#32463</a> test: fix an incorrect feature_fee_estimation.py subtest</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32483">#32483</a> test: fix two intermittent failures in wallet_basic.py</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32630">#32630</a> test: fix sync function in rpc_psbt.py</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32765">#32765</a> test: Fix list index out of range error in feature_bip68_sequence.py</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32742">#32742</a> test: fix catchup loop in outbound eviction functional test</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32823">#32823</a> test: Fix wait_for_getheaders() call in test_outbound_eviction_blocks_relay_only()</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32833">#32833</a> test: Add msgtype to msg_generic slots</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32841">#32841</a> feature_taproot: sample tx version border values more</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32850">#32850</a> test: check P2SH sigop count for coinbase tx</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32859">#32859</a> test: correctly detect nonstd TRUC tx vsize in feature_taproot</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33001">#33001</a> test: Do not pass tests on unhandled exceptions</li>
+</ul>
+
+<h3 id="indexes">Indexes</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33212">#33212</a> index: Don’t commit state in BaseIndex::Rewind</li>
+</ul>
+
+<h3 id="util">Util</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32248">#32248</a> Remove support for RNDR/RNDRRS for aarch64</li>
+</ul>
+
+<h3 id="build">Build</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32356">#32356</a> cmake: Respect user-provided configuration-specific flags</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32437">#32437</a> crypto: disable ASan for sha256_sse4 with Clang</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32469">#32469</a> cmake: Allow WITH_DBUS on all Unix-like systems</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32439">#32439</a> guix: accomodate migration to codeberg</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32551">#32551</a> cmake: Add missed SSE41_CXXFLAGS</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32568">#32568</a> depends: use “mkdir -p” when installing xproto</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32678">#32678</a> guix: warn and abort when SOURCE_DATE_EPOCH is set</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32690">#32690</a> depends: fix SHA256SUM command on OpenBSD (use GNU mode output)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32716">#32716</a> depends: Override host compilers for FreeBSD and OpenBSD</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32760">#32760</a> depends: capnp 1.2.0</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32798">#32798</a> build: add root dir to CMAKE_PREFIX_PATH in toolchain</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32805">#32805</a> cmake: Use HINTS instead of PATHS in find_* commands</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32814">#32814</a> cmake: Explicitly specify Boost_ROOT for Homebrew’s package</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32837">#32837</a> depends: fix libevent _WIN32_WINNT usage</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32943">#32943</a> depends: Force CMAKE_EXPORT_NO_PACKAGE_REGISTRY=TRUE</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32954">#32954</a> cmake: Drop no longer necessary “cmakeMinimumRequired” object</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33073">#33073</a> guix: warn SOURCE_DATE_EPOCH set in guix-codesign</li>
+</ul>
+
+<h3 id="gui">Gui</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/864">#864</a> Crash fix, disconnect numBlocksChanged() signal during shutdown</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/868">#868</a> Replace stray tfm::format to cerr with qWarning</li>
+</ul>
+
+<h3 id="doc">Doc</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32333">#32333</a> doc: Add missing top-level description to pruneblockchain RPC</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32353">#32353</a> doc: Fix fuzz test_runner.py path</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32389">#32389</a> doc: Fix test_bitcoin path</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32607">#32607</a> rpc: Note in fundrawtransaction doc, fee rate is for package</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32679">#32679</a> doc: update tor docs to use bitcoind binary from path</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32693">#32693</a> depends: fix cmake compatibility error for freetype</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32696">#32696</a> doc: make -DWITH_ZMQ=ON explicit on build-unix.md</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32708">#32708</a> rpc, doc: update listdescriptors RCP help</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32711">#32711</a> doc: add missing packages for BSDs (cmake, gmake, curl) to depends/README.md</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32719">#32719</a> doc, windows: CompanyName “Bitcoin” =&gt; “Bitcoin Core project”</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32776">#32776</a> doc: taproot became always active in v24.0</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32777">#32777</a> doc: fix Transifex 404s</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32846">#32846</a> doc: clarify that the “-j N” goes after the “–build build” part</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32858">#32858</a> doc: Add workaround for vcpkg issue with paths with embedded spaces</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33070">#33070</a> doc/zmq: fix unix socket path example</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33088">#33088</a> doc: move cmake -B build -LH up in Unix build docs</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33133">#33133</a> rpc: fix getpeerinfo ping duration unit docs</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33119">#33119</a> rpc: Fix ‘getdescriptoractivity’ RPCHelpMan, add test to verify fix</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33236">#33236</a> doc: Remove wrong and redundant doxygen tag</li>
+</ul>
+
+<h3 id="ci">CI</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32184">#32184</a> ci: Add workaround for vcpkg’s libevent package</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33261">#33261</a> ci: return to using dash in CentOS job</li>
+</ul>
+
+<h3 id="misc">Misc</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32187">#32187</a> refactor: Remove spurious virtual from final ~CZMQNotificationInterface</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32454">#32454</a> tracing: fix invalid argument in mempool_monitor</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/32771">#32771</a> contrib: tracing: Fix read of pmsg_type in p2p_monitor.py</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/33086">#33086</a> contrib: [tracing] fix pointer argument handling in mempool_monitor.py</li>
+</ul>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的人：</p>
+
+<ul>
+  <li>0xB10C</li>
+  <li>achow101</li>
+  <li>Antoine Poinsot</li>
+  <li>benthecarman</li>
+  <li>bigspider</li>
+  <li>Brandon Odiwuor</li>
+  <li>brunoerg</li>
+  <li>Bufo</li>
+  <li>Christewart</li>
+  <li>Crypt-iQ</li>
+  <li>davidgumberg</li>
+  <li>deadmanoz</li>
+  <li>dergoegge</li>
+  <li>enirox001</li>
+  <li>fanquake</li>
+  <li>furszy</li>
+  <li>glozow</li>
+  <li>instagibbs</li>
+  <li>Hennadii Stepanov</li>
+  <li>hodlinator</li>
+  <li>ismaelsadeeq</li>
+  <li>jb55</li>
+  <li>jlopp</li>
+  <li>josibake</li>
+  <li>laanwj</li>
+  <li>luisschwab</li>
+  <li>MarcoFalke</li>
+  <li>Martin Zumsande</li>
+  <li>monlovesmango</li>
+  <li>nervana21</li>
+  <li>pablomartin4btc</li>
+  <li>rkrux</li>
+  <li>romanz</li>
+  <li>ryanofsky</li>
+  <li>Sjors</li>
+  <li>theStack</li>
+  <li>willcl-ark</li>
+  <li>zaidmstrr</li>
+</ul>
+
+<p>以及所有在 <a href="https://explore.transifex.com/bitcoin/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

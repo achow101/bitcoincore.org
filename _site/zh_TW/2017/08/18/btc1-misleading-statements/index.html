@@ -1,0 +1,226 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2017-08-18-btc1-misleading-statements.md' -->
+<!-- name: 'btc1-misleading-statements' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 更正關於 Segwit2x 和 btc1 的錯誤資訊</title>
+<meta name="description" content="更正關於 Segwit2x 和 btc1 的錯誤資訊">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2017/08/18/btc1-misleading-statements/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="更正關於 Segwit2x 和 btc1 的錯誤資訊">
+<meta name="twitter:description" content="更正關於 Segwit2x 和 btc1 的錯誤資訊">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="更正關於 Segwit2x 和 btc1 的錯誤資訊">
+<meta property="og:description" content="更正關於 Segwit2x 和 btc1 的錯誤資訊">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2017/08/18/btc1-misleading-statements/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2017/08/18/btc1-misleading-statements/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/2017/08/18/btc1-misleading-statements/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2017/08/18/btc1-misleading-statements/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2017/08/18/btc1-misleading-statements/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2017/08/18/btc1-misleading-statements/">English</option>
+                        <option value="/ja/2017/08/18/btc1-misleading-statements/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2017/08/18/btc1-misleading-statements/" rel="bookmark" title="更正關於 Segwit2x 和 btc1 的錯誤資訊">更正關於 Segwit2x 和 btc1 的錯誤資訊</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <p>「Segwit2x」，一項對 Bitcoin 網路共識規則進行不相容變更的提案，最近受到越來越多的關注。有人試圖誤導人們相信 btc1 專案（Segwit2x 提案的實作）是現有軟體的必要更新──事實並非如此。相反，它是對現有網路規則的爭議性偏離，其使用者將很快發現自己與網路其他部分在區塊和交易的有效性方面存在分歧。</p>
+
+<p>請注意：</p>
+
+<ul>
+  <li>
+    <p>隔離見證（或 Segwit，一種將在未來幾天內啟動的軟分叉）與 Segwit2x 硬分叉無關。隔離見證與所有先前的 Bitcoin 軟體向後相容。對於絕大多數 Bitcoin 使用者來說，不需要採取任何行動。</p>
+  </li>
+  <li>
+    <p><a href="https://bitcoincore.org">bitcoincore.org</a> 是官方網站，<a href="https://twitter.com/bitcoincoreorg">@bitcoincoreorg</a> 是 Bitcoin Core 專案的官方 Twitter 帳戶。任何其他聲稱代表該專案的網站或 Twitter 帳戶都是欺詐性的。Bitcoin Core 是一個開源專案，歡迎任何人透過其 GitHub 專案貢獻和審查。Bitcoin Core 二進位檔案可以從 <a href="/zh_TW/download">bitcoincore.org</a> 取得，並且始終由發布經理的簽署金鑰進行數位簽章。撰寫本文時，Bitcoin Core 的最新版本是 0.14.2。</p>
+  </li>
+  <li>
+    <p>btc1 與 Bitcoin Core <em>沒有任何</em> 關聯。沒有常規的 Bitcoin Core 貢獻者支援 btc1 或與該專案有任何聯繫，也沒有參與其提議的硬分叉的設計。</p>
+  </li>
+  <li>
+    <p>我們強烈建議使用者不要下載任何聲稱是對 Bitcoin 共識規則「升級」的 Bitcoin 全節點軟體，除非仔細考慮提議的變更對 Bitcoin 系統的影響以及社群對它的支援程度。這包括 Bitcoin Core 新版本中提議的共識變更。</p>
+  </li>
+  <li>
+    <p>雖然很難確定更廣泛的 Bitcoin 社群支援什麼，但要警惕聲稱龐大而多樣化的 Bitcoin 社群在沒有獨立驗證的情況下完全轉向一個分叉或另一個分叉的說法。簽署信已被公司用來聲稱代表其客戶/使用者而未經其同意，並且經常使用不精確和誤導性的語言。過去，Bitcoin XT、Bitcoin Classic 和 Bitcoin Unlimited 以及其他的信件已被傳閱以表明對一個想法的普遍支援，同時被宣傳為不考慮社群考慮而執行軟體的承諾，只會在幾個月後被放棄。</p>
+  </li>
+  <li>
+    <p>Bitcoin Core 貢獻者和 Bitcoin 社群成員提出的關於 Segwit2x 提案的擔憂尚未得到其支持者的充分解決。該提案的細節是在 Bitcoin 的隔離見證啟動之前以及最近建立 BCH 貨幣之前確定的。在規劃未來時忽略這些事件的結果是不負責任的。例如，我們已經看到了當單個地址在兩條鏈上都有效時產生的混亂，但 Segwit2x 提案打算重複同樣的錯誤。此外，BCH 對強重放保護的實作為 BCH 和 Bitcoin 的使用者提供了顯著的保護，而 Segwit2x 不打算提供這種保護。</p>
+  </li>
+  <li>
+    <p>Bitcoin 的共識規則應該只在謹慎的情況下並在整個社群的廣泛同意下變更。Segwit2x 在其流程和實作中都受到了許多人的反對。Bitcoin Core 將繼續支援 Segwit 軟分叉，我們期待在未來幾年幫助 Bitcoin 擴展到新的高度。</p>
+  </li>
+</ul>
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>更正關於 Segwit2x 和 btc1 的錯誤資訊</strong>
+          was published on
+          <time class="dt-published" datetime="2017-08-18T00:00:00+00:00">
+            August 18, 2017</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

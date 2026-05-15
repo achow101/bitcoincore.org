@@ -1,0 +1,433 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/meetings/2018-07-05-meeting.md' -->
+<!-- name: '2018-07-05-meeting' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 2018-07-05 IRC 會議摘要</title>
+<meta name="description" content="2018-07-05 IRC 會議摘要">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/meetings/2018/07/05/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="2018-07-05 IRC 會議摘要">
+<meta name="twitter:description" content="2018-07-05 IRC 會議摘要">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018-07-05 IRC 會議摘要">
+<meta property="og:description" content="2018-07-05 IRC 會議摘要">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2018/07/05/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2018/07/05/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/meetings/2018/07/05/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2018/07/05/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/meetings/2018/07/05/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>2018-07-05 IRC 會議摘要</h1>
+    <div class="article-wrap">
+      <section id="table-of-contents" class="toc">
+  <header>
+    
+    <h3 class="toc-header"><i class="fa fa-book"></i> 概覽</h3>
+  </header>
+<div class="toc-drawer">
+<ul id="markdown-toc">
+  <li><a href="#高優先級審查" id="markdown-toc-高優先級審查">高優先級審查</a></li>
+  <li><a href="#交替會議時間" id="markdown-toc-交替會議時間">交替會議時間</a></li>
+  <li><a href="#降低預設最低中繼費用" id="markdown-toc-降低預設最低中繼費用">[降低預設]最低中繼費用</a></li>
+  <li><a href="#幽默" id="markdown-toc-幽默">幽默</a></li>
+  <li><a href="#參與者" id="markdown-toc-參與者">參與者</a></li>
+  <li><a href="#免責聲明" id="markdown-toc-免責聲明">免責聲明</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<ul>
+  <li>在 <a href="https://botbot.me/freenode/bitcoin-core-dev/msg/101804501/">BotBot.me</a> 或 <a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.00.log.html">MeetBot (第 1 部分)</a> 和 <a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.22.log.html">MeetBot (第 2 部分)</a> 上查看本週的日誌</li>
+  <li>MeetBot 的會議記錄<a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.00.html">第 1 部分</a>和<a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.22.html">第 2 部分</a></li>
+</ul>
+
+<p><em>本週 MeetBot 記錄和日誌分為兩部分，因為最初的會議主持人不得不在會議中途離開。</em></p>
+
+<hr />
+
+<p>本週會議討論的主題包括專案成員希望審查者在未來一週重點關注的拉取請求（特別是鑒於即將到來的 Bitcoin Core 0.17 功能凍結）、交替每週會議的時間，以及降低預設最低中繼費用。</p>
+
+<h2 id="高優先級審查">高優先級審查</h2>
+
+<p><strong>背景：</strong> 每次會議，Bitcoin Core 開發人員都會討論會議參與者認為在未來一週最需要審查的拉取請求（PR）。其中一些 PR 與貢獻者特別希望在下一個版本中看到的程式碼相關；其他 PR 則是阻礙進一步工作或需要大量維護（重新基底）以保持待處理狀態的 PR。鼓勵任何有能力的審查者訪問專案的<a href="https://github.com/bitcoin/bitcoin/projects/8">當前高優先級 PR</a> 列表。</p>
+
+<p><strong>討論（<a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.00.log.html#l-9">日誌</a>）：</strong> Wladimir van der Laan 開始討論時說，「看起來只剩下一件事：<a href="https://github.com/bitcoin/bitcoin/issues/12196">#12196</a>」，它新增了一個 <code class="language-plaintext highlighter-rouge">scantxoutset</code> RPC 方法。然後他補充說，「提醒 <a href="https://github.com/bitcoin/bitcoin/issues/12624">0.17 功能凍結</a>是 2018-07-16，大約一週後。」在該日期之後，不鼓勵貢獻者為即將發布的 0.17 版本提議包含新功能的 PR，以便每個人都可以專注於在發布前尋找和消除任何錯誤或其他不當行為。</p>
+
+<p>隨著該截止日期的臨近，會議參與者建議將以下 PR 新增到高優先級列表：</p>
+
+<ul>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/13547">#13547</a>：</strong> 使 <code class="language-plaintext highlighter-rouge">signrawtransaction</code> 在需要但缺少金額時給出錯誤。由 AJ Towns 建議，Pieter Wuille 支援。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/12458">#12458</a>：</strong> 強制為 <code class="language-plaintext highlighter-rouge">signrawtransaction</code> prevtxs 提供金額。由 Towns 建議，Wuille 支援。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/13072">#13072</a>：</strong> 更新 <code class="language-plaintext highlighter-rouge">createmultisig</code> RPC 以支援 segwit。由 Towns 建議，Wuille 支援。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/11658">#11658</a>：</strong> 在 IBD 期間進行修剪時，額外修剪 10% 以避免不久後再次修剪。由 Sjors Provoost 建議。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/13557">#13557</a>：</strong> <a href="https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki">BIP174</a> PSBT 序列化和 RPC。由 Van der Laan、Wuille、Andrew Chow 和 Gregory Maxwell 請求或支援。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/13298">#13298</a>：</strong> Net：<em>每個網路群組</em>的隨機延遲以混淆交易時間。由 Gleb Naumenko 建議，Maxwell 明確支援，Wuille 可能支援。</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/bitcoin/bitcoin/issues/13414">#13414</a>：</strong> 在 github-merge.py 中支援 Gitlab API。由 r-f 請求，但 Van der Laan 提到可能與 Bitcoin Core 0.17 不相關。</p>
+  </li>
+</ul>
+
+<p><strong>結論：</strong> 除了最後一個 #13414 之外，上述所有 PR 都被新增到高優先級列表。</p>
+
+<h2 id="交替會議時間">交替會議時間</h2>
+
+<p><strong>背景：</strong> 每週的 Bitcoin Core 會議在每週的同一時間舉行，星期四 19:00 UTC。由 AJ Towns 轉換為當地時間（使用北半球夏令時間），這對應於當地時間：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>UTC</th>
+      <th>NYC</th>
+      <th>LAX</th>
+      <th>Sydney</th>
+      <th>Tokyo</th>
+      <th>Delhi</th>
+      <th>Paris</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19:00</td>
+      <td>15:00</td>
+      <td>12:00</td>
+      <td>05:00</td>
+      <td>04:00</td>
+      <td>00:30</td>
+      <td>21:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>對於位於大洋洲和東亞的 Bitcoin Core 貢獻者來說，這些時間特別不方便。</p>
+
+<p><strong>討論（<a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.00.log.html#l-70">日誌</a>）：</strong> Sjors Provoost 請求該主題並以一個建議介紹它，「我的建議是一些簡單的事情，例如每週交替 12 小時。」</p>
+
+<p>一些會議參與者對該時間或交替會議時間導致的混亂表示擔憂，儘管 Wladimir van der Laan 指出，「問題是支援[不同]時間的人現在可能不在這裡，[所以]這是不公平的。」</p>
+
+<p>Towns 建議「8 小時的三階段循環應該使每個人都能參加 3 次會議中的 2 次 :-/」。會議結束後，Towns 將提供此類潛在時間表的以下地圖：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>UTC</th>
+      <th>NYC</th>
+      <th>LAX</th>
+      <th>Sydney</th>
+      <th>Tokyo</th>
+      <th>Delhi</th>
+      <th>Paris</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>03:00</td>
+      <td>23:00</td>
+      <td>20:00</td>
+      <td>13:00</td>
+      <td>12:00</td>
+      <td>08:30</td>
+      <td>05:00</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td>07:00</td>
+      <td>04:00</td>
+      <td>21:00</td>
+      <td>20:00</td>
+      <td>16:30</td>
+      <td>13:00</td>
+    </tr>
+    <tr>
+      <td>19:00</td>
+      <td>15:00</td>
+      <td>12:00</td>
+      <td>05:00</td>
+      <td>04:00</td>
+      <td>00:30</td>
+      <td>21:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>結論：</strong> 最終建議有人建立一個民意調查以幫助找到哪些會議時間對不同貢獻者是可接受的，Cory Fields 同意管理該民意調查。</p>
+
+<h2 id="降低預設最低中繼費用">[降低預設]最低中繼費用</h2>
+
+<p><strong>背景：</strong> Bitcoin Core 不會接受交易進入其記憶池（mempool），除非它們每虛擬千位元組（vKB）支付至少 0.00001000 BTC 的費用，有時寫為每位元組 1 聰（1 sat/B）。這個最低費用水準是幾年前設定的，當時每比特幣的價格（以美元計）約為現在的 1/10，因此它可能太高了——特別是因為節點最近很少在其記憶池中看到超過幾個區塊價值的交易。</p>
+
+<p>Bitcoin Core 還有一個單獨的最低增量中繼費用設定，有助於防止濫用手續費替換機制，但它與最低中繼費用相互作用。</p>
+
+<p><strong>討論（<a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2018/bitcoin-core-dev.2018-07-05-19.22.log.html#l-24">日誌</a>）：</strong> 引用了 <a href="https://twitter.com/orionwl/status/1014829318986436608">Twitter 上的討論</a>，建議應降低或理想情況下消除最低中繼費用。Gregory Maxwell 說，「我們的基礎設施設定為有最低費用。隨著費用趨近於零，每美元的中繼垃圾郵件數量趨向於無窮大。」</p>
+
+<p>Pieter Wuille 指出，「最低中繼費用的影響有限，因為如果交易速率因[低費用]而上升，動態費率就會啟動。」這會將費率提高到新接收的交易只有在支付與目前記憶池中最便宜交易競爭的費率時才被接受的水準。</p>
+
+<p>然而，Wuille 提到相關的增量中繼費用必須設定為合理的數量，以防止節點頻寬被濫用。</p>
+
+<p>IRC 使用者 Booyah 提到，「有一些錢包，如 Mycelium，有時會計算錯誤，當準備 1 sat/B 交易時，最終得到 0.97.. sat/B 的實際交易，目前無法廣播。」AJ Towns 確認 Xapo 有類似的錯誤，並描述了發生的原因：「簽名比[錢包]估計的稍大，[所以] 1 sat/B 目標最終為 0.9 多 sat/B 並且不會傳播。」</p>
+
+<p>會議參與者一致認為沒有什麼可以修復的。正如 Luke Dashjr 所說，「如果[最低中繼費用]是 0.5 sat/B，他們最終會[支付] 0.49。」</p>
+
+<p>Dashjr 建議開發人員不要進行任何更改，而是讓使用者在他們之間開展活動以鼓勵更改該值。但 Wuille 指出，將值設定得較低與 <a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki">BIP152</a> 相關存在缺點：「不過，它降低了緊湊區塊中繼效率。節點營運者通常有動機選擇與礦工相同的值。」</p>
+
+<p>與嘗試開發一個沒有最低中繼費用的設計相關，Maxwell 說，「嘗試使事情在沒有最低中繼費用的情況下工作可能不值得努力。有一堆愚蠢的行為，擁有一個低但非零的最低值可以避免。」</p>
+
+<p><strong>結論：</strong> Maxwell 說，「我會 PR 一些關於將其減半的東西。」</p>
+
+<h2 id="幽默">幽默</h2>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&lt;gmaxwell&gt; probably rather than discussing this here
+           someone should go make some proposals (including
+           times in common timezones).
+&lt;cfields&gt; those annoying doodle availability polls handle
+          this really well.
+&lt;sipa&gt; cfields just volunteered? :)</code></pre></figure>
+
+<h2 id="參與者">參與者</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IRC 暱稱</th>
+      <th>姓名/匿名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>achow101</td>
+      <td><a href="https://github.com/achow101">Andrew Chow</a></td>
+    </tr>
+    <tr>
+      <td>aj</td>
+      <td><a href="https://github.com/ajtowns">Anthony Towns</a></td>
+    </tr>
+    <tr>
+      <td>booyah</td>
+      <td>booyah</td>
+    </tr>
+    <tr>
+      <td>cfields</td>
+      <td><a href="https://github.com/theuni">Cory Fields</a></td>
+    </tr>
+    <tr>
+      <td>clarkmoody</td>
+      <td><a href="https://github.com/clarkmoody">Clark Moody</a></td>
+    </tr>
+    <tr>
+      <td>gmaxwell</td>
+      <td><a href="https://github.com/gmaxwell">Gregory Maxwell</a></td>
+    </tr>
+    <tr>
+      <td>luke-jr</td>
+      <td><a href="https://github.com/luke-jr">Luke Dashjr</a></td>
+    </tr>
+    <tr>
+      <td>nmnkgl</td>
+      <td><a href="https://github.com/naumenkogs">Gleb Naumenko</a></td>
+    </tr>
+    <tr>
+      <td>phantomcircuit</td>
+      <td><a href="https://github.com/pstratem">Patrick Strateman</a></td>
+    </tr>
+    <tr>
+      <td>promag</td>
+      <td><a href="https://github.com/promag">Joao Barbosa</a></td>
+    </tr>
+    <tr>
+      <td>provoostenator</td>
+      <td><a href="https://github.com/sjors">Sjors Provoost</a></td>
+    </tr>
+    <tr>
+      <td>Randolf</td>
+      <td><a href="https://github.com/randolf">Randolf Richardson</a></td>
+    </tr>
+    <tr>
+      <td>r-f</td>
+      <td><a href="https://github.com/rfree-d">r-f</a></td>
+    </tr>
+    <tr>
+      <td>sipa</td>
+      <td><a href="https://github.com/sipa">Pieter Wuille</a></td>
+    </tr>
+    <tr>
+      <td>Varunram</td>
+      <td><a href="https://github.com/Varunram">Varunram Ganesh</a></td>
+    </tr>
+    <tr>
+      <td>wumpus</td>
+      <td><a href="https://github.com/laanwj">Wladimir van der Laan</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="免責聲明">免責聲明</h2>
+
+<p>本摘要在編寫時未徵求討論參與者的意見，因此任何錯誤都是摘要作者的過失，而非討論參與者的過失。特別是，從討論中摘錄的引文在大小寫、標點符號和拼寫方面進行了修改，以產生一致的句子。括號中的詞語和片段以及背景敘述和說明由本摘要的作者新增，可能無意中改變了某些句子的含義。如果您認為任何引文被斷章取義，請<a href="https://github.com/bitcoin-core/bitcoincore.org/issues/new">開啟 issue</a>，我們將更正錯誤。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

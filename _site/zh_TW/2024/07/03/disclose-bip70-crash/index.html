@@ -1,0 +1,224 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2024-07-03-disclose-bip70-crash.md' -->
+<!-- name: 'blog-disclose-bip70-crash' -->
+<!-- version: 2 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰</title>
+<meta name="description" content="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2024/07/03/disclose-bip70-crash/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">
+<meta name="twitter:description" content="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">
+<meta property="og:description" content="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2024/07/03/disclose-bip70-crash/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2024/07/03/disclose-bip70-crash/" />
+<link rel="alternate" hreflang="ja" href="https://btc-zhtw-review.achow101.com/ja/2024/07/03/disclose-bip70-crash/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2024/07/03/disclose-bip70-crash/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2024/07/03/disclose-bip70-crash/">English</option>
+                        <option value="/ja/2024/07/03/disclose-bip70-crash/">日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2024/07/03/disclose-bip70-crash/" rel="bookmark" title="CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰">CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <p>Bitcoin-Qt 在開啟 <a href="https://github.com/bitcoin/bips/blob/master/bip-0072.mediawiki">BIP72</a> URI 時可能會崩潰。</p>
+
+<p>此問題被認為是<strong>中等</strong>嚴重性。</p>
+
+<h2 id="細節">細節</h2>
+
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0072.mediawiki">BIP72</a> 使用 <code class="language-plaintext highlighter-rouge">r</code> 參數擴展了 BIP21 URI 方案，以從中獲取付款請求。攻擊者可以簡單地將 <code class="language-plaintext highlighter-rouge">r</code> 參數中包含的 URL 指向一個非常大的檔案，Bitcoin-Qt 會嘗試為其分配足夠的記憶體並崩潰。</p>
+
+<p>受害者可能會被誘騙開啟惡意付款請求。大型下載將在背景中進行，在 GUI 中幾乎沒有輸出，直到應用程式記憶體不足。</p>
+
+<h2 id="歸屬">歸屬</h2>
+
+<p>感謝 Michael Ford (Fanquake) 負責任地披露問題並提供 PoC。</p>
+
+<h2 id="時間表">時間表</h2>
+
+<ul>
+  <li>2019-08-12 Michael Ford 向 Cory Fields 和 Wladimir Van Der Laan 報告該錯誤</li>
+  <li>2019-10-16 Michael Ford 開啟 PR <a href="https://github.com/bitcoin/bitcoin/pull/17165">#17165</a> 以完全移除 BIP70 支援</li>
+  <li>2019-10-26 Michael 的 PR 被合併到 Bitcoin Core</li>
+  <li>2020-06-03 Bitcoin Core 版本 0.20.0 發布</li>
+  <li>2021-09-13 最後一個易受影響的 Bitcoin Core 版本（0.19.x）終止支援</li>
+  <li>2024-07-03 公開披露</li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>CVE-2024-52918 - 使用惡意 BIP72 URI 導致崩潰</strong>
+          was published on
+          <time class="dt-published" datetime="2024-07-03T00:00:00+00:00">
+            July 03, 2024</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

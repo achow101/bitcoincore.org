@@ -1,0 +1,392 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/meetings/2017-04-27-meeting.md' -->
+<!-- name: '2017-04-27-meeting' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: IRC meeting summary for 2017-04-27</title>
+<meta name="description" content="IRC meeting summary for 2017-04-27">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/meetings/2017/04/27/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="IRC meeting summary for 2017-04-27">
+<meta name="twitter:description" content="IRC meeting summary for 2017-04-27">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IRC meeting summary for 2017-04-27">
+<meta property="og:description" content="IRC meeting summary for 2017-04-27">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2017/04/27/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2017/04/27/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/meetings/2017/04/27/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/meetings/2017/04/27/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/meetings/2017/04/27/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>IRC meeting summary for 2017-04-27</h1>
+    <div class="article-wrap">
+      <section id="table-of-contents" class="toc">
+  <header>
+    
+    <h3 class="toc-header"><i class="fa fa-book"></i> 概覽</h3>
+  </header>
+<div class="toc-drawer">
+<ul id="markdown-toc">
+  <li><a href="#註記--短議題" id="markdown-toc-註記--短議題">註記 / 短議題</a></li>
+  <li><a href="#主要議題" id="markdown-toc-主要議題">主要議題</a></li>
+  <li><a href="#hd-錢包自動恢復" id="markdown-toc-hd-錢包自動恢復">HD 錢包自動恢復</a>    <ul>
+      <li><a href="#背景" id="markdown-toc-背景">背景</a></li>
+      <li><a href="#會議意見" id="markdown-toc-會議意見">會議意見</a></li>
+      <li><a href="#會議結論" id="markdown-toc-會議結論">會議結論</a></li>
+    </ul>
+  </li>
+  <li><a href="#node_network_limited" id="markdown-toc-node_network_limited">NODE_NETWORK_LIMITED</a>    <ul>
+      <li><a href="#背景-1" id="markdown-toc-背景-1">背景</a></li>
+      <li><a href="#會議意見-1" id="markdown-toc-會議意見-1">會議意見</a></li>
+      <li><a href="#會議結論-1" id="markdown-toc-會議結論-1">會議結論</a></li>
+    </ul>
+  </li>
+  <li><a href="#bitcoind-過期" id="markdown-toc-bitcoind-過期">bitcoind 過期</a>    <ul>
+      <li><a href="#背景-2" id="markdown-toc-背景-2">背景</a></li>
+      <li><a href="#會議意見-2" id="markdown-toc-會議意見-2">會議意見</a></li>
+      <li><a href="#會議結論-2" id="markdown-toc-會議結論-2">會議結論</a></li>
+    </ul>
+  </li>
+  <li><a href="#高優先級審查" id="markdown-toc-高優先級審查">高優先級審查</a></li>
+  <li><a href="#幽默時刻" id="markdown-toc-幽默時刻">幽默時刻</a></li>
+  <li><a href="#參與者" id="markdown-toc-參與者">參與者</a></li>
+  <li><a href="#免責聲明" id="markdown-toc-免責聲明">免責聲明</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<ul>
+  <li><a href="https://botbot.me/freenode/bitcoin-core-dev/2017-04-27/?msg=84825928&amp;page=2">本週會議記錄</a></li>
+  <li><a href="http://www.erisian.com.au/meetbot/bitcoin-core-dev/2017/bitcoin-core-dev.2017-04-27-19.02.html">Meeting minutes by meetbot</a></li>
+</ul>
+
+<hr />
+
+<h2 id="註記--短議題">註記 / 短議題</h2>
+
+<ul>
+  <li>BlueMatt 有一個<a href="https://github.com/bitcoin/bitcoin/pull/10279">PR</a>準備好了,這是邁向 libconsensus 的另一步。它將 CChainState 類別加入到 validation.cpp,它將持有像 mapBlockIndex chainActive 等東西</li>
+</ul>
+
+<h2 id="主要議題">主要議題</h2>
+
+<ul>
+  <li>HD 錢包自動恢復</li>
+  <li>NODE_NETWORK_LIMITED</li>
+  <li>bitcoind 過期</li>
+</ul>
+
+<h2 id="hd-錢包自動恢復">HD 錢包自動恢復</h2>
+
+<h3 id="背景">背景</h3>
+
+<p>Bitcoin Core 自 0.13 版以來擁有階層式確定性錢包（HD wallet/<a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP32</a>）。HD 錢包是一個系統，它從一個稱為「種子」的單一起點派生所有金鑰。這允許使用者只需備份一次錢包，所有未來生成的金鑰都可以從種子重新生成。</p>
+
+<p>為了加快審查和部署，Bitcoin Core 中 HD 錢包的第一個版本被做得很簡單，沒有太多花俏的功能。現在正在向錢包加入新功能，例如這個 <a href="https://github.com/bitcoin/bitcoin/pull/10240">HD 錢包自動恢復</a>，它確保在與節點同步時始終檢查金鑰池，並且它搜尋的未使用金鑰數量足夠大。</p>
+
+<h3 id="會議意見">會議意見</h3>
+
+<p><a href="https://github.com/bitcoin/bitcoin/pull/10240">PR</a> 的作者 Jonasschnelli 有幾個問題需要討論。他想知道我們應該嘗試始終恢復資金，還是檢查錢包的最佳已見區塊並與節點的最新區塊進行比較，然後才恢復。他認為我們應該只在最佳已見區塊落後時恢復，因為加密錢包可能需要解鎖以生成新金鑰，並且出於效能原因。Achow101 認為如果需要生成更多金鑰，可以在 GUI 彈出時提示使用者。然而，它也應該在命令列介面中工作，這樣解決起來更難。BlueMatt 建議在金鑰池足夠小時停止更新最佳已見區塊，並在錢包解鎖且金鑰池擴展時從該高度重新掃描。Sipa 注意到修剪節點也需要停止修剪。</p>
+
+<p>另一個問題是金鑰池中的間隙限制應該是多少。目前這是 100，但這似乎太低了。目前的瓶頸是派生時間，這是 Berkeley DB 刷新的問題。修復 Berkeley DB 問題將導致巨大的改進，並允許將金鑰池提高到 1000 或 10000 之類的東西。</p>
+
+<h3 id="會議結論">會議結論</h3>
+
+<ul>
+  <li>始終掃描金鑰池並檢查金鑰池是否足夠大</li>
+  <li>將金鑰池和間隙限制擴展到 500+</li>
+  <li>對於加密錢包：暫停錢包的同步，直到它解鎖</li>
+  <li>對於加密的修剪節點：也暫停完整節點</li>
+</ul>
+
+<h2 id="node_network_limited">NODE_NETWORK_LIMITED</h2>
+
+<h3 id="背景-1">背景</h3>
+
+<p>目前修剪節點不會宣告自己擁有任何區塊，因此它們不向其他對等節點提供任何區塊。隨著區塊鏈大小的持續增長，修剪節點的數量在未來可能會增加。</p>
+
+<p>非修剪的完整節點通過 <code class="language-plaintext highlighter-rouge">NODE_NETWORK</code> 宣告自己，Jonasschnelli 建議製作一個訊息來宣告轉發並能夠提供最後 144 個區塊（1 天的區塊）的修剪節點，即 <code class="language-plaintext highlighter-rouge">NODE_NETWORK_LIMITED</code>。</p>
+
+<h3 id="會議意見-1">會議意見</h3>
+
+<p>先前關於此主題的討論得出結論，使用兩個服務位元，用於 144 個區塊和約 1000 個區塊。</p>
+
+<p>唯一需要討論的是我們需要將截止設置得多高，因為由於重組/邊界，它應該至少高幾個區塊。Gmaxwell 建議使用現有的修剪最小值 288 個區塊。</p>
+
+<p>Jonasschnelli 認為我們應該允許目前設定 <code class="language-plaintext highlighter-rouge">prune=550</code>（550MB，這是最小值）的修剪對等節點發出轉發信號和圍繞最新區塊的有限數量的區塊（10），因為這將通過不必提供歷史區塊來降低頻寬要求。Gmaxwell 注意到還有其他限制頻寬的方法，我們沒有信號空間來發送每種區塊轉發的變體。還有過超過 10 個區塊深度的重組（如 <a href="https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki">BIP50</a>），所以如果你所有的對等節點只提供 10 個區塊，這會造成許多問題。</p>
+
+<h3 id="會議結論-1">會議結論</h3>
+
+<ul>
+  <li>Jonasschnelli 將開始為兩個位元 NODE_NETWORK_LIMITED 編寫草案規範</li>
+</ul>
+
+<h2 id="bitcoind-過期">bitcoind 過期</h2>
+
+<h3 id="背景-2">背景</h3>
+
+<p>Luke-jr <a href="https://github.com/bitcoin/bitcoin/pull/10282">建議</a>讓 bitcoind 和 bitcoin-qt 在 7-8 年沒有更新後過期。假設在 7 年內軟體將變得過時，因為軟分叉和可能的硬分叉將使其不安全，以及在此期間的漏洞利用。</p>
+
+<p>它還會提供某種確定性，舊節點將在截止日期前結束，使任何硬分叉變成軟分叉，前提是它在 8 年前計劃。</p>
+
+<h3 id="會議意見-2">會議意見</h3>
+
+<p>Luke-jr 澄清它允許明確覆蓋，所以如果人們願意，他們可以在過期日期之後使用軟體。</p>
+
+<p>Petertodd 認為任何足夠短以真正有用的時間範圍可能都足夠短以引發政治風險。</p>
+
+<p>BlueMatt 和 Wumpus 認為讓節點拒絕啟動並顯示錯誤訊息提及覆蓋旗標會更合理，儘管在那個時間尺度上沒有太大區別。然而，它會更簡單地實作，也不太容易出錯。</p>
+
+<h3 id="會議結論-2">會議結論</h3>
+
+<ul>
+  <li>會議後討論繼續，但沒有達成共識</li>
+</ul>
+
+<h2 id="高優先級審查">高優先級審查</h2>
+
+<ul>
+  <li>BlueMatt 建議為無法參加會議的 Morcos 加入 <a href="https://github.com/bitcoin/bitcoin/pull/10199">#10199</a>（更好的手續費估算）。</li>
+  <li>Sipa 喜歡將需要更多測試的 <a href="https://github.com/bitcoin/bitcoin/pull/10148">#10148</a>（使用區塊重放的非原子刷新）與 <a href="https://github.com/bitcoin/bitcoin/pull/10195">#10195</a>（將鏈狀態資料庫和快取切換到每 txout 模型）交換</li>
+  <li>CFields 希望看到不緊急但是朝向 Libevent 的長線中的第一個的 <a href="https://github.com/bitcoin/bitcoin/pull/10285">#10285</a>（重構）進入。</li>
+</ul>
+
+<h2 id="幽默時刻">幽默時刻</h2>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">wumpus           #topic libconsensus (BlueMatt)
+BlueMatt         yes, so obviously this is all based on #771
+jonasschnelli    (19 Jan 2012)
+wumpus           archeology?
+
+gmaxwell         I think in the future we'll change it to a limited set of options.
+gmaxwell         Maybe all of them named after words for big in different languages, like starbucks. :P
+sipa             gmaxwell: "For me a venti depruned node, please"
+BlueMatt         sipa: I'm sorry, I dont speak starbucks
+sipa             BlueMatt: venti is italian for 20. easy. that's obviously more than "grande" or "tall"
+BlueMatt         sipa: ehh, I'll stick with my *good* coffee, thanks
+
+wumpus           heck my nodes do nothing imporant and even I have a one-liner script that sends me a mail on crash or unexpected exit
+sipa             my node does something important, and i have a 0-line script that sends me an mail on crash (= people mail me that my website stopped updating)
+sipa hides
+BlueMatt has a feeling sipa's approach is more common</code></pre></figure>
+
+<h2 id="參與者">參與者</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IRC nick</th>
+      <th>Name/Nym</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>wumpus</td>
+      <td><a href="https://github.com/laanwj">Wladimir van der Laan</a></td>
+    </tr>
+    <tr>
+      <td>jonasschnelli</td>
+      <td><a href="https://github.com/jonasschnelli">Jonas Schnelli</a></td>
+    </tr>
+    <tr>
+      <td>sipa</td>
+      <td><a href="https://github.com/sipa">Pieter Wuille</a></td>
+    </tr>
+    <tr>
+      <td>cfields</td>
+      <td><a href="https://github.com/theuni">Cory Fields</a></td>
+    </tr>
+    <tr>
+      <td>luke-jr</td>
+      <td><a href="https://github.com/luke-jr">Luke Dashjr</a></td>
+    </tr>
+    <tr>
+      <td>kanzure</td>
+      <td><a href="https://github.com/kanzure">Bryan Bishop</a></td>
+    </tr>
+    <tr>
+      <td>gmaxwell</td>
+      <td><a href="https://github.com/gmaxwell">Gregory Maxwell</a></td>
+    </tr>
+    <tr>
+      <td>BlueMatt</td>
+      <td><a href="https://github.com/TheBlueMatt">Matt Corallo</a></td>
+    </tr>
+    <tr>
+      <td>instagibbs</td>
+      <td><a href="https://github.com/instagibbs">Gregory Sanders</a></td>
+    </tr>
+    <tr>
+      <td>jtimon</td>
+      <td><a href="https://github.com/jtimon">Jorge Timón</a></td>
+    </tr>
+    <tr>
+      <td>petertodd</td>
+      <td><a href="https://github.com/petertodd">Peter Todd</a></td>
+    </tr>
+    <tr>
+      <td>achow101</td>
+      <td><a href="https://github.com/achow101">Andrew Chow</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="免責聲明">免責聲明</h2>
+
+<p>本摘要是在沒有任何討論參與者輸入的情況下編寫的，因此任何錯誤都是摘要作者的責任，而非討論參與者。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

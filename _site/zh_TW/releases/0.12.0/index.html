@@ -1,0 +1,359 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2016-02-23-release-0.12.0.md' -->
+<!-- name: 'release-0.12.0' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 0.12.0</title>
+<meta name="description" content="Bitcoin Core 0.12.0">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/0.12.0/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 0.12.0">
+<meta name="twitter:description" content="Bitcoin Core 0.12.0">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 0.12.0">
+<meta property="og:description" content="Bitcoin Core 0.12.0">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.0/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.0/" />
+<link rel="alternate" hreflang="zh_CN" href="https://btc-zhtw-review.achow101.com/zh_CN/releases/0.12.0/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.0/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/zh_CN/releases/0.12.0/">简体中文</option>
+                        <option value="/en/releases/0.12.0/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 0.12.0</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<p>Bitcoin Core 0.12.0 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-0.12.0/">https://bitcoincore.org/bin/bitcoin-core-0.12.0/</a></p>
+
+<p>此主要版本帶來了新功能和其他改進。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<h1 id="升級和降級">升級和降級</h1>
+
+<h2 id="降級警告">降級警告</h2>
+
+<h3 id="降級到版本--0120">降級到版本 &lt; 0.12.0</h3>
+
+<p>由於 0.12.0 及更高版本將在每次新同步或重新索引時混淆 chainstate，因此 chainstate 與 0.12 之前版本的 Bitcoin Core 或其他軟體不向後相容。</p>
+
+<p>如果您想在使用 0.12.0 或更高版本進行重新索引後降級，當您首次啟動 Bitcoin Core 0.11 或更早版本時，您將需要重新索引。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h2 id="使用-libsecp256k1-進行簽名驗證">使用 libsecp256k1 進行簽名驗證</h2>
+
+<p>Bitcoin 交易中的 ECDSA 簽名現在使用 <a href="https://github.com/bitcoin/secp256k1">libsecp256k1</a> 進行驗證，而不是 OpenSSL。</p>
+
+<p>根據平台的不同，這意味著原始簽名驗證速度的顯著加速。在 x86_64 上優勢最大，驗證速度提高了五倍以上。在實際應用中，這轉化為原始重新索引和新區塊驗證時間不到以前的一半。</p>
+
+<p>Libsecp256k1 經過了非常廣泛的測試和驗證。</p>
+
+<p>此變更的副作用是 libconsensus 不再依賴 OpenSSL。</p>
+
+<h2 id="減少上傳流量">減少上傳流量</h2>
+
+<p>出站流量的主要部分是由於在初始區塊下載狀態下向其他節點提供歷史區塊。</p>
+
+<p>現在可以透過 <code class="language-plaintext highlighter-rouge">-maxuploadtarget</code> 參數減少總上傳流量。這<em>不是</em>硬限制，而是最小化出站流量的閾值。當即將達到限制時，透過不提供歷史區塊（超過一週的區塊）來削減上傳的資料。此外，當請求過濾區塊時，任何 SPV 對等節點都會被斷開連線。</p>
+
+<p>此選項可以以每天 MiB 為單位指定，預設關閉（<code class="language-plaintext highlighter-rouge">-maxuploadtarget=0</code>）。建議的最小值是每天 144 * MAX_BLOCK_SIZE（目前為 144MB）。</p>
+
+<p>白名單對等節點永遠不會被斷開連線，儘管它們的流量會計入目標計算。</p>
+
+<p>有關保持流量低的更詳細文件可以在 <a href="https://github.com/bitcoin/bitcoin/blob/v0.12.0/doc/reduce-traffic.md">/doc/reduce-traffic.md</a> 中找到。</p>
+
+<h2 id="直接標頭公告bip-130">直接標頭公告（BIP 130）</h2>
+
+<p>在相容對等節點之間，使用 <a href="https://github.com/bitcoin/bips/blob/master/bip-0130.mediawiki">BIP 130</a> 直接標頭公告。這意味著透過直接公告標頭來廣告區塊，而不僅僅是公告雜湊。在重組中，發送所有新標頭，而不僅僅是新提示。這通常可以防止在下載實際區塊之前的額外往返。</p>
+
+<p>隨著此變更，修剪節點現在能夠向相容對等節點中繼新區塊。</p>
+
+<h2 id="記憶體池限制">記憶體池限制</h2>
+
+<p>先前版本的 Bitcoin Core 透過檢查交易費用是否符合節點的最低中繼費用來限制其 mempool。mempool 的大小沒有上限，攻擊者可以發送大量支付略高於預設最低中繼費用的交易，以使相對低 RAM 的節點崩潰。先前版本的 Bitcoin Core 的臨時解決方法是提高預設最低中繼費用。</p>
+
+<p>Bitcoin Core 0.12 將對 mempool 有嚴格的最大大小。預設值為 300 MB，可以使用 <code class="language-plaintext highlighter-rouge">-maxmempool</code> 參數配置。每當交易會導致 mempool 超過其最大大小時，具有最低總費率（作為套件）的交易（連同記憶體內後代）將被驅逐，節點的有效最低中繼費率將增加以匹配此費率加上初始最低中繼費率。初始最低中繼費率設定為每 kB 1000 satoshi。</p>
+
+<p>Bitcoin Core 0.12 還引入了新的預設政策限制，限制 mempool 中允許的未確認交易鏈的長度和大小（通常將未確認鏈的長度限制為 25 個交易，總大小為 101 KB）。</p>
+
+<h2 id="選擇加入的-replace-by-fee-交易">選擇加入的 Replace-by-fee 交易</h2>
+
+<p>現在可以替換 Bitcoin Core 0.12 節點的交易記憶體池中的交易。Bitcoin Core 只允許替換其任何輸入的 <code class="language-plaintext highlighter-rouge">nSequence</code> 號設定為小於 <code class="language-plaintext highlighter-rouge">0xffffffff - 1</code> 的交易。此外，只有當替換交易支付足夠的費用時，才能接受替換交易，如 <a href="https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki">BIP 125</a> 中所述。</p>
+
+<p>可以使用新的命令列選項 <code class="language-plaintext highlighter-rouge">-mempoolreplacement=0</code> 停用交易替換。在 BIP125 下發送替換訊號的交易仍將在此配置中被允許進入 mempool，但替換將被拒絕。此選項適用於希望繼續先前版本的交易選擇行為的礦工。</p>
+
+<p>請注意，Bitcoin Core 0.12 中的錢包尚不支援建立在 BIP 125 下可替換的交易。</p>
+
+<h2 id="rpcrandom-cookie-rpc-認證">RPC：Random-cookie RPC 認證</h2>
+
+<p>當未指定 <code class="language-plaintext highlighter-rouge">-rpcpassword</code> 時，守護程式現在使用特殊的「cookie」檔案進行認證。此檔案在守護程式啟動時使用隨機內容生成，並在退出時刪除。其內容用作認證令牌。對此檔案的讀取存取控制誰可以透過 RPC 存取。預設情況下，它儲存在資料目錄中，但可以使用 <code class="language-plaintext highlighter-rouge">-rpccookiefile</code> 選項覆蓋其位置。</p>
+
+<p>這類似於 Tor 的 CookieAuthentication：請參閱 <a href="https://www.torproject.org/docs/tor-manual.html.en">https://www.torproject.org/docs/tor-manual.html.en</a></p>
+
+<p>這允許在不進行任何手動配置的情況下執行 bitcoind。</p>
+
+<h2 id="中繼op_return-輸出中的任何-pushdata-序列現在允許">中繼：OP_RETURN 輸出中的任何 pushdata 序列現在允許</h2>
+
+<p>以前，只有當 OP_RETURN 輸出具有單個 pushdata 時，才會中繼和挖掘具有有效負載的 OP_RETURN 輸出。此限制已解除，以允許在 OP_RETURN 之後使用任何資料推送和數字常數操作碼（OP_1 到 OP_16）的組合。OP_RETURN 輸出大小的限制現在應用於整個序列化的 scriptPubKey，預設為 83 位元組。（先前的 80 位元組預設值加上三個位元組開銷）</p>
+
+<h2 id="中繼和挖礦優先級交易">中繼和挖礦：優先級交易</h2>
+
+<p>Bitcoin Core 有基於幣值和年齡的啟發式「優先級」。此計算用於中繼不支付最低中繼費用的交易，並可用作為挖掘區塊排序交易的替代方法。</p>
+
+<p>在 Bitcoin Core 0.12 中，當達到 mempool 限制時，更高的最低中繼費用生效以限制記憶體使用。即使根據優先級啟發式排名很高，不符合此更高有效最低中繼費用的交易也不會被中繼或挖掘。</p>
+
+<p>基於優先級的交易挖掘現在預設也已停用。要重新啟用它，只需設定 <code class="language-plaintext highlighter-rouge">-blockprioritysize=&lt;n&gt;</code>，其中 n 是為這些交易保留的區塊大小（以位元組為單位）。舊的預設值為 50k，因此要保留大致相同的政策，您需要設定 <code class="language-plaintext highlighter-rouge">-blockprioritysize=50000</code>。</p>
+
+<h2 id="自動使用-tor-隱藏服務">自動使用 Tor 隱藏服務</h2>
+
+<p>從 Tor 版本 0.2.7.1 開始，透過 Tor 的控制套接字 API，可以程式化地建立和銷毀「臨時」隱藏服務。Bitcoin Core 已更新以使用此功能。</p>
+
+<p>這意味著如果 Tor 正在執行（並且可用適當的授權），Bitcoin Core 會自動建立一個隱藏服務來監聽，無需手動配置。如果可以成功開啟控制套接字，Bitcoin Core 也將自動使用 Tor 連線到其他 .onion 節點。</p>
+
+<p>如果 Bitcoin Core 正在監聽，並且可以與 Tor 建立連線，則此新功能預設啟用。可以使用 <code class="language-plaintext highlighter-rouge">-listenonion</code>、<code class="language-plaintext highlighter-rouge">-torcontrol</code> 和 <code class="language-plaintext highlighter-rouge">-torpassword</code> 設定進行配置。要顯示詳細除錯資訊，請傳遞 <code class="language-plaintext highlighter-rouge">-debug=tor</code>。</p>
+
+<h2 id="透過-zmq-的通知">透過 ZMQ 的通知</h2>
+
+<p>Bitcoind 現在可以（可選）透過基於 ZMQ 的 PUB 套接字異步通知客戶端新交易和區塊的到達。此功能需要安裝 ZMQ C API 程式庫 4.x，並透過命令列或配置檔配置其使用。請參閱 <a href="https://github.com/bitcoin/bitcoin/blob/v0.12.0/doc/zmq.md">docs/zmq.md</a> 以獲取操作詳細資訊。</p>
+
+<h2 id="錢包交易費用">錢包：交易費用</h2>
+
+<p>對錢包如何計算交易費用進行了各種改進。</p>
+
+<p>使用者可以透過設定 <code class="language-plaintext highlighter-rouge">-paytxfee=&lt;n&gt;</code>（或在執行時執行 <code class="language-plaintext highlighter-rouge">settxfee &lt;n&gt;</code> rpc）來決定支付預定義的費率。<code class="language-plaintext highlighter-rouge">n=0</code> 的值表示 Bitcoin Core 使用浮動費用。預設情況下，Bitcoin Core 將使用浮動費用。</p>
+
+<p>基於過去的交易資料，浮動費用近似從現在起進入第 <code class="language-plaintext highlighter-rouge">m</code> 個區塊所需的費用。這可以使用 <code class="language-plaintext highlighter-rouge">-txconfirmtarget=&lt;m&gt;</code>（預設值：<code class="language-plaintext highlighter-rouge">2</code>）配置。</p>
+
+<p>有時，無法給出良好的估算，或根本無法給出估算。因此，可以使用 <code class="language-plaintext highlighter-rouge">-fallbackfee=&lt;f&gt;</code>（預設值：<code class="language-plaintext highlighter-rouge">0.0002</code> BTC/kB）設定回退值。</p>
+
+<p>在任何時候，Bitcoin Core 都會將費用限制在 <code class="language-plaintext highlighter-rouge">-maxtxfee=&lt;x&gt;</code>（預設值：0.10）BTC。此外，Bitcoin Core 永遠不會建立支付少於當前最低中繼費用的交易。最後，使用者可以使用 <code class="language-plaintext highlighter-rouge">-mintxfee=&lt;i&gt;</code> 為所有交易設定最低費率，預設為每 kB 1000 satoshi。</p>
+
+<h2 id="錢包負確認和衝突檢測">錢包：負確認和衝突檢測</h2>
+
+<p>錢包現在將報告負確認數，指示衝突在區塊鏈中的深度。例如，如果交易 A 有 5 次確認並花費與錢包交易 B 相同的輸入，B 將被報告為具有 -5 次確認。如果另一個錢包交易 C 花費來自 B 的輸出，它也將被報告為具有 -5 次確認。</p>
+
+<p>與早期版本不同，未確認但不衝突的交易永遠不會獲得負確認計數。除非它們來自我們自己（找零）並被接受到我們的本地 mempool 中，否則它們不會被視為可花費。<code class="language-plaintext highlighter-rouge">listtransactions</code> RPC 輸出中的新「trusted」欄位指示未確認交易的輸出是否被視為可花費。</p>
+
+<h2 id="錢包移除-merkle-分支">錢包：移除 Merkle 分支</h2>
+
+<p>以前，每個錢包交易都儲存一個 Merkle 分支來證明其在區塊中的存在。這只是用於昂貴的健全性檢查。從 0.12 開始，不再儲存這些。當將 0.12 錢包載入到較舊版本時，它將自動重新掃描以避免檢查失敗。</p>
+
+<h2 id="錢包修剪">錢包：修剪</h2>
+
+<p>從 0.12 開始，可以在修剪模式下使用錢包功能。這可以將磁碟使用量從目前的約 60 GB 減少到約 2 GB。</p>
+
+<p>然而，重新掃描以及 RPC <code class="language-plaintext highlighter-rouge">importwallet</code>、<code class="language-plaintext highlighter-rouge">importaddress</code>、<code class="language-plaintext highlighter-rouge">importprivkey</code> 被停用。</p>
+
+<p>要啟用區塊修剪，請在命令列或 <code class="language-plaintext highlighter-rouge">bitcoin.conf</code> 中設定 <code class="language-plaintext highlighter-rouge">prune=&lt;N&gt;</code>，其中 <code class="language-plaintext highlighter-rouge">N</code> 是為原始區塊和還原資料分配的 MiB 數。值 0 停用修剪。0 以上的最小值為 550。</p>
+
+<h2 id="node_bloom-服務位元"><code class="language-plaintext highlighter-rouge">NODE_BLOOM</code> 服務位元</h2>
+
+<p>已將對 <code class="language-plaintext highlighter-rouge">NODE_BLOOM</code> 服務位元的支援新增到 P2P 協定程式碼中，如 <a href="https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki">BIP 111</a> 中所述。</p>
+
+<p>BIP 111 定義了一個服務位元，允許對等節點明確廣告它們支援 bloom 過濾器（如 SPV 客戶端使用的）。它還提升協定版本，以允許對等節點識別儘管缺少新服務位元但仍允許連線的 bloom 過濾的舊節點。</p>
+
+<h2 id="選項解析行為">選項解析行為</h2>
+
+<p>命令列選項現在嚴格按照指定的順序解析。過去的情況是 <code class="language-plaintext highlighter-rouge">-X -noX</code> 最終不直觀地設定 X，因為 <code class="language-plaintext highlighter-rouge">-X</code> 優先於 <code class="language-plaintext highlighter-rouge">-noX</code>。這不再是這種情況。與其他軟體一樣，選項的最後指定值將保留。</p>
+
+<h2 id="rpc低階-api-變更">RPC：低階 API 變更</h2>
+
+<ul>
+  <li>
+    <p>可以以字串形式提供貨幣金額。這意味著例如 sendtoaddress 的參數可以是「0.0001」而不是 0.0001。如果 JSON 程式庫堅持對數字使用有損浮點類型，這可能是一個優勢，這對於貨幣金額來說是危險的。</p>
+  </li>
+  <li>
+    <p>每個 scriptSig 的 <code class="language-plaintext highlighter-rouge">asm</code> 屬性現在包含每個提供有效定義雜湊類型的簽名的解碼簽名雜湊類型。</p>
+  </li>
+  <li>
+    <p>OP_NOP2 已被 <a href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki">BIP 65</a> 重新命名為 OP_CHECKLOCKTIMEVERIFY</p>
+  </li>
+</ul>
+
+<h2 id="rpcssl-支援移除">RPC：SSL 支援移除</h2>
+
+<p>先前透過選項 <code class="language-plaintext highlighter-rouge">rpcssl</code> 啟用的 RPC 的 SSL 支援已從客戶端和伺服器中移除。這是為了準備完全移除守護程式對 OpenSSL 的依賴。</p>
+
+<p>嘗試使用 <code class="language-plaintext highlighter-rouge">rpcssl</code> 將導致錯誤：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: SSL mode for RPC (-rpcssl) is no longer supported.
+</code></pre></div></div>
+
+<p>如果您是少數依賴此功能的人之一，靈活的遷移路徑是使用 <code class="language-plaintext highlighter-rouge">stunnel</code>。這是一個可以在 SSL 內隧道任意 TCP 連線的實用程式。</p>
+
+<h2 id="挖礦程式碼變更">挖礦程式碼變更</h2>
+
+<p>0.12 中的挖礦程式碼已最佳化，速度明顯更快且使用更少的記憶體。作為這些變更的一部分，共識關鍵計算在交易被接受到 mempool 時快取，挖礦程式碼現在依賴 mempool 的一致性來組裝區塊。然而，所有區塊在組裝後仍然進行有效性測試。</p>
+
+<h2 id="其他-p2p-變更">其他 P2P 變更</h2>
+
+<p>被禁止對等節點的清單現在儲存在磁碟上而不是記憶體中。重新啟動 bitcoind 將不再清除被禁止對等節點的清單；相反，可以使用新的 RPC 呼叫（<code class="language-plaintext highlighter-rouge">clearbanned</code>）手動清除清單。新的 <code class="language-plaintext highlighter-rouge">setban</code> RPC 呼叫也可用於手動禁止或解禁對等節點。</p>
+
+<h1 id="0120-變更日誌">0.12.0 變更日誌</h1>
+
+<p>完整的變更日誌包含數百個 PR，涵蓋 RPC 和 REST、配置和命令列選項、區塊和交易處理、P2P 協定和網路程式碼、驗證、建置系統、錢包、GUI、測試和 QA 等方面。由於篇幅限制，請參閱原始版本說明以獲取完整清單。</p>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的超過 100 位貢獻者。完整清單請參閱原始版本說明。</p>
+
+<p>以及所有在 <a href="https://www.transifex.com/projects/p/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

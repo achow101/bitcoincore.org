@@ -1,0 +1,260 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2016-01-21-segwit-testnet.md' -->
+<!-- name: 'segwit-testnet' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 隔離見證測試網啟動</title>
+<meta name="description" content="隔離見證測試網啟動">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2016/01/21/launch_segwit_testnet/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="隔離見證測試網啟動">
+<meta name="twitter:description" content="隔離見證測試網啟動">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隔離見證測試網啟動">
+<meta property="og:description" content="隔離見證測試網啟動">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2016/01/21/launch_segwit_testnet/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2016/01/21/launch_segwit_testnet/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2016/01/21/launch_segwit_testnet/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2016/01/21/launch_segwit_testnet/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2016/01/21/launch_segwit_testnet/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2016/01/21/launch_segwit_testnet/" rel="bookmark" title="隔離見證測試網啟動">隔離見證測試網啟動</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <p>我們非常高興和興奮地宣布<a href="https://github.com/sipa/bitcoin/commits/segwit">隔離見證測試網</a>的發布！我們鼓勵所有開發者立即開始協助測試和整合工作。</p>
+
+<p>這代表了迄今為止最受期待和令人興奮的發展之一，是許多未來改進和創新的重要基礎。隔離見證透過將交易簽名資料安全地移至交易區塊外的特別指定「隔離見證」資料結構中，釋放了 Bitcoin 區塊鏈上的空間。</p>
+
+<p>這項重大創新使 Bitcoin 區塊鏈的使用效率大幅提升，同時為更廣泛的 Bitcoin 生態系統開啟了令人興奮的新可能性和機會，特別是在智慧合約應用和更快速的交易方面，同時也為未來更進階的功能和可能性奠定了基礎。</p>
+
+<p>這項開發始於 Bitcoin Core 開發者 Dr. Pieter Wuille 的研究工作，最初專注於解決交易可塑性問題，這是一個長期存在且廣為人知的關注點和優先事項。然而，在研究過程中以及在縮小解決方案範圍時，發現了該解決方案的其他特性，這些特性不僅允許增加區塊大小，同時還開啟了一些令人難以置信的次要好處。</p>
+
+<p>這項工作由 Dr. Pieter Wuille 發起，但也包含了許多其他人的貢獻，特別感謝 Eric Lombrozo、Johnson Lau、Alex Morcos、Nicolas Dorier、Bryan Bishop、Gregory Maxwell、Peter Todd、Cory Fields、Suhas Daftuar 和 Luke-Jr。</p>
+
+<h2 id="bitcoin-core-生態系統">Bitcoin Core 生態系統</h2>
+
+<p>提供者和其他交易所營運者將使用此版本中包含的基礎開發和創新來創造什麼，存在著廣泛的興奮和期待。到目前為止，最受歡迎的錢包和支援程式庫已表示將支援 segwit，包括 Ledger、Trezor、Electrum 和 Bitgo。此外，許多其他程式庫如 bitcoinj、bitcoinjs、pycoin 和 bitcore 的工作已經開始。</p>
+
+<p>「segnet」代幣的水龍頭可在<a href="https://segwit.greenaddress.it/faucet/">這裡</a>取得。</p>
+
+<p>第三方錢包支援的早期預覽可在以下位置取得：</p>
+
+<ul>
+  <li><a href="https://github.com/ciphrex/mSIGNA/tree/segwit">mSIGNA</a>（錢包原始碼）</li>
+  <li><a href="https://segwit.greenaddress.it/">Green Address</a>（網頁錢包）</li>
+</ul>
+
+<h2 id="如何參與">如何參與</h2>
+
+<p>請加入 irc.freenode.net 上的 <code class="language-plaintext highlighter-rouge">segwit-dev</code> IRC 頻道。</p>
+
+<p>錢包提供者應閱讀<a href="/zh_TW/segwit_wallet_dev">遷移指南</a>。</p>
+
+<h2 id="測試">測試</h2>
+
+<p>最後也是最重要的，請協助測試隔離見證測試網！</p>
+
+<p>原始碼可以在<a href="https://github.com/sipa/bitcoin/tree/segwit">這裡</a>找到，請 checkout <code class="language-plaintext highlighter-rouge">segwit</code> 分支。</p>
+
+<p>編譯完成後，在標準的 <code class="language-plaintext highlighter-rouge">bitcoind</code> 和 <code class="language-plaintext highlighter-rouge">bitcoin-cli</code> 命令列中加入 <code class="language-plaintext highlighter-rouge">-segnet</code>。</p>
+
+<h2 id="其他背景和歷史">其他背景和歷史</h2>
+
+<ul>
+  <li><a href="https://prezi.com/lyghixkrguao/segregated-witness-and-deploying-it-for-bitcoin/">Scaling Bitcoins 香港演講</a></li>
+  <li><a href="https://bitcoincore.org/zh_TW/2015/12/14/segregated-witness">擴展影片</a></li>
+  <li><a href="http://diyhpl.us/wiki/transcripts/scalingbitcoin/hong-kong/segregated-witness-and-its-impact-on-scalability/">逐字稿</a></li>
+</ul>
+
+<h2 id="技術參考">技術參考</h2>
+
+<h3 id="segwit-bip">SegWit BIP</h3>
+
+<ul>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a>：隔離見證軟分叉的概述，以及對其好處、向後相容性、共識限制和部署的討論。</li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">BIP143</a>：隔離見證交易中用於簽名驗證的新摘要演算法定義。</li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki">BIP144</a>：隔離見證交易的新訊息類型和序列化格式。</li>
+</ul>
+
+<h3 id="參考資料">參考資料</h3>
+
+<ul>
+  <li><a href="http://lists.linuxfoundation.org/pipermail/bitcoin-dev/2016-January/012248.html">隔離見證好處分析</a></li>
+  <li><a href="https://petertodd.org/2016/soft-forks-are-safer-than-hard-forks">硬分叉與軟分叉</a></li>
+  <li><a href="https://scalingbitcoin.org/hongkong2015/presentations/DAY1/1_overview_1_timon.pdf">「非爭議性」硬分叉研究的早期探索</a></li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>隔離見證測試網啟動</strong>
+          was published on
+          <time class="dt-published" datetime="2016-01-21T00:00:00+00:00">
+            January 21, 2016</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

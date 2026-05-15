@@ -1,0 +1,314 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2016-10-27-release-0.13.1.md' -->
+<!-- name: 'release-0.13.1' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 0.13.1</title>
+<meta name="description" content="Bitcoin Core 0.13.1">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/0.13.1/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 0.13.1">
+<meta name="twitter:description" content="Bitcoin Core 0.13.1">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 0.13.1">
+<meta property="og:description" content="Bitcoin Core 0.13.1">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.1/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.1/" />
+<link rel="alternate" hreflang="zh_CN" href="https://btc-zhtw-review.achow101.com/zh_CN/releases/0.13.1/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.1/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/zh_CN/releases/0.13.1/">简体中文</option>
+                        <option value="/en/releases/0.13.1/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 0.13.1</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<p>Bitcoin Core 0.13.1 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-0.13.1/">https://bitcoincore.org/bin/bitcoin-core-0.13.1/</a></p>
+
+<p>此小版本包含 segwit 軟分叉的啟動參數、各種錯誤修正和效能改善，以及更新的翻譯。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<p>如需接收安全性和更新通知，請訂閱：</p>
+
+<p><a href="https://bitcoincore.org/zh_TW/list/announcements/join/">https://bitcoincore.org/zh_TW/list/announcements/join/</a></p>
+
+<h1 id="相容性">相容性</h1>
+
+<p>從 0.13.0 開始，不再支援 Windows XP。建議使用者升級到較新版本的 Windows，或安裝支援的替代作業系統。我們沒有嘗試阻止在 Windows XP 上安裝或執行軟體，您仍然可以自行承擔風險執行，但不要期望它能正常工作：請不要向問題追蹤器回報關於 Windows XP 的問題。</p>
+
+<p>從 0.13.1 開始，不再支援 OS X 10.7。0.13.0 原本打算在 10.7+ 上運作，但 10.7.x 上的 libc++ 版本存在嚴重問題，使其無法可靠執行。0.13.1 現在需要 10.8+，並會將此訊息傳達給 10.7 使用者，而不是意外崩潰。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h2 id="segregated-witness-軟分叉">Segregated Witness 軟分叉</h2>
+
+<p>Segregated witness (segwit) 是一種軟分叉，如果啟動，將允許產生交易的軟體將交易簽名（見證）與交易中由 txid 覆蓋的部分資料分離（隔離）。這提供了幾個即時好處：</p>
+
+<ul>
+  <li>
+    <p><strong>消除不需要的交易可塑性</strong>：隔離見證允許現有和升級的軟體在不引用見證的情況下計算交易識別符（txid），見證有時可能被第三方（如礦工）或多重簽名支出中的共同簽名者更改。這解決了所有已知的不需要的交易可塑性案例，這使得編寫 Bitcoin 錢包軟體更加困難，並嚴重複雜化了 Bitcoin 智慧合約的設計。</p>
+  </li>
+  <li>
+    <p><strong>容量增加</strong>：Segwit 交易包含新欄位，這些欄位不是目前用於計算區塊大小的資料的一部分，這允許包含 segwit 交易的區塊容納比當前最大區塊大小允許的更多資料。基於目前在區塊中發現的交易的估算表明，如果所有錢包都切換到使用 segwit，網路將能夠支援大約 70% 更多的交易。</p>
+  </li>
+  <li>
+    <p><strong>基於對節點效能影響的資料加權</strong>：在 segwit 啟動後，隔離見證的每個位元組被賦予權重 1，區塊中的每個其他位元組被賦予權重 4，區塊的最大允許權重為 400 萬。以這種方式加權資料更好地將建立區塊的最有利可圖的策略與區塊驗證的長期成本對齊。</p>
+  </li>
+  <li>
+    <p><strong>簽名覆蓋價值</strong>：Segwit 中簽名生成方式的簡單改進簡化了安全簽名產生器（如硬體錢包）的設計，減少了簽名產生器需要下載的資料量，並允許簽名產生器更快地操作。</p>
+  </li>
+  <li>
+    <p><strong>Sighash 操作的線性擴展</strong>：在 2015 年，由於交易簽名雜湊的執行方式，產生了一個在現代硬體上需要大約 25 秒驗證的區塊。可以選擇加入使用 segwit 的交易現在將使用不同的簽名方法，不會遭受此問題且沒有任何不需要的副作用。</p>
+  </li>
+  <li>
+    <p><strong>提高多重簽名的安全性</strong>：Segwit 允許進階交易使用 SHA256 雜湊函數，提供約 128 位元的安全性（相當於 ECDSA 提供的最大安全位元數）。</p>
+  </li>
+  <li>
+    <p><strong>腳本版本控制</strong>：Segwit 使得未來的軟分叉可以輕鬆允許 Bitcoin 使用者在收到新交易時單獨選擇加入 Bitcoin Script 語言的幾乎任何變更。目前由 Bitcoin Core 貢獻者研究的功能包括 Schnorr 簽名和 Merklized Abstract Syntax Trees (MAST) 支援。</p>
+  </li>
+</ul>
+
+<p>Segwit 軟分叉的啟動使用 BIP9 versionbits 進行管理。Segwit 的版本位元是位元 1，節點將在 segwit 開始日期 2016 年 11 月 15 日後的第一個重新目標期間開始追蹤哪些區塊發送 segwit 支援訊號。如果 2,016 個區塊的重新目標期間（約兩週）內 95% 的區塊發送 segwit 支援訊號，軟分叉將被鎖定。再經過 2,016 個區塊後，segwit 將啟動。</p>
+
+<p>有關 segwit 的更多資訊，請參閱 <a href="https://bitcoincore.org/en/2016/01/26/segwit-benefits/">segwit FAQ</a>、<a href="https://bitcoincore.org/en/segwit_wallet_dev/">segwit wallet developers guide</a> 或 BIP <a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">141</a>、<a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki">143</a>、<a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki">144</a> 和 <a href="https://github.com/bitcoin/bips/blob/master/bip-0145.mediawiki">145</a>。如果您是礦工或礦池營運商，請參閱 <a href="https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/">versionbits FAQ</a> 以獲取有關為軟分叉發送支援訊號的資訊。</p>
+
+<h2 id="null-dummy-軟分叉">Null dummy 軟分叉</h2>
+
+<p>與 segwit 軟分叉結合的是一個額外變更，將長期存在的網路中繼政策轉變為共識規則。<code class="language-plaintext highlighter-rouge">OP_CHECKMULTISIG</code> 和 <code class="language-plaintext highlighter-rouge">OP_CHECKMULTISIGVERIFY</code> 操作碼在簽名驗證後消耗額外的堆疊元素（「dummy element」）。Dummy element 不會以任何方式檢查，可以被任何值替換而不會使腳本無效。</p>
+
+<p>由於任何值都可以用於此 dummy element，第三方可以將資料插入其他人的交易中，更改交易的 txid（稱為交易可塑性）並可能造成其他問題。</p>
+
+<p>自 Bitcoin Core 0.10.0 以來，節點預設只中繼和挖掘其 dummy element 為 null 值（0x00，也稱為 OP_0）的交易。Null dummy 軟分叉將此中繼規則轉變為共識規則，適用於非 segwit 交易和 segwit 交易，因此這種變異交易的方法從網路中永久消除。</p>
+
+<p>Null dummy 軟分叉的訊號是透過為 segwit 發送支援訊號來完成的，null dummy 軟分叉將與 segwit 同時啟動。</p>
+
+<p>有關更多資訊，請參閱 <a href="https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki">BIP147</a>。</p>
+
+<h2 id="低階-rpc-變更">低階 RPC 變更</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">importprunedfunds</code> 只接受兩個必需參數。某些版本接受可選的第三個參數，但總是被忽略。請確保永遠不要傳遞超過兩個參數。</li>
+</ul>
+
+<h2 id="linux-arm-建置">Linux ARM 建置</h2>
+
+<p>從 0.13.0 版本開始，預建構的 Linux ARM 二進位檔已新增到上傳的可執行檔集合中。以下提供每個目標 ARM 架構的其他詳細資訊。</p>
+
+<p>下載目錄或 torrent 中可以找到以下額外檔案：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bitcoin-${VERSION}-arm-linux-gnueabihf.tar.gz</code>：針對 32 位元 ARMv7-A 架構的 Linux 二進位檔。</li>
+  <li><code class="language-plaintext highlighter-rouge">bitcoin-${VERSION}-aarch64-linux-gnu.tar.gz</code>：針對 64 位元 ARMv8-A 架構的 Linux 二進位檔。</li>
+</ul>
+
+<p>ARM 建置仍然是實驗性的。如果您在某個裝置或 Linux 發行版組合上遇到問題，請在錯誤追蹤器上回報，可能可以解決。請注意，您使用的裝置必須（向後）相容您使用的二進位檔所針對的架構。</p>
+
+<p>請注意，在此上下文中，Android 不被視為 ARM Linux。這些可執行檔預計不會在 Android 上開箱即用。</p>
+
+<h1 id="0131-變更日誌">0.13.1 變更日誌</h1>
+
+<p>完整的變更日誌包含數百個 PR。由於篇幅限制，請參閱原始版本說明以獲取完整清單。</p>
+
+<h3 id="主要變更包括">主要變更包括：</h3>
+
+<p><strong>共識</strong></p>
+<ul>
+  <li>實作 NULLDUMMY 軟分叉（BIP147）</li>
+  <li>定義 segwit 部署的開始和結束時間</li>
+</ul>
+
+<p><strong>RPC 和其他 API</strong></p>
+<ul>
+  <li>移除 importprunedfunds 中的誤導性選項</li>
+  <li>移除 createwitnessaddress RPC 命令</li>
+  <li>棄用 getinfo</li>
+  <li>在十六進位而非 base64 中生成認證 cookie</li>
+</ul>
+
+<p><strong>P2P 協定和網路程式碼</strong></p>
+<ul>
+  <li>不再在 addrMe 中發送本地位址</li>
+  <li>忽略 notfound P2P 訊息</li>
+  <li>支援緊湊區塊與 segwit 一起使用</li>
+  <li>Feeler 連線以增加 tried table 中的線上位址</li>
+</ul>
+
+<p><strong>GUI</strong></p>
+<ul>
+  <li>修復最小化和關閉錯誤</li>
+  <li>在選項重設後持久化 datadir</li>
+  <li>修復可能導致支付意外費用的 UI 錯誤</li>
+  <li>在隱藏服務執行時顯示網路/鏈錯誤</li>
+</ul>
+
+<p><strong>錢包</strong></p>
+<ul>
+  <li>修復 segwit 相關的錢包錯誤</li>
+  <li>將見證位址新增到位址簿</li>
+  <li>從 removeprunedfunds 移除「未使用的」ThreadFlushWalletDB</li>
+</ul>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的超過 60 位貢獻者。完整清單請參閱原始版本說明。</p>
+
+<p>以及所有在 <a href="https://www.transifex.com/projects/p/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

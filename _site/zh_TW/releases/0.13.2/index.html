@@ -1,0 +1,342 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2017-01-03-release-0.13.2.md' -->
+<!-- name: 'release-0.13.2' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 0.13.2</title>
+<meta name="description" content="Bitcoin Core 0.13.2">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/0.13.2/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 0.13.2">
+<meta name="twitter:description" content="Bitcoin Core 0.13.2">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 0.13.2">
+<meta property="og:description" content="Bitcoin Core 0.13.2">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.2/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.2/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.13.2/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/releases/0.13.2/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 0.13.2</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<p>Bitcoin Core 0.13.2 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-0.13.2/">https://bitcoincore.org/bin/bitcoin-core-0.13.2/</a></p>
+
+<p>此小版本包含各種錯誤修正和效能改善，以及更新的翻譯。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<p>如需接收安全性和更新通知，請訂閱：</p>
+
+<p><a href="https://bitcoincore.org/zh_TW/list/announcements/join/">https://bitcoincore.org/zh_TW/list/announcements/join/</a></p>
+
+<h1 id="相容性">相容性</h1>
+
+<p>Microsoft 已於 <a href="https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support">2014 年 4 月 8 日</a>終止對 Windows XP（最初於 2001 年發布的作業系統）的支援。這意味著甚至不會再發布關鍵的安全性更新。在沒有安全性更新的情況下，在 XP 機器上使用 bitcoin 錢包至少是不負責任的。</p>
+
+<p>此外，在 0.12.x 中有各種關於 Bitcoin Core 在 Windows XP 上隨機崩潰的報告。尚<a href="https://github.com/bitcoin/bitcoin/issues/7681#issuecomment-217439891">不清楚</a>這些崩潰的來源是什麼，但很可能是上游程式庫（如 Qt）不再在 XP 上測試。</p>
+
+<p>我們沒有時間或資源為生命週期結束的作業系統提供支援。從 0.13.0 開始，不再支援 Windows XP。建議使用者升級到較新版本的 Windows，或安裝支援的替代作業系統。</p>
+
+<p>我們沒有嘗試阻止在 Windows XP 上安裝或執行軟體，您仍然可以自行承擔風險執行，但不要期望它能正常工作：請不要向問題追蹤器回報關於 Windows XP 的問題。</p>
+
+<p>從 0.13.1 開始，不再支援 OS X 10.7。0.13.0 原本打算在 10.7+ 上運作，但 10.7.x 上的 libc++ 版本存在嚴重問題，使其無法可靠執行。0.13.1 現在需要 10.8+，並會將此訊息傳達給 10.7 使用者，而不是意外崩潰。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h2 id="錢包處理-mempool-拒絕的變更">錢包處理 mempool 拒絕的變更</h2>
+
+<p>當新建立的交易由於未確認交易鏈的限制而無法進入 mempool 時，發送 RPC 呼叫會返回錯誤。交易仍會在錢包中排隊，一旦某些父交易被確認，在軟體重新啟動後會廣播。</p>
+
+<p>此行為已更改為返回成功，並在嘗試交易重新廣播的同時重新嘗試 mempool 插入，避免需要重新啟動。</p>
+
+<p>無法被 mempool 接受的錢包中的交易可以使用先前存在的 abandontransaction RPC（或在 GUI 中透過交易的上下文選單）放棄。</p>
+
+<h1 id="0132-變更日誌">0.13.2 變更日誌</h1>
+
+<h3 id="共識">共識</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9293">#9293</a> <a href="https://github.com/bitcoin/bitcoin/commit/e591c10"><code class="language-plaintext highlighter-rouge">e591c10</code></a> [0.13 Backport <a href="https://github.com/bitcoin/bitcoin/pull/9053">#9053</a>] IBD using chainwork instead of height and not using header timestamp (gmaxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9053">#9053</a> <a href="https://github.com/bitcoin/bitcoin/commit/5b93eee"><code class="language-plaintext highlighter-rouge">5b93eee</code></a> IBD using chainwork instead of height and not using header timestamps (gmaxwell)</li>
+</ul>
+
+<h3 id="rpc-和其他-api">RPC 和其他 API</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8845">#8845</a> <a href="https://github.com/bitcoin/bitcoin/commit/1d048b9"><code class="language-plaintext highlighter-rouge">1d048b9</code></a> Don’t return the address of a P2SH of a P2SH (jnewbery)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9041">#9041</a> <a href="https://github.com/bitcoin/bitcoin/commit/87fbced"><code class="language-plaintext highlighter-rouge">87fbced</code></a> keypoololdest denote Unix epoch, not GMT (s-matthew-english)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9122">#9122</a> <a href="https://github.com/bitcoin/bitcoin/commit/f82c81b"><code class="language-plaintext highlighter-rouge">f82c81b</code></a> fix getnettotals RPC description about timemillis (visvirial)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9042">#9042</a> <a href="https://github.com/bitcoin/bitcoin/commit/5bcb05d"><code class="language-plaintext highlighter-rouge">5bcb05d</code></a> [rpc] ParseHash: Fail when length is not 64 (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9194">#9194</a> <a href="https://github.com/bitcoin/bitcoin/commit/f26dab7"><code class="language-plaintext highlighter-rouge">f26dab7</code></a> Add option to return non-segwit serialization via rpc (instagibbs)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9347">#9347</a> <a href="https://github.com/bitcoin/bitcoin/commit/b711390"><code class="language-plaintext highlighter-rouge">b711390</code></a> [0.13.2] wallet/rpc backports (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9292">#9292</a> <a href="https://github.com/bitcoin/bitcoin/commit/c365556"><code class="language-plaintext highlighter-rouge">c365556</code></a> Complain when unknown rpcserialversion is specified (sipa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9322">#9322</a> <a href="https://github.com/bitcoin/bitcoin/commit/49a612f"><code class="language-plaintext highlighter-rouge">49a612f</code></a> [qa] Don’t set unknown rpcserialversion (MarcoFalke)</li>
+</ul>
+
+<h3 id="區塊和交易處理">區塊和交易處理</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8357">#8357</a> <a href="https://github.com/bitcoin/bitcoin/commit/ce0d817"><code class="language-plaintext highlighter-rouge">ce0d817</code></a> [mempool] Fix relaypriority calculation error (maiiz)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9267">#9267</a> <a href="https://github.com/bitcoin/bitcoin/commit/0a4aa87"><code class="language-plaintext highlighter-rouge">0a4aa87</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9239">#9239</a>] Disable fee estimates for a confirm target of 1 block (morcos)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9196">#9196</a> <a href="https://github.com/bitcoin/bitcoin/commit/0c09d9f"><code class="language-plaintext highlighter-rouge">0c09d9f</code></a> Send tip change notification from invalidateblock (ryanofsky)</li>
+</ul>
+
+<h3 id="p2p-協定和網路程式碼">P2P 協定和網路程式碼</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8995">#8995</a> <a href="https://github.com/bitcoin/bitcoin/commit/9ef3875"><code class="language-plaintext highlighter-rouge">9ef3875</code></a> Add missing cs_main lock to ::GETBLOCKTXN processing (TheBlueMatt)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9234">#9234</a> <a href="https://github.com/bitcoin/bitcoin/commit/94531b5"><code class="language-plaintext highlighter-rouge">94531b5</code></a> torcontrol: Explicitly request RSA1024 private key (laanwj)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8637">#8637</a> <a href="https://github.com/bitcoin/bitcoin/commit/2cad5db"><code class="language-plaintext highlighter-rouge">2cad5db</code></a> Compact Block Tweaks (rebase of <a href="https://github.com/bitcoin/bitcoin/pull/8235">#8235</a>) (sipa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9058">#9058</a> <a href="https://github.com/bitcoin/bitcoin/commit/286e548"><code class="language-plaintext highlighter-rouge">286e548</code></a> Fixes for p2p-compactblocks.py test timeouts on travis (<a href="https://github.com/bitcoin/bitcoin/pull/8842">#8842</a>) (ryanofsky)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8865">#8865</a> <a href="https://github.com/bitcoin/bitcoin/commit/4c71fc4"><code class="language-plaintext highlighter-rouge">4c71fc4</code></a> Decouple peer-processing-logic from block-connection-logic (TheBlueMatt)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9117">#9117</a> <a href="https://github.com/bitcoin/bitcoin/commit/6fe3981"><code class="language-plaintext highlighter-rouge">6fe3981</code></a> net: don’t send feefilter messages before the version handshake is complete (theuni)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9188">#9188</a> <a href="https://github.com/bitcoin/bitcoin/commit/ca1fd75"><code class="language-plaintext highlighter-rouge">ca1fd75</code></a> Make orphan parent fetching ask for witnesses (gmaxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9052">#9052</a> <a href="https://github.com/bitcoin/bitcoin/commit/3a3bcbf"><code class="language-plaintext highlighter-rouge">3a3bcbf</code></a> Use RelevantServices instead of node_network in AttemptToEvict (gmaxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9048">#9048</a> <a href="https://github.com/bitcoin/bitcoin/commit/9460771"><code class="language-plaintext highlighter-rouge">9460771</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9026">#9026</a>] Fix handling of invalid compact blocks (sdaftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9357">#9357</a> <a href="https://github.com/bitcoin/bitcoin/commit/03b6f62"><code class="language-plaintext highlighter-rouge">03b6f62</code></a> [0.13 backport <a href="https://github.com/bitcoin/bitcoin/pull/9352">#9352</a>] Attempt reconstruction from all compact block announcements (sdaftuar)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9189">#9189</a> <a href="https://github.com/bitcoin/bitcoin/commit/b96a8f7"><code class="language-plaintext highlighter-rouge">b96a8f7</code></a> Always add default_witness_commitment with GBT client support (sipa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9253">#9253</a> <a href="https://github.com/bitcoin/bitcoin/commit/28d0f22"><code class="language-plaintext highlighter-rouge">28d0f22</code></a> Fix calculation of number of bound sockets to use (TheBlueMatt)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9199">#9199</a> <a href="https://github.com/bitcoin/bitcoin/commit/da5a16b"><code class="language-plaintext highlighter-rouge">da5a16b</code></a> Always drop the least preferred HB peer when adding a new one (gmaxwell)</li>
+</ul>
+
+<h3 id="建置系統">建置系統</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9169">#9169</a> <a href="https://github.com/bitcoin/bitcoin/commit/d1b4da9"><code class="language-plaintext highlighter-rouge">d1b4da9</code></a> build: fix qt5.7 build under macOS (theuni)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9326">#9326</a> <a href="https://github.com/bitcoin/bitcoin/commit/a0f7ece"><code class="language-plaintext highlighter-rouge">a0f7ece</code></a> Update for OpenSSL 1.1 API (gmaxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9224">#9224</a> <a href="https://github.com/bitcoin/bitcoin/commit/396c405"><code class="language-plaintext highlighter-rouge">396c405</code></a> Prevent FD_SETSIZE error building on OpenBSD (ivdsangen)</li>
+</ul>
+
+<h3 id="gui">GUI</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8972">#8972</a> <a href="https://github.com/bitcoin/bitcoin/commit/6f86b53"><code class="language-plaintext highlighter-rouge">6f86b53</code></a> Make warnings label selectable (jonasschnelli) (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9185">#9185</a> <a href="https://github.com/bitcoin/bitcoin/commit/6d70a73"><code class="language-plaintext highlighter-rouge">6d70a73</code></a> Fix coincontrol sort issue (jonasschnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9094">#9094</a> <a href="https://github.com/bitcoin/bitcoin/commit/5f3a12c"><code class="language-plaintext highlighter-rouge">5f3a12c</code></a> Use correct conversion function for boost::path datadir (laanwj)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8908">#8908</a> <a href="https://github.com/bitcoin/bitcoin/commit/4a974b2"><code class="language-plaintext highlighter-rouge">4a974b2</code></a> Update bitcoin-qt.desktop (s-matthew-english)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9190">#9190</a> <a href="https://github.com/bitcoin/bitcoin/commit/dc46b10"><code class="language-plaintext highlighter-rouge">dc46b10</code></a> Plug many memory leaks (laanwj)</li>
+</ul>
+
+<h3 id="錢包">錢包</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9290">#9290</a> <a href="https://github.com/bitcoin/bitcoin/commit/35174a0"><code class="language-plaintext highlighter-rouge">35174a0</code></a> Make RelayWalletTransaction attempt to AcceptToMemoryPool (gmaxwell)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9295">#9295</a> <a href="https://github.com/bitcoin/bitcoin/commit/43bcfca"><code class="language-plaintext highlighter-rouge">43bcfca</code></a> Bugfix: Fundrawtransaction: don’t terminate when keypool is empty (jonasschnelli)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9302">#9302</a> <a href="https://github.com/bitcoin/bitcoin/commit/f5d606e"><code class="language-plaintext highlighter-rouge">f5d606e</code></a> Return txid even if ATMP fails for new transaction (sipa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9262">#9262</a> <a href="https://github.com/bitcoin/bitcoin/commit/fe39f26"><code class="language-plaintext highlighter-rouge">fe39f26</code></a> Prefer coins that have fewer ancestors, sanity check txn before ATMP (instagibbs)</li>
+</ul>
+
+<h3 id="測試和-qa">測試和 QA</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9159">#9159</a> <a href="https://github.com/bitcoin/bitcoin/commit/eca9b46"><code class="language-plaintext highlighter-rouge">eca9b46</code></a> Wait for specific block announcement in p2p-compactblocks (ryanofsky)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9186">#9186</a> <a href="https://github.com/bitcoin/bitcoin/commit/dccdc3a"><code class="language-plaintext highlighter-rouge">dccdc3a</code></a> Fix use-after-free in scheduler tests (laanwj)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9168">#9168</a> <a href="https://github.com/bitcoin/bitcoin/commit/3107280"><code class="language-plaintext highlighter-rouge">3107280</code></a> Add assert_raises_message to check specific error message (mrbandrews)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9191">#9191</a> <a href="https://github.com/bitcoin/bitcoin/commit/29435db"><code class="language-plaintext highlighter-rouge">29435db</code></a> 0.13.2 Backports (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9077">#9077</a> <a href="https://github.com/bitcoin/bitcoin/commit/1d4c884"><code class="language-plaintext highlighter-rouge">1d4c884</code></a> Increase wallet-dump RPC timeout (ryanofsky)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9098">#9098</a> <a href="https://github.com/bitcoin/bitcoin/commit/ecd7db5"><code class="language-plaintext highlighter-rouge">ecd7db5</code></a> Handle zombies and cluttered tmpdirs (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8927">#8927</a> <a href="https://github.com/bitcoin/bitcoin/commit/387ec9d"><code class="language-plaintext highlighter-rouge">387ec9d</code></a> Add script tests for FindAndDelete in pre-segwit and segwit scripts (jl2012)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9200">#9200</a> <a href="https://github.com/bitcoin/bitcoin/commit/eebc699"><code class="language-plaintext highlighter-rouge">eebc699</code></a> bench: Fix subtle counting issue when rescaling iteration count (laanwj)</li>
+</ul>
+
+<h3 id="雜項">雜項</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8838">#8838</a> <a href="https://github.com/bitcoin/bitcoin/commit/094848b"><code class="language-plaintext highlighter-rouge">094848b</code></a> Calculate size and weight of block correctly in CreateNewBlock() (jnewbery)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8920">#8920</a> <a href="https://github.com/bitcoin/bitcoin/commit/40169dc"><code class="language-plaintext highlighter-rouge">40169dc</code></a> Set minimum required Boost to 1.47.0 (fanquake)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9251">#9251</a> <a href="https://github.com/bitcoin/bitcoin/commit/a710a43"><code class="language-plaintext highlighter-rouge">a710a43</code></a> Improvement of documentation of command line parameter ‘whitelist’ (wodry)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8932">#8932</a> <a href="https://github.com/bitcoin/bitcoin/commit/106da69"><code class="language-plaintext highlighter-rouge">106da69</code></a> Allow bitcoin-tx to create v2 transactions (btcdrak)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/8929">#8929</a> <a href="https://github.com/bitcoin/bitcoin/commit/12428b4"><code class="language-plaintext highlighter-rouge">12428b4</code></a> add software-properties-common (sigwo)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9120">#9120</a> <a href="https://github.com/bitcoin/bitcoin/commit/08d1c90"><code class="language-plaintext highlighter-rouge">08d1c90</code></a> bug: Missed one “return false” in recent refactoring in <a href="https://github.com/bitcoin/bitcoin/pull/9067">#9067</a> (UdjinM6)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9067">#9067</a> <a href="https://github.com/bitcoin/bitcoin/commit/f85ee01"><code class="language-plaintext highlighter-rouge">f85ee01</code></a> Fix exit codes (UdjinM6)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9340">#9340</a> <a href="https://github.com/bitcoin/bitcoin/commit/fb987b3"><code class="language-plaintext highlighter-rouge">fb987b3</code></a> [0.13] Update secp256k1 subtree (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9229">#9229</a> <a href="https://github.com/bitcoin/bitcoin/commit/b172377"><code class="language-plaintext highlighter-rouge">b172377</code></a> Remove calls to getaddrinfo_a (TheBlueMatt)</li>
+</ul>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的人：</p>
+
+<ul>
+  <li>Alex Morcos</li>
+  <li>BtcDrak</li>
+  <li>Cory Fields</li>
+  <li>fanquake</li>
+  <li>Gregory Maxwell</li>
+  <li>Gregory Sanders</li>
+  <li>instagibbs</li>
+  <li>Ivo van der Sangen</li>
+  <li>jnewbery</li>
+  <li>Johnson Lau</li>
+  <li>Jonas Schnelli</li>
+  <li>Luke Dashjr</li>
+  <li>maiiz</li>
+  <li>MarcoFalke</li>
+  <li>Masahiko Hyuga</li>
+  <li>Matt Corallo</li>
+  <li>matthias</li>
+  <li>mrbandrews</li>
+  <li>Pavel Janík</li>
+  <li>Pieter Wuille</li>
+  <li>randy-waterhouse</li>
+  <li>Russell Yanofsky</li>
+  <li>S. Matthew English</li>
+  <li>Steven</li>
+  <li>Suhas Daftuar</li>
+  <li>UdjinM6</li>
+  <li>Wladimir J. van der Laan</li>
+  <li>wodry</li>
+</ul>
+
+<p>以及所有在 <a href="https://www.transifex.com/projects/p/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

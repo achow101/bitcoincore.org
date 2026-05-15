@@ -1,0 +1,382 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2016-06-08-version-bits-miners.md' -->
+<!-- name: 'version-bits-faq-miners' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 礦工版本位元常見問題</title>
+<meta name="description" content="礦工版本位元常見問題">
+<meta name="keywords" content="soft fork, soft forks, bip9, version bits, mining">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2016/06/08/version-bits-miners-faq/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="礦工版本位元常見問題">
+<meta name="twitter:description" content="礦工版本位元常見問題">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="礦工版本位元常見問題">
+<meta property="og:description" content="礦工版本位元常見問題">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2016/06/08/version-bits-miners-faq/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2016/06/08/version-bits-miners-faq/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2016/06/08/version-bits-miners-faq/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2016/06/08/version-bits-miners-faq/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2016/06/08/version-bits-miners-faq/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2016/06/08/version-bits-miners-faq/" rel="bookmark" title="礦工版本位元常見問題">礦工版本位元常見問題</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <section id="table-of-contents" class="toc">
+  <header>
+    
+    <h3 class="toc-header"><i class="fa fa-book"></i> 概覽</h3>
+  </header>
+<div class="toc-drawer">
+<ul id="markdown-toc">
+  <li><a href="#什麼是-版本位元-bip9" id="markdown-toc-什麼是-版本位元-bip9">什麼是 <em>版本位元</em> BIP9？</a></li>
+  <li><a href="#版本位元-如何啟動" id="markdown-toc-版本位元-如何啟動"><em>版本位元</em> 如何啟動？</a></li>
+  <li><a href="#什麼是軟分叉超時" id="markdown-toc-什麼是軟分叉超時">什麼是軟分叉超時？</a></li>
+  <li><a href="#啟動工作流程是什麼" id="markdown-toc-啟動工作流程是什麼">啟動工作流程是什麼？</a></li>
+  <li><a href="#什麼是版本位元" id="markdown-toc-什麼是版本位元">什麼是版本位元？</a></li>
+  <li><a href="#礦工何時應該設定位元" id="markdown-toc-礦工何時應該設定位元">礦工何時應該設定位元？</a></li>
+  <li><a href="#它與-ism-軟分叉有何不同" id="markdown-toc-它與-ism-軟分叉有何不同">它與 ISM 軟分叉有何不同？</a></li>
+  <li><a href="#礦工必須升級嗎" id="markdown-toc-礦工必須升級嗎">礦工必須升級嗎？</a></li>
+  <li><a href="#誰為不同的升級提案分配版本位元" id="markdown-toc-誰為不同的升級提案分配版本位元">誰為不同的升級提案分配版本位元？</a></li>
+  <li><a href="#進一步閱讀" id="markdown-toc-進一步閱讀">進一步閱讀</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<h2 id="什麼是-版本位元-bip9">什麼是 <em>版本位元</em> BIP9？</h2>
+
+<p><em>版本位元</em> <a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9</a> 系統是一種向 Bitcoin 共識規則引入向後相容規則變更的方法，稱為軟分叉。</p>
+
+<p><em>版本位元</em> 允許礦工發出訊號表示他們可以驗證軟分叉規則。它還允許同時提出最多 29 個軟分叉。</p>
+
+<h2 id="版本位元-如何啟動"><em>版本位元</em> 如何啟動？</h2>
+
+<p><em>版本位元</em> 不需要啟動，它只是礦工透過在區塊標頭 nVersion 欄位中設定位元來發出對軟分叉準備就緒訊號的一種方式。</p>
+
+<h2 id="什麼是軟分叉超時">什麼是軟分叉超時？</h2>
+
+<p>軟分叉有一個開始時間和一個 <em>超時時間</em>，在此期間提案是活躍的。軟分叉只能在 <em>開始時間</em> 和 <em>超時時間</em> 之間啟動。如果軟分叉在 <em>超時時間</em> 之前未被啟動，軟分叉提案失敗，即使發出訊號也不會啟動。</p>
+
+<h2 id="啟動工作流程是什麼">啟動工作流程是什麼？</h2>
+
+<p>在 <em>版本位元</em> 下，軟分叉提案經歷一個工作流程：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[DEFINED]</code> -&gt; <code class="language-plaintext highlighter-rouge">[STARTED]</code> -&gt; <code class="language-plaintext highlighter-rouge">[LOCKED_IN]</code> -&gt; <code class="language-plaintext highlighter-rouge">[ACTIVE]</code></li>
+</ul>
+
+<p>或</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[DEFINED]</code> -&gt; <code class="language-plaintext highlighter-rouge">[STARTED]</code> -&gt; <code class="language-plaintext highlighter-rouge">[FAILED]</code></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/bitcoin/bips/master/bip-0009/states.png" alt="version bits state diagram" /></p>
+
+<p>Bitcoin 網路每 2016 個區塊重新定向挖礦難度；此時 <em>版本位元</em> 將查看前 2016 個區塊的視窗，以查看有多少區塊為給定的軟分叉發出訊號。如果 95% 的區塊發出軟分叉準備就緒的訊號，狀態將從 <code class="language-plaintext highlighter-rouge">[STARTED]</code> 變更為 <code class="language-plaintext highlighter-rouge">[LOCKED_IN]</code>。</p>
+
+<p>在 <code class="language-plaintext highlighter-rouge">[LOCKED_IN]</code> 之後，規則將在再一次難度重新定向後啟動，即再 2016 個區塊。節點軟體將警告升級正在等待中。</p>
+
+<h2 id="什麼是版本位元">什麼是版本位元？</h2>
+
+<p>當沒有軟分叉發出訊號時，礦工應將區塊版本欄位設定為 <code class="language-plaintext highlighter-rouge">0x20000000</code>。</p>
+
+<h2 id="礦工何時應該設定位元">礦工何時應該設定位元？</h2>
+
+<p>要為軟分叉發出準備就緒訊號，礦工應將相關版本位元與 <code class="language-plaintext highlighter-rouge">0x20000000</code> 一起設定。這應該只在軟分叉的 <em>開始時間</em> 之後執行。</p>
+
+<p>如果軟分叉啟動或達到 <code class="language-plaintext highlighter-rouge">[FAILED]</code> 狀態，應取消設定位元。</p>
+
+<p>例如：</p>
+
+<p>「alice」軟分叉使用位元 0，即 <code class="language-plaintext highlighter-rouge">0x1</code> + <code class="language-plaintext highlighter-rouge">0x20000000</code></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>…</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>「bob」軟分叉使用位元 1，即 <code class="language-plaintext highlighter-rouge">0x2</code> + <code class="language-plaintext highlighter-rouge">0x20000000</code></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>…</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>要同時為兩個軟分叉發出訊號，使用 <code class="language-plaintext highlighter-rouge">0x20000003</code>（即 <code class="language-plaintext highlighter-rouge">0x1</code> + <code class="language-plaintext highlighter-rouge">0x2</code> + <code class="language-plaintext highlighter-rouge">0x20000000</code>*）</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>…</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>注意，如果其中一個在另一個之前啟動，您必須取消設定相關位元並繼續為另一個發出訊號。如果一個未能啟動且超時到期，您也應該取消設定該位元。</li>
+</ul>
+
+<h2 id="它與-ism-軟分叉有何不同">它與 ISM 軟分叉有何不同？</h2>
+
+<p>IsSuperMajority() 或簡稱 ISM，是一種傳統的軟分叉觸發器，一旦 1000 個區塊中有 950 個挖出發出新區塊版本訊號的區塊，就會啟動新規則。</p>
+
+<ol>
+  <li>
+    <p>IsSuperMajority() 軟分叉將在啟動後孤立所有具有先前版本的區塊。例如，如果當前版本是 4，而下一個軟分叉引入版本 5 區塊，那麼在達到啟動（950/1000 個區塊）後，節點將拒絕所有版本 4 區塊。</p>
+  </li>
+  <li>
+    <p>一旦 <em>版本位元</em> 軟分叉達到啟動，節點將簡單地開始強制執行新規則，並且不會孤立非發出訊號的區塊，<em>除非</em> 它違反新規則。</p>
+  </li>
+  <li>
+    <p>ISM() 在滾動基礎上查看前 1000 個區塊；<em>版本位元</em> 在每次挖礦難度重新定向時查看前 2016 個區塊一次。</p>
+  </li>
+  <li>
+    <p>ISM() 軟分叉不會過期。<em>版本位元</em> 軟分叉只能在 <em>開始時間</em> 和 <em>超時時間</em> 之間啟動。</p>
+  </li>
+</ol>
+
+<h2 id="礦工必須升級嗎">礦工必須升級嗎？</h2>
+
+<p>不。<a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9</a> 軟分叉不會啟動，除非 95% 的礦工發出準備就緒訊號。如果軟分叉達到 <code class="language-plaintext highlighter-rouge">[LOCKED_IN]</code> 狀態，絕大多數礦工已準備好進行變更，剩餘的礦工應該在下一次難度重新定向（大約 2 週）<em>之前</em> 升級。</p>
+
+<p>未升級的礦工如果無法驗證新啟動的規則，則有產生無效區塊的風險，這些區塊將被孤立。</p>
+
+<h2 id="誰為不同的升級提案分配版本位元">誰為不同的升級提案分配版本位元？</h2>
+
+<p>軟分叉透過 <a href="https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki">BIPs 流程</a> 提出。活躍的 <a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9</a> 軟分叉提案列在<a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki#deployments">分配頁面</a>上。</p>
+
+<h2 id="進一步閱讀">進一步閱讀</h2>
+
+<ul>
+  <li><a href="http://rusty.ozlabs.org/?p=576">http://rusty.ozlabs.org/?p=576</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki</a></li>
+  <li><a href="https://bitcointalk.org/index.php?topic=1067693.msg11446462#msg11446462">https://bitcointalk.org/index.php?topic=1067693.msg11446462#msg11446462</a></li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>礦工版本位元常見問題</strong>
+          was published on
+          <time class="dt-published" datetime="2016-06-08T00:00:00+00:00">
+            June 08, 2016</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

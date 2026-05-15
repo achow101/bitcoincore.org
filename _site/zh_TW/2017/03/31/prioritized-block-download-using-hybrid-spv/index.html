@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/posts/2017-03-31-hybrid-spv.md' -->
+<!-- name: 'hybrid-spv' -->
+<!-- version: 1 -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: 技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載</title>
+<meta name="description" content="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/2017/03/31/prioritized-block-download-using-hybrid-spv/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">
+<meta name="twitter:description" content="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">
+<meta property="og:description" content="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/2017/03/31/prioritized-block-download-using-hybrid-spv/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/2017/03/31/prioritized-block-download-using-hybrid-spv/" />
+<link rel="alternate" hreflang="en" href="https://btc-zhtw-review.achow101.com/en/2017/03/31/prioritized-block-download-using-hybrid-spv/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/2017/03/31/prioritized-block-download-using-hybrid-spv/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/2017/03/31/prioritized-block-download-using-hybrid-spv/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="post h-entry">
+    <div class="headline-wrap">
+      
+        <h1 class="p-name"><a href="/zh_TW/2017/03/31/prioritized-block-download-using-hybrid-spv/" rel="bookmark" title="技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載">技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載</a></h1>
+      
+      
+        <span hidden class="p-author">
+          by .
+        </span>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <div class="e-content">
+        <h2 id="混合式完整區塊-spv-模式">混合式完整區塊 SPV 模式</h2>
+
+<p>阻礙一般使用者進一步採用完全驗證軟體的主要障礙之一是，在完全同步整個區塊鏈之前無法使用客戶端的錢包功能。對於引導新節點的使用者來說，這意味著他們無法接收或傳送交易，直到每個區塊都已下載並驗證到鏈的當前尖端。這種行為並非錯誤：Bitcoin Core 參考軟體預設構建為提供 Bitcoin 使用者可以期望的最強安全性和私密性保證，這必然意味著完全驗證以確認歷史區塊鏈資料的完整性。</p>
+
+<p>另一方面，軟體的現有功能（例如標頭優先驗證）提供了改進錢包可用性的機會，前提是使用者願意做出臨時的安全權衡。使用混合式完整區塊 SPV 模式，軟體將根據使用者錢包中最舊的金鑰優先下載區塊。與先前下載的區塊標頭鏈一起，它應該滿足預期的工作量證明難度檢查，客戶端可以立即開始處理相關交易。整個區塊鏈仍然並行下載並最終驗證，但此功能使使用者能夠在背景中進行同步時查看和花費與其錢包相關的 UTXO。</p>
+
+<p>與 SPV 錢包的典型實作相反，此模型不會遭受依賴布隆過濾器和公鑰公開披露的方案所施加的<a href="http://bitcoin.stackexchange.com/questions/37756/are-public-keys-and-their-corresponding-hash-values-both-added-to-a-bitcoinj-blo">私密性降級</a>。這種好處帶來的權衡是它消耗更多頻寬。另一個警告：在 SPV 模式下收到的確認本質上不如在完全驗證下收到的確認安全。利用混合式 SPV 模式的使用者應該等待多次確認（6+），直到他的付款可以被認為是安全的。</p>
+
+<h3 id="更多資訊">更多資訊</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/9483">完整修補程式集 PR</a></li>
+  <li><a href="https://bitcoin.org/en/bitcoin-core/features/privacy#perfect-privacy-for-received-transactions">接收交易的完美私密性</a></li>
+</ul>
+
+
+      </div>
+      <hr />
+      <footer role="contentinfo">
+        <p class="byline">
+          <strong>技術路線圖 - 使用完整區塊 SPV 模式的優先區塊下載</strong>
+          was published on
+          <time class="dt-published" datetime="2017-03-31T00:00:00+00:00">
+            March 31, 2017</time>.
+        </p>
+      </footer>
+
+    </div><!-- /.article-wrap -->
+  </article>
+  
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_TW"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="zh_TW"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="zh_TW"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh_TW"><!--<![endif]-->
+<head>
+<!-- source: '_posts/zh_TW/releases/2016-04-15-release-0.12.1.md' -->
+<!-- name: 'release-0.12.1' -->
+<!-- version:  -->
+<!-- translated:  -->
+<meta charset="utf-8">
+
+<title>Bitcoin Core :: Bitcoin Core 0.12.1</title>
+<meta name="description" content="Bitcoin Core 0.12.1">
+<meta name="keywords" content="">
+<meta http-equiv="onion-location" content="http://6hasakffvppilxgehrswmffqurlcjjjhd76jgvaqmsg6ul25s7t3rzyd.onion/zh_TW/releases/0.12.1/" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Bitcoin Core 0.12.1">
+<meta name="twitter:description" content="Bitcoin Core 0.12.1">
+<meta name="twitter:site" content="@bitcoincoreorg">
+<meta name="twitter:creator" content="@bitcoincoreorg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitcoin Core 0.12.1">
+<meta property="og:description" content="Bitcoin Core 0.12.1">
+<meta property="og:url" content="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.1/">
+<meta property="og:site_name" content="Bitcoin Core">
+
+<meta property="og:image" content="https://btc-zhtw-review.achow101.com/assets/images/default-thumb.png">
+
+
+
+<link rel="alternate" hreflang="zh_TW" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.1/" />
+<link rel="canonical" href="https://btc-zhtw-review.achow101.com/zh_TW/releases/0.12.1/">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" type="application/atom+xml" rel="alternate" title="Bitcoin Core Blog XML Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/rss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Blog RSS Feed">
+<link href="https://btc-zhtw-review.achow101.com/zh_TW/meetingrss.xml" type="application/rss+xml" rel="alternate" title="Bitcoin Core Meeting RSS Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="/assets/images/favicon.ico"><!-- 16x16 -->
+<link rel="shortcut icon" href="/assets/images/favicon.png"><!-- 32x32 -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72x72-precomposed.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114x114-precomposed.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144x144-precomposed.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+
+<!-- Hide Searchbar if nojs -->
+<noscript>
+  <style>
+      #searchbar { display:none; }
+  </style>
+</noscript>
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+    <div class="site-name">
+        <a href="/zh_TW/"><img src="/assets/images/bitcoin_core_logo_colored_reversed.png" alt="bitcoin core logo"></a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                    <li><a href="/zh_TW/about/">關於我們</a></li>
+                    <li><a href="/zh_TW/download/">下載</a></li>
+                    <li><a href="/zh_TW/blog/">網誌</a></li>
+                    <li><a href="/zh_TW/releases/">版本發布</a></li>
+                    <li><a href="/zh_TW/security-advisories/">安全公告</a></li>
+                    <li><a href="javascript:;">開發</a>
+                            <ul>
+                                <li><a href="/zh_TW/contribute/">貢獻</a></li>
+                                <li><a href="/zh_TW/faq/contributing-code/">貢獻程式碼</a></li>
+                                <li><a href="/zh_TW/meetings/">會議紀錄</a></li>
+                                <li><a href="/zh_TW/lifecycle/">生命週期</a></li>
+                            <li>
+                                        <a href="/en/doc/">RPC Docs</a>
+                                <ul>
+                                                <li><a href="/en/doc/30.0.0/">30.0.0</a></li>
+                                                <li><a href="/en/doc/29.0.0/">29.0.0</a></li>
+                                                <li><a href="/en/doc/28.0.0/">28.0.0</a></li>
+                                                <li><a href="/en/doc/27.0.0/">27.0.0</a></li>
+                                                <li><a href="/en/doc/26.0.0/">26.0.0</a></li>
+                                                <li><a href="/en/doc/25.0.0/">25.0.0</a></li>
+                                                <li><a href="/en/doc/24.0.0/">24.0.0</a></li>
+                                                <li><a href="/en/doc/23.0.0/">23.0.0</a></li>
+                                                <li><a href="/en/doc/22.0.0/">22.0.0</a></li>
+                                                <li><a href="/en/doc/0.21.0/">0.21.0</a></li>
+                                                <li><a href="/en/doc/0.20.0/">0.20.0</a></li>
+                                                <li><a href="/en/doc/0.19.0/">0.19.0</a></li>
+                                                <li><a href="/en/doc/0.18.0/">0.18.0</a></li>
+                                                <li><a href="/en/doc/0.17.0/">0.17.0</a></li>
+                                                <li><a href="/en/doc/0.16.3/">0.16.3</a></li>
+                                                <li><a href="/en/doc/0.16.2/">0.16.2</a></li>
+                                                <li><a href="/en/doc/0.16.1/">0.16.1</a></li>
+                                                <li><a href="/en/doc/0.16.0/">0.16.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">聯絡</a>
+                            <ul>
+                                <li><a href="/zh_TW/contact/">聯絡我們</a></li>
+                                <li><a href="/zh_TW/list/announcements/join/">公告</a></li>
+                                <li><a href="/zh_TW/twitter-impersonation">X 冒充帳號</a></li>
+                        </ul>
+                    </li>
+
+                <li id="langselect" class="lang">
+                    <select onchange="window.location=this.value;">
+                        <option value="">繁體中文</option>
+                        <option value="/en/releases/0.12.1/">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">&nbsp;</div>
+  <article class="page">
+    <h1>Bitcoin Core 0.12.1</h1>
+    <div class="article-wrap">
+      <p><strong>Bitcoin Core installation binaries can be downloaded from <a href="/en/download">bitcoincore.org</a> and the source-code is available from the <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a> source repository.</strong></p>
+
+<p>Bitcoin Core 0.12.1 版本現已發布，可從以下位置下載：</p>
+
+<p><a href="https://bitcoincore.org/bin/bitcoin-core-0.12.1/">https://bitcoincore.org/bin/bitcoin-core-0.12.1/</a></p>
+
+<p>此小版本包含 BIP9、BIP68 和 BIP112 軟分叉、各種錯誤修正和更新的翻譯。</p>
+
+<p>請使用 GitHub 的問題追蹤器回報錯誤：</p>
+
+<p><a href="https://github.com/bitcoin/bitcoin/issues">https://github.com/bitcoin/bitcoin/issues</a></p>
+
+<h1 id="升級和降級">升級和降級</h1>
+
+<h2 id="如何升級">如何升級</h2>
+
+<p>如果您正在執行舊版本，請將其關閉。等待它完全關閉（舊版本可能需要幾分鐘），然後執行安裝程式（在 Windows 上）或直接複製 <code class="language-plaintext highlighter-rouge">/Applications/Bitcoin-Qt</code>（在 Mac 上）或 <code class="language-plaintext highlighter-rouge">bitcoind</code>/<code class="language-plaintext highlighter-rouge">bitcoin-qt</code>（在 Linux 上）。</p>
+
+<h2 id="降級警告">降級警告</h2>
+
+<h3 id="降級到版本--0120">降級到版本 &lt; 0.12.0</h3>
+
+<p>由於 0.12.0 及更高版本將在每次新同步或重新索引時混淆 chainstate，因此 chainstate 與 0.12 之前版本的 Bitcoin Core 或其他軟體不向後相容。</p>
+
+<p>如果您想在使用 0.12.0 或更高版本進行重新索引後降級，當您首次啟動 Bitcoin Core 0.11 或更早版本時，您將需要重新索引。</p>
+
+<h1 id="重要變更">重要變更</h1>
+
+<h2 id="首個使用-bip9-的-version-bits-軟分叉部署">首個使用 BIP9 的 version bits 軟分叉部署</h2>
+
+<p>此版本包含使用 <a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP9</a> 部署機制強制執行 <a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP68</a>、<a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">BIP112</a> 和 <a href="https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki">BIP113</a> 的軟分叉部署。</p>
+
+<p>部署將區塊版本號設定為 0x20000001，在 2016 年 5 月 1 日午夜到 2017 年 5 月 1 日午夜之間發送就緒部署訊號。版本號由 0x20000000 組成以指示 version bits，並設定位元 0 以指示對此組合部署的支援，在 <code class="language-plaintext highlighter-rouge">getblockchaininfo</code> RPC 呼叫中顯示為「csv」。</p>
+
+<p>有關軟分叉變更的更多資訊，請參閱 <a href="https://github.com/bitcoin/bitcoin/pull/7648">https://github.com/bitcoin/bitcoin/pull/7648</a></p>
+
+<p>此特定回移 pull-request 可在 <a href="https://github.com/bitcoin/bitcoin/pull/7543">https://github.com/bitcoin/bitcoin/pull/7543</a> 查看</p>
+
+<h2 id="bip68-軟分叉以強制執行相對鎖定時間的序列鎖">BIP68 軟分叉以強制執行相對鎖定時間的序列鎖</h2>
+
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP68</a> 引入了序列號欄位的相對鎖定時間共識強制執行語義，以使簽名的交易輸入在其對應輸出點確認後的定義時間內保持無效。</p>
+
+<p>有關實作的更多資訊，請參閱 <a href="https://github.com/bitcoin/bitcoin/pull/7184">https://github.com/bitcoin/bitcoin/pull/7184</a></p>
+
+<h2 id="bip112-軟分叉以強制執行-op_checksequenceverify">BIP112 軟分叉以強制執行 OP_CHECKSEQUENCEVERIFY</h2>
+
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">BIP112</a> 將現有的 OP_NOP3 重新定義為 OP_CHECKSEQUENCEVERIFY (CSV)，作為 Bitcoin 腳本系統中的新操作碼，結合 <a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP68</a> 允許根據被花費輸出的年齡限制腳本的執行路徑。</p>
+
+<p>有關實作的更多資訊，請參閱 <a href="https://github.com/bitcoin/bitcoin/pull/7524">https://github.com/bitcoin/bitcoin/pull/7524</a></p>
+
+<h2 id="bip113-鎖定時間強制執行軟分叉">BIP113 鎖定時間強制執行軟分叉</h2>
+
+<p>Bitcoin Core 0.11.2 先前引入了僅 mempool 的鎖定時間強制執行，使用 GetMedianTimePast()。此版本尋求共識強制執行該規則。</p>
+
+<p>Bitcoin 交易目前可以指定鎖定時間，指示何時可以將它們新增到有效區塊。當前共識規則要求區塊的區塊標頭時間大於該區塊中任何交易指定的鎖定時間。</p>
+
+<p>礦工可以選擇用於其標頭時間的時間，共識規則是沒有節點會接受其時間比未來時間超過兩個小時的區塊。這為礦工創造了一個激勵，讓他們將標頭時間設定為未來值，以便包含原本不應該在未來兩個小時內包含的鎖定時間交易。</p>
+
+<p>共識規則還指定有效區塊的標頭時間可以大於前 11 個區塊的中位數時間。此 GetMedianTimePast() 時間具有我們通常與時間相關的關鍵特徵：它不能倒退。</p>
+
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki">BIP113</a> 指定在此版本中強制執行的軟分叉，透過要求有效區塊的計算 GetMedianTimePast() 大於該區塊中任何交易指定的鎖定時間，來削弱個別礦工使用未來時間的這種不當激勵。</p>
+
+<p><strong>對礦工的影響：</strong>您將開始拒絕在 BIP113 下無效的交易，這將防止您在網路上強制執行 BIP113 時產生無效區塊。在當前規則下有效但在 BIP113 規則下尚未有效的任何交易將由其他礦工挖掘或延遲，直到它們在 BIP113 下有效為止。</p>
+
+<p><strong>對使用者的影響：</strong>GetMedianTimePast() 總是落後於當前時間，因此鎖定時間設定為當前時間的交易將被執行此版本的節點拒絕，直到中位數時間向前移動。為了補償，從您的鎖定時間中減去一小時（3,600 秒），以允許這些交易在大約預期的時間被包含在 mempool 中。</p>
+
+<p>有關實作的更多資訊，請參閱 <a href="https://github.com/bitcoin/bitcoin/pull/6566">https://github.com/bitcoin/bitcoin/pull/6566</a></p>
+
+<h2 id="雜項">雜項</h2>
+
+<p>p2p 警報系統預設關閉。要開啟，請在啟動配置中使用 <code class="language-plaintext highlighter-rouge">-alert</code>。</p>
+
+<h1 id="0121-變更日誌">0.12.1 變更日誌</h1>
+
+<h3 id="rpc-和其他-api">RPC 和其他 API</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7739">#7739</a> <a href="https://github.com/bitcoin/bitcoin/commit/7ffc2bd"><code class="language-plaintext highlighter-rouge">7ffc2bd</code></a> Add abandoned status to listtransactions (jonasschnelli)</li>
+</ul>
+
+<h3 id="區塊和交易處理">區塊和交易處理</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7543">#7543</a> <a href="https://github.com/bitcoin/bitcoin/commit/834aaef"><code class="language-plaintext highlighter-rouge">834aaef</code></a> Backport BIP9, BIP68 and BIP112 with softfork (btcdrak)</li>
+</ul>
+
+<h3 id="p2p-協定和網路程式碼">P2P 協定和網路程式碼</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7804">#7804</a> <a href="https://github.com/bitcoin/bitcoin/commit/90f1d24"><code class="language-plaintext highlighter-rouge">90f1d24</code></a> Track block download times per individual block (sipa)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7832">#7832</a> <a href="https://github.com/bitcoin/bitcoin/commit/4c3a00d"><code class="language-plaintext highlighter-rouge">4c3a00d</code></a> Reduce block timeout to 10 minutes (laanwj)</li>
+</ul>
+
+<h3 id="驗證">驗證</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7821">#7821</a> <a href="https://github.com/bitcoin/bitcoin/commit/4226aac"><code class="language-plaintext highlighter-rouge">4226aac</code></a> init: allow shutdown during ‘Activating best chain…’ (laanwj)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7835">#7835</a> <a href="https://github.com/bitcoin/bitcoin/commit/46898e7"><code class="language-plaintext highlighter-rouge">46898e7</code></a> Version 2 transactions remain non-standard until CSV activates (sdaftuar)</li>
+</ul>
+
+<h3 id="建置系統">建置系統</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7487">#7487</a> <a href="https://github.com/bitcoin/bitcoin/commit/00d57b4"><code class="language-plaintext highlighter-rouge">00d57b4</code></a> Workaround Travis-side CI issues (luke-jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7606">#7606</a> <a href="https://github.com/bitcoin/bitcoin/commit/a10da9a"><code class="language-plaintext highlighter-rouge">a10da9a</code></a> No need to set -L and –location for curl (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7614">#7614</a> <a href="https://github.com/bitcoin/bitcoin/commit/ca8f160"><code class="language-plaintext highlighter-rouge">ca8f160</code></a> Add curl to packages (now needed for depends) (luke-jr)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7776">#7776</a> <a href="https://github.com/bitcoin/bitcoin/commit/a784675"><code class="language-plaintext highlighter-rouge">a784675</code></a> Remove unnecessary executables from gitian release (laanwj)</li>
+</ul>
+
+<h3 id="錢包">錢包</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7715">#7715</a> <a href="https://github.com/bitcoin/bitcoin/commit/19866c1"><code class="language-plaintext highlighter-rouge">19866c1</code></a> Fix calculation of balances and available coins (morcos)</li>
+</ul>
+
+<h3 id="雜項-1">雜項</h3>
+<ul>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7617">#7617</a> <a href="https://github.com/bitcoin/bitcoin/commit/f04f4fd"><code class="language-plaintext highlighter-rouge">f04f4fd</code></a> Fix markdown syntax and line terminate LogPrint (MarcoFalke)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7747">#7747</a> <a href="https://github.com/bitcoin/bitcoin/commit/4d035bc"><code class="language-plaintext highlighter-rouge">4d035bc</code></a> added depends cross compile info (accraze)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7741">#7741</a> <a href="https://github.com/bitcoin/bitcoin/commit/a0cea89"><code class="language-plaintext highlighter-rouge">a0cea89</code></a> Mark p2p alert system as deprecated (btcdrak)</li>
+  <li><a href="https://github.com/bitcoin/bitcoin/pull/7780">#7780</a> <a href="https://github.com/bitcoin/bitcoin/commit/c5f94f6"><code class="language-plaintext highlighter-rouge">c5f94f6</code></a> Disable bad-chain alert (btcdrak)</li>
+</ul>
+
+<h1 id="致謝">致謝</h1>
+
+<p>感謝所有直接為此版本做出貢獻的人：</p>
+
+<ul>
+  <li>accraze</li>
+  <li>Alex Morcos</li>
+  <li>BtcDrak</li>
+  <li>Jonas Schnelli</li>
+  <li>Luke Dashjr</li>
+  <li>MarcoFalke</li>
+  <li>Mark Friedenbach</li>
+  <li>NicolasDorier</li>
+  <li>Pieter Wuille</li>
+  <li>Suhas Daftuar</li>
+  <li>Wladimir J. van der Laan</li>
+</ul>
+
+<p>以及所有在 <a href="https://www.transifex.com/projects/p/bitcoin/">Transifex</a> 上協助翻譯的人。</p>
+
+
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    <div>
+    <span>
+        <a href="https://x.com/bitcoincoreorg" target="_blank" class="">X</a><br />
+        <a href="/en/legal/">Legal</a> | <a href="/en/legal/privacy">Privacy Policy</a> | <a href="/zh_TW/rss/">RSS <img src="/assets/images/rss-24x24.png" alt="rss feeds" width="14" height="14"></a>
+    </span>
+</div>
+<div>
+    <img src="/assets/images/bitcoin_core_logo.png" alt="bitcoin core logo" width="160"><br />
+    <span class="copyright">&copy; 2026 Bitcoin Core</span>
+</div>
+
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+  </footer>
+
+</div><!-- /.footer-wrap -->
+
+<script src="/assets/js/scripts.js"></script>
+
+
+</body>
+</html>
