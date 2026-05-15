@@ -3,8 +3,8 @@
     <channel>
         <title>Bitcoin Core</title>
         <description></description>
-        <link>https://bitcoincore.org</link>
-        <atom:link href="https://bitcoincore.org/es/rss.xml" rel="self" type="application/rss+xml" />
+        <link>https://btc-zhtw-review.achow101.com</link>
+        <atom:link href="https://btc-zhtw-review.achow101.com/es/rss.xml" rel="self" type="application/rss+xml" />
         
         
         
@@ -63,8 +63,8 @@ the early returns&lt;/li&gt;
 
 </description>
             <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</guid>
         </item>
         
         <item>
@@ -107,8 +107,8 @@ a covert fix&lt;/li&gt;
 
 </description>
             <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/</guid>
         </item>
         
         <item>
@@ -153,8 +153,8 @@ further mitigate the worst case in legacy Script context&lt;/li&gt;
 
 </description>
             <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/</guid>
         </item>
         
         <item>
@@ -200,8 +200,8 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 
 </description>
             <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/</guid>
         </item>
         
         <item>
@@ -249,8 +249,8 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 
 </description>
             <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/</guid>
         </item>
         
         <item>
@@ -263,8 +263,8 @@ en nuestras manos para ayudarle.&lt;/p&gt;
 
 </description>
             <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/es/2025/06/26/release-28.2/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/es/2025/06/26/release-28.2/</guid>
+            <link>https://btc-zhtw-review.achow101.com/es/2025/06/26/release-28.2/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/es/2025/06/26/release-28.2/</guid>
         </item>
         
         <item>
@@ -310,8 +310,8 @@ Zumsande for changing the identifier to 64-bit.&lt;/p&gt;
 
 </description>
             <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/</guid>
         </item>
         
         <item>
@@ -365,8 +365,8 @@ to be an outbound connection.&lt;/p&gt;
 
 </description>
             <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/11/05/cb-stall-hindering-propagation/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/11/05/cb-stall-hindering-propagation/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/11/05/cb-stall-hindering-propagation/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/11/05/cb-stall-hindering-propagation/</guid>
         </item>
         
         <item>
@@ -428,8 +428,8 @@ as well as fixing the issue in https://github.com/bitcoin/bitcoin/pull/26898.&lt
 
 </description>
             <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/10/08/disclose-blocktxn-crash/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/10/08/disclose-blocktxn-crash/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-blocktxn-crash/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-blocktxn-crash/</guid>
         </item>
         
         <item>
@@ -483,8 +483,8 @@ reporting and narrowing the problem down to the slow inv-to-send sorting.&lt;/p&
 
 </description>
             <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/10/08/disclose-large-inv-to-send/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/10/08/disclose-large-inv-to-send/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-large-inv-to-send/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-large-inv-to-send/</guid>
         </item>
         
         <item>
@@ -528,8 +528,8 @@ download state of other peers.&lt;/p&gt;
 
 </description>
             <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</guid>
         </item>
         
         <item>
@@ -634,8 +634,8 @@ been removed entirely yet.&lt;/li&gt;
 
 </description>
             <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/09/18/disclose-headers-oom/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/09/18/disclose-headers-oom/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/</guid>
         </item>
         
         <item>
@@ -670,8 +670,8 @@ https://github.com/bitcoin/bitcoin/pull/22387.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-addrman-int-overflow/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-addrman-int-overflow/</guid>
         </item>
         
         <item>
@@ -713,8 +713,8 @@ bump the dependency (containing the fix).&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/31/disclose-upnp-oom/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/31/disclose-upnp-oom/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-upnp-oom/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-upnp-oom/</guid>
         </item>
         
         <item>
@@ -757,8 +757,8 @@ bump the dependency (containing the fix).&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose_already_asked_for/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose_already_asked_for/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_already_asked_for/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_already_asked_for/</guid>
         </item>
         
         <item>
@@ -794,8 +794,8 @@ in the background with little to no output in the GUI until the application runs
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-bip70-crash/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-bip70-crash/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/</guid>
         </item>
         
         <item>
@@ -834,8 +834,8 @@ only disclosing the lack of progress.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-getdata-cpu/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-getdata-cpu/</guid>
         </item>
         
         <item>
@@ -873,8 +873,8 @@ blocks bypassed the checkpoint logic.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-header-spam/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-header-spam/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-header-spam/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-header-spam/</guid>
         </item>
         
         <item>
@@ -912,8 +912,8 @@ pretexting a bandwidth gain from sending a single &lt;code class=&quot;language-
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-inv-buffer-blowup/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-inv-buffer-blowup/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-inv-buffer-blowup/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-inv-buffer-blowup/</guid>
         </item>
         
         <item>
@@ -955,8 +955,8 @@ orphan turns out to be valid or not).&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-orphan-dos/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-orphan-dos/</guid>
         </item>
         
         <item>
@@ -997,8 +997,8 @@ part of the Segwit BIP144 changes.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose_receive_buffer_oom/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose_receive_buffer_oom/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_receive_buffer_oom/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_receive_buffer_oom/</guid>
         </item>
         
         <item>
@@ -1042,8 +1042,8 @@ at-risk code.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-timestamp-overflow/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-timestamp-overflow/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-timestamp-overflow/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-timestamp-overflow/</guid>
         </item>
         
         <item>
@@ -1085,8 +1085,8 @@ report they also received.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose-unbounded-banlist/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose-unbounded-banlist/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-unbounded-banlist/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-unbounded-banlist/</guid>
         </item>
         
         <item>
@@ -1148,8 +1148,8 @@ released&lt;/a&gt;.&lt;/li&gt;
 
 </description>
             <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2024/07/03/disclose_upnp_rce/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2024/07/03/disclose_upnp_rce/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_upnp_rce/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_upnp_rce/</guid>
         </item>
         
         <item>
@@ -1164,8 +1164,8 @@ en nuestras manos para ayudarle.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/es/2021/09/29/release-0.21.2/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/es/2021/09/29/release-0.21.2/</guid>
+            <link>https://btc-zhtw-review.achow101.com/es/2021/09/29/release-0.21.2/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/es/2021/09/29/release-0.21.2/</guid>
         </item>
         
         <item>
@@ -1207,8 +1207,8 @@ en nuestras manos para ayudarle.&lt;/p&gt;
 
 </description>
             <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2019/11/08/CVE-2017-18350/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2019/11/08/CVE-2017-18350/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2019/11/08/CVE-2017-18350/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2019/11/08/CVE-2017-18350/</guid>
         </item>
         
         <item>
@@ -1275,8 +1275,8 @@ en nuestras manos para ayudarle.&lt;/p&gt;
 
 </description>
             <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2018/09/20/notice/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2018/09/20/notice/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2018/09/20/notice/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2018/09/20/notice/</guid>
         </item>
         
     </channel>

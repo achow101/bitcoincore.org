@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_TW">
     <title type="text">Bitcoin Core</title>
-    <link rel="self" type="application/atom+xml" href="https://bitcoincore.org/zh_TW/feed.xml" />
-    <link rel="alternate" type="text/html" href="https://bitcoincore.org" />
+    <link rel="self" type="application/atom+xml" href="https://btc-zhtw-review.achow101.com/zh_TW/feed.xml" />
+    <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com" />
     
     
     
@@ -10,19 +10,19 @@
     <id></id>
     <author>
         <name>Bitcoin Core</name>
-        <uri>https://bitcoincore.org</uri>
+        <uri>https://btc-zhtw-review.achow101.com</uri>
     </author>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52911 - Script Interpreter Remote Crash]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/" />
         <id>/en/2026/05/05/disclose-cve-2024-52911</id>
         <published>2026-05-05T00:00:00+00:00</published>
         <updated>2026-05-05T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</uri>
             
         </author>
         <content type="html">
@@ -77,20 +77,20 @@ the early returns&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/&quot;&gt;CVE-2024-52911 - Script Interpreter Remote Crash&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on May 05, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/&quot;&gt;CVE-2024-52911 - Script Interpreter Remote Crash&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on May 05, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/" />
         <id>/en/2025/10/24/disclose-cve-2025-46597</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/</uri>
             
         </author>
         <content type="html">
@@ -131,20 +131,20 @@ a covert fix&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/&quot;&gt;CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/&quot;&gt;CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-46598 - CPU DoS from unconfirmed transaction processing]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/" />
         <id>/en/2025/10/24/disclose-cve-2025-46598</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/</uri>
             
         </author>
         <content type="html">
@@ -187,20 +187,20 @@ further mitigate the worst case in legacy Script context&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/&quot;&gt;CVE-2025-46598 - CPU DoS from unconfirmed transaction processing&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/&quot;&gt;CVE-2025-46598 - CPU DoS from unconfirmed transaction processing&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-54604 - Disk filling from spoofed self connections]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/" />
         <id>/en/2025/10/24/disclose-cve-2025-54604</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/</uri>
             
         </author>
         <content type="html">
@@ -244,20 +244,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/&quot;&gt;CVE-2025-54604 - Disk filling from spoofed self connections&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/&quot;&gt;CVE-2025-54604 - Disk filling from spoofed self connections&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-54605 - Disk filling from invalid blocks]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/" />
         <id>/en/2025/10/24/disclose-cve-2025-54605</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/</uri>
             
         </author>
         <content type="html">
@@ -303,20 +303,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/&quot;&gt;CVE-2025-54605 - Disk filling from invalid blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/&quot;&gt;CVE-2025-54605 - Disk filling from invalid blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52919 - Remote crash due to addr message spam (part 2)]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/" />
         <id>/en/2025/04/28/disclose-cve-2024-52919</id>
         <published>2025-04-28T00:00:00+00:00</published>
         <updated>2025-04-28T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/</uri>
             
         </author>
         <content type="html">
@@ -360,20 +360,20 @@ Zumsande for changing the identifier to 64-bit.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam (part 2)&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on April 28, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam (part 2)&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on April 28, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52922 - Hindered block propagation due to stalling peers]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/11/05/cb-stall-hindering-propagation/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/11/05/cb-stall-hindering-propagation/" />
         <id>/en/2024/11/05/cb-stall-hindering-propagation</id>
         <published>2024-11-05T00:00:00+00:00</published>
         <updated>2024-11-05T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/11/05/cb-stall-hindering-propagation/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/11/05/cb-stall-hindering-propagation/</uri>
             
         </author>
         <content type="html">
@@ -425,20 +425,20 @@ to be an outbound connection.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/11/05/cb-stall-hindering-propagation/&quot;&gt;CVE-2024-52922 - Hindered block propagation due to stalling peers&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on November 05, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/11/05/cb-stall-hindering-propagation/&quot;&gt;CVE-2024-52922 - Hindered block propagation due to stalling peers&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on November 05, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Disclosure of CVE-2024-35202]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/10/08/disclose-blocktxn-crash/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-blocktxn-crash/" />
         <id>/en/2024/10/08/disclose-blocktxn-crash</id>
         <published>2024-10-08T00:00:00+00:00</published>
         <updated>2024-10-08T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/10/08/disclose-blocktxn-crash/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-blocktxn-crash/</uri>
             
         </author>
         <content type="html">
@@ -498,20 +498,20 @@ as well as fixing the issue in https://github.com/bitcoin/bitcoin/pull/26898.&lt
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/10/08/disclose-blocktxn-crash/&quot;&gt;Disclosure of CVE-2024-35202&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-blocktxn-crash/&quot;&gt;Disclosure of CVE-2024-35202&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Disclosure of DoS due to inv-to-send sets growing too large]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/10/08/disclose-large-inv-to-send/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-large-inv-to-send/" />
         <id>/en/2024/10/08/disclose-large-inv-to-send</id>
         <published>2024-10-08T00:00:00+00:00</published>
         <updated>2024-10-08T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/10/08/disclose-large-inv-to-send/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-large-inv-to-send/</uri>
             
         </author>
         <content type="html">
@@ -563,20 +563,20 @@ reporting and narrowing the problem down to the slow inv-to-send sorting.&lt;/p&
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/10/08/disclose-large-inv-to-send/&quot;&gt;Disclosure of DoS due to inv-to-send sets growing too large&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-large-inv-to-send/&quot;&gt;Disclosure of DoS due to inv-to-send sets growing too large&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52921 - Hindered block propagation due to mutated blocks]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/" />
         <id>/en/2024/10/08/disclose-mutated-blocks-hindering-propagation</id>
         <published>2024-10-08T00:00:00+00:00</published>
         <updated>2024-10-08T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/</uri>
             
         </author>
         <content type="html">
@@ -618,20 +618,20 @@ download state of other peers.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/&quot;&gt;CVE-2024-52921 - Hindered block propagation due to mutated blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/10/08/disclose-mutated-blocks-hindering-propagation/&quot;&gt;CVE-2024-52921 - Hindered block propagation due to mutated blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 08, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2019-25220 - Memory DoS due to headers spam]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/09/18/disclose-headers-oom/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/" />
         <id>/en/2024/09/18/disclose-headers-oom</id>
         <published>2024-09-18T00:00:00+00:00</published>
         <updated>2024-09-18T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/09/18/disclose-headers-oom/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/</uri>
             
         </author>
         <content type="html">
@@ -734,20 +734,20 @@ been removed entirely yet.&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/09/18/disclose-headers-oom/&quot;&gt;CVE-2019-25220 - Memory DoS due to headers spam&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on September 18, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/09/18/disclose-headers-oom/&quot;&gt;CVE-2019-25220 - Memory DoS due to headers spam&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on September 18, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52919 - Remote crash due to addr message spam]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-addrman-int-overflow/" />
         <id>/en/2024/07/31/disclose-addrman-int-overflow</id>
         <published>2024-07-31T00:00:00+00:00</published>
         <updated>2024-07-31T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-addrman-int-overflow/</uri>
             
         </author>
         <content type="html">
@@ -780,20 +780,20 @@ https://github.com/bitcoin/bitcoin/pull/22387.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 31, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-addrman-int-overflow/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 31, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52917 - Infinite loop bug in the miniupnp dependency]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/31/disclose-upnp-oom/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-upnp-oom/" />
         <id>/en/2024/07/31/disclose-upnp-oom</id>
         <published>2024-07-31T00:00:00+00:00</published>
         <updated>2024-07-31T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/31/disclose-upnp-oom/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-upnp-oom/</uri>
             
         </author>
         <content type="html">
@@ -833,20 +833,20 @@ bump the dependency (containing the fix).&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/31/disclose-upnp-oom/&quot;&gt;CVE-2024-52917 - Infinite loop bug in the miniupnp dependency&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 31, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/31/disclose-upnp-oom/&quot;&gt;CVE-2024-52917 - Infinite loop bug in the miniupnp dependency&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 31, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52913 - Censorship due to transaction re-request handling]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose_already_asked_for/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_already_asked_for/" />
         <id>/en/2024/07/03/disclose_already_asked_for</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose_already_asked_for/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_already_asked_for/</uri>
             
         </author>
         <content type="html">
@@ -887,20 +887,20 @@ bump the dependency (containing the fix).&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose_already_asked_for/&quot;&gt;CVE-2024-52913 - Censorship due to transaction re-request handling&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_already_asked_for/&quot;&gt;CVE-2024-52913 - Censorship due to transaction re-request handling&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52918 - Crash using malicious BIP72 URI]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose-bip70-crash/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/" />
         <id>/en/2024/07/03/disclose-bip70-crash</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose-bip70-crash/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/</uri>
             
         </author>
         <content type="html">
@@ -934,20 +934,20 @@ in the background with little to no output in the GUI until the application runs
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose-bip70-crash/&quot;&gt;CVE-2024-52918 - Crash using malicious BIP72 URI&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-bip70-crash/&quot;&gt;CVE-2024-52918 - Crash using malicious BIP72 URI&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52920 - DoS using huge GETDATA messages]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-getdata-cpu/" />
         <id>/en/2024/07/03/disclose-getdata-cpu</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-getdata-cpu/</uri>
             
         </author>
         <content type="html">
@@ -984,20 +984,20 @@ only disclosing the lack of progress.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu/&quot;&gt;CVE-2024-52920 - DoS using huge GETDATA messages&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-getdata-cpu/&quot;&gt;CVE-2024-52920 - DoS using huge GETDATA messages&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52916 - Memory DoS using low-difficulty headers]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose-header-spam/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-header-spam/" />
         <id>/en/2024/07/03/disclose-header-spam</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose-header-spam/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-header-spam/</uri>
             
         </author>
         <content type="html">
@@ -1033,20 +1033,20 @@ blocks bypassed the checkpoint logic.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose-header-spam/&quot;&gt;CVE-2024-52916 - Memory DoS using low-difficulty headers&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-header-spam/&quot;&gt;CVE-2024-52916 - Memory DoS using low-difficulty headers&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52915 - Memory DoS using huge INV messages]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose-inv-buffer-blowup/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-inv-buffer-blowup/" />
         <id>/en/2024/07/03/disclose-inv-buffer-blowup</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose-inv-buffer-blowup/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-inv-buffer-blowup/</uri>
             
         </author>
         <content type="html">
@@ -1082,20 +1082,20 @@ pretexting a bandwidth gain from sending a single &lt;code class=&quot;language-
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose-inv-buffer-blowup/&quot;&gt;CVE-2024-52915 - Memory DoS using huge INV messages&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-inv-buffer-blowup/&quot;&gt;CVE-2024-52915 - Memory DoS using huge INV messages&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52914 - Significant DoS due to orphan handling]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-orphan-dos/" />
         <id>/en/2024/07/03/disclose-orphan-dos</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-orphan-dos/</uri>
             
         </author>
         <content type="html">
@@ -1135,20 +1135,20 @@ orphan turns out to be valid or not).&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos/&quot;&gt;CVE-2024-52914 - Significant DoS due to orphan handling&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose-orphan-dos/&quot;&gt;CVE-2024-52914 - Significant DoS due to orphan handling&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Disclosure of CVE-2015-3641]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2024/07/03/disclose_receive_buffer_oom/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_receive_buffer_oom/" />
         <id>/en/2024/07/03/disclose_receive_buffer_oom</id>
         <published>2024-07-03T00:00:00+00:00</published>
         <updated>2024-07-03T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2024/07/03/disclose_receive_buffer_oom/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_receive_buffer_oom/</uri>
             
         </author>
         <content type="html">
@@ -1187,7 +1187,7 @@ part of the Segwit BIP144 changes.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2024/07/03/disclose_receive_buffer_oom/&quot;&gt;Disclosure of CVE-2015-3641&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2024/07/03/disclose_receive_buffer_oom/&quot;&gt;Disclosure of CVE-2015-3641&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on July 03, 2024.&lt;/p&gt;
         </content>
     </entry>
     

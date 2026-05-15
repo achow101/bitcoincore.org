@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
     <title type="text">Bitcoin Core</title>
-    <link rel="self" type="application/atom+xml" href="https://bitcoincore.org/ja/feed.xml" />
-    <link rel="alternate" type="text/html" href="https://bitcoincore.org" />
+    <link rel="self" type="application/atom+xml" href="https://btc-zhtw-review.achow101.com/ja/feed.xml" />
+    <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com" />
     
     
     
@@ -10,19 +10,19 @@
     <id></id>
     <author>
         <name>Bitcoin Core</name>
-        <uri>https://bitcoincore.org</uri>
+        <uri>https://btc-zhtw-review.achow101.com</uri>
     </author>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52911 - Script Interpreter Remote Crash]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/" />
         <id>/en/2026/05/05/disclose-cve-2024-52911</id>
         <published>2026-05-05T00:00:00+00:00</published>
         <updated>2026-05-05T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</uri>
             
         </author>
         <content type="html">
@@ -77,20 +77,20 @@ the early returns&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/&quot;&gt;CVE-2024-52911 - Script Interpreter Remote Crash&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on May 05, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/&quot;&gt;CVE-2024-52911 - Script Interpreter Remote Crash&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on May 05, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 31.0 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/04/19/release-31.0/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/04/19/release-31.0/" />
         <id>/ja/2026/04/19/release-31.0</id>
         <published>2026-04-19T00:00:00+00:00</published>
         <updated>2026-04-19T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/04/19/release-31.0/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/04/19/release-31.0/</uri>
             
         </author>
         <content type="html">
@@ -101,20 +101,20 @@ the early returns&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/04/19/release-31.0/&quot;&gt;Bitcoin Core 31.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on April 19, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/04/19/release-31.0/&quot;&gt;Bitcoin Core 31.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on April 19, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 28.4 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/03/18/release-28.4/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/03/18/release-28.4/" />
         <id>/ja/2026/03/18/release-28.4</id>
         <published>2026-03-18T00:00:00+00:00</published>
         <updated>2026-03-18T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/03/18/release-28.4/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/03/18/release-28.4/</uri>
             
         </author>
         <content type="html">
@@ -125,20 +125,20 @@ the early returns&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/03/18/release-28.4/&quot;&gt;Bitcoin Core 28.4 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on March 18, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/03/18/release-28.4/&quot;&gt;Bitcoin Core 28.4 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on March 18, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 29.3 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/02/10/release-29.3/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/02/10/release-29.3/" />
         <id>/ja/2026/02/10/release-29.3</id>
         <published>2026-02-10T00:00:00+00:00</published>
         <updated>2026-02-10T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/02/10/release-29.3/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/02/10/release-29.3/</uri>
             
         </author>
         <content type="html">
@@ -149,20 +149,20 @@ the early returns&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/02/10/release-29.3/&quot;&gt;Bitcoin Core 29.3 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on February 10, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/02/10/release-29.3/&quot;&gt;Bitcoin Core 29.3 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on February 10, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 30.2 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/01/10/release-30.2/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/01/10/release-30.2/" />
         <id>/ja/2026/01/10/release-30.2</id>
         <published>2026-01-10T00:00:00+00:00</published>
         <updated>2026-01-10T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/01/10/release-30.2/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/01/10/release-30.2/</uri>
             
         </author>
         <content type="html">
@@ -173,20 +173,20 @@ the early returns&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/01/10/release-30.2/&quot;&gt;Bitcoin Core 30.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on January 10, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/01/10/release-30.2/&quot;&gt;Bitcoin Core 30.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on January 10, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 30.0および30.1でウォレット移行に失敗すると無関係なウォレットファイルが削除される可能性があります]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/01/05/wallet-migration-bug/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/01/05/wallet-migration-bug/" />
         <id>/ja/2026/01/05/wallet-migration-bug</id>
         <published>2026-01-05T00:00:00+00:00</published>
         <updated>2026-01-05T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/01/05/wallet-migration-bug/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/01/05/wallet-migration-bug/</uri>
             
         </author>
         <content type="html">
@@ -205,20 +205,20 @@ the early returns&lt;/li&gt;
 プルーニング中にウォレットがアンロードされた場合が挙げられます。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/01/05/wallet-migration-bug/&quot;&gt;Bitcoin Core 30.0および30.1でウォレット移行に失敗すると無関係なウォレットファイルが削除される可能性があります&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on January 05, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/01/05/wallet-migration-bug/&quot;&gt;Bitcoin Core 30.0および30.1でウォレット移行に失敗すると無関係なウォレットファイルが削除される可能性があります&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on January 05, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 30.1 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2026/01/02/release-30.1/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2026/01/02/release-30.1/" />
         <id>/ja/2026/01/02/release-30.1</id>
         <published>2026-01-02T00:00:00+00:00</published>
         <updated>2026-01-02T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2026/01/02/release-30.1/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2026/01/02/release-30.1/</uri>
             
         </author>
         <content type="html">
@@ -229,20 +229,20 @@ the early returns&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2026/01/02/release-30.1/&quot;&gt;Bitcoin Core 30.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on January 02, 2026.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2026/01/02/release-30.1/&quot;&gt;Bitcoin Core 30.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on January 02, 2026.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/" />
         <id>/en/2025/10/24/disclose-cve-2025-46597</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/</uri>
             
         </author>
         <content type="html">
@@ -283,20 +283,20 @@ a covert fix&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46597/&quot;&gt;CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46597/&quot;&gt;CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-46598 - CPU DoS from unconfirmed transaction processing]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/" />
         <id>/en/2025/10/24/disclose-cve-2025-46598</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/</uri>
             
         </author>
         <content type="html">
@@ -339,20 +339,20 @@ further mitigate the worst case in legacy Script context&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-46598/&quot;&gt;CVE-2025-46598 - CPU DoS from unconfirmed transaction processing&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-46598/&quot;&gt;CVE-2025-46598 - CPU DoS from unconfirmed transaction processing&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-54604 - Disk filling from spoofed self connections]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/" />
         <id>/en/2025/10/24/disclose-cve-2025-54604</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/</uri>
             
         </author>
         <content type="html">
@@ -396,20 +396,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54604/&quot;&gt;CVE-2025-54604 - Disk filling from spoofed self connections&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54604/&quot;&gt;CVE-2025-54604 - Disk filling from spoofed self connections&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2025-54605 - Disk filling from invalid blocks]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/" />
         <id>/en/2025/10/24/disclose-cve-2025-54605</id>
         <published>2025-10-24T00:00:00+00:00</published>
         <updated>2025-10-24T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/</uri>
             
         </author>
         <content type="html">
@@ -455,20 +455,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/10/24/disclose-cve-2025-54605/&quot;&gt;CVE-2025-54605 - Disk filling from invalid blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/10/24/disclose-cve-2025-54605/&quot;&gt;CVE-2025-54605 - Disk filling from invalid blocks&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 24, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 28.3 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/10/17/release-28.3/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/10/17/release-28.3/" />
         <id>/ja/2025/10/17/release-28.3</id>
         <published>2025-10-17T00:00:00+00:00</published>
         <updated>2025-10-17T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/10/17/release-28.3/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/10/17/release-28.3/</uri>
             
         </author>
         <content type="html">
@@ -479,20 +479,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/10/17/release-28.3/&quot;&gt;Bitcoin Core 28.3 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 17, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/10/17/release-28.3/&quot;&gt;Bitcoin Core 28.3 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 17, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 29.2 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/10/14/release-29.2/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/10/14/release-29.2/" />
         <id>/ja/2025/10/14/release-29.2</id>
         <published>2025-10-14T00:00:00+00:00</published>
         <updated>2025-10-14T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/10/14/release-29.2/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/10/14/release-29.2/</uri>
             
         </author>
         <content type="html">
@@ -503,20 +503,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/10/14/release-29.2/&quot;&gt;Bitcoin Core 29.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 14, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/10/14/release-29.2/&quot;&gt;Bitcoin Core 29.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 14, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 30.0 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/10/10/release-30.0/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/10/10/release-30.0/" />
         <id>/ja/2025/10/10/release-30.0</id>
         <published>2025-10-10T00:00:00+00:00</published>
         <updated>2025-10-10T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/10/10/release-30.0/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/10/10/release-30.0/</uri>
             
         </author>
         <content type="html">
@@ -527,20 +527,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/10/10/release-30.0/&quot;&gt;Bitcoin Core 30.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on October 10, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/10/10/release-30.0/&quot;&gt;Bitcoin Core 30.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on October 10, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 29.1 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/09/04/release-29.1/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/09/04/release-29.1/" />
         <id>/ja/2025/09/04/release-29.1</id>
         <published>2025-09-04T00:00:00+00:00</published>
         <updated>2025-09-04T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/09/04/release-29.1/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/09/04/release-29.1/</uri>
             
         </author>
         <content type="html">
@@ -551,20 +551,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/09/04/release-29.1/&quot;&gt;Bitcoin Core 29.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on September 04, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/09/04/release-29.1/&quot;&gt;Bitcoin Core 29.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on September 04, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 28.2 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/06/26/release-28.2/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/06/26/release-28.2/" />
         <id>/ja/2025/06/26/release-28.2</id>
         <published>2025-06-26T00:00:00+00:00</published>
         <updated>2025-06-26T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/06/26/release-28.2/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/06/26/release-28.2/</uri>
             
         </author>
         <content type="html">
@@ -575,20 +575,20 @@ introduce log rate-limiting, based on earlier work from Niklas Goegge&lt;/li&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/06/26/release-28.2/&quot;&gt;Bitcoin Core 28.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on June 26, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/06/26/release-28.2/&quot;&gt;Bitcoin Core 28.2 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on June 26, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Coreの開発とトランザクションリレーポリシー]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/06/06/relay-statement/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/06/06/relay-statement/" />
         <id>/ja/2025/06/06/relay-statement</id>
         <published>2025-06-06T00:00:00+00:00</published>
         <updated>2025-06-06T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/06/06/relay-statement/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/06/06/relay-statement/</uri>
             
         </author>
         <content type="html">
@@ -683,20 +683,20 @@ Bitcoinのピアーツーピアネットワークにおけるブロックとト�
   &lt;li&gt;w0xlt&lt;/li&gt;
 &lt;/ul&gt;
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/06/06/relay-statement/&quot;&gt;Bitcoin Coreの開発とトランザクションリレーポリシー&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on June 06, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/06/06/relay-statement/&quot;&gt;Bitcoin Coreの開発とトランザクションリレーポリシー&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on June 06, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[CVE-2024-52919 - Remote crash due to addr message spam (part 2)]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/" />
         <id>/en/2025/04/28/disclose-cve-2024-52919</id>
         <published>2025-04-28T00:00:00+00:00</published>
         <updated>2025-04-28T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/</uri>
             
         </author>
         <content type="html">
@@ -740,20 +740,20 @@ Zumsande for changing the identifier to 64-bit.&lt;/p&gt;
 &lt;/ul&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/2025/04/28/disclose-cve-2024-52919/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam (part 2)&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on April 28, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/en/2025/04/28/disclose-cve-2024-52919/&quot;&gt;CVE-2024-52919 - Remote crash due to addr message spam (part 2)&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on April 28, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 29.0 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/04/14/release-29.0/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/04/14/release-29.0/" />
         <id>/ja/2025/04/14/release-29.0</id>
         <published>2025-04-14T00:00:00+00:00</published>
         <updated>2025-04-14T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/04/14/release-29.0/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/04/14/release-29.0/</uri>
             
         </author>
         <content type="html">
@@ -767,20 +767,20 @@ Zumsande for changing the identifier to 64-bit.&lt;/p&gt;
 さらに、バージョン28.xに影響する重大度低の脆弱性（存在する場合）も公開されます。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/04/14/release-29.0/&quot;&gt;Bitcoin Core 29.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on April 14, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/04/14/release-29.0/&quot;&gt;Bitcoin Core 29.0 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on April 14, 2025.&lt;/p&gt;
         </content>
     </entry>
     
     
     <entry>
         <title type="html"><![CDATA[Bitcoin Core 28.1 リリース]]></title>
-        <link rel="alternate" type="text/html" href="https://bitcoincore.org/ja/2025/01/09/release-28.1/" />
+        <link rel="alternate" type="text/html" href="https://btc-zhtw-review.achow101.com/ja/2025/01/09/release-28.1/" />
         <id>/ja/2025/01/09/release-28.1</id>
         <published>2025-01-09T00:00:00+00:00</published>
         <updated>2025-01-09T00:00:00+00:00</updated>
         <author>
             <name>Bitcoin Core</name>
-            <uri>https://bitcoincore.org/ja/2025/01/09/release-28.1/</uri>
+            <uri>https://btc-zhtw-review.achow101.com/ja/2025/01/09/release-28.1/</uri>
             
         </author>
         <content type="html">
@@ -791,7 +791,7 @@ Zumsande for changing the identifier to 64-bit.&lt;/p&gt;
 可能な限り支援します。&lt;/p&gt;
 
 
-            &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/ja/2025/01/09/release-28.1/&quot;&gt;Bitcoin Core 28.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://bitcoincore.org&quot;&gt;Bitcoin Core&lt;/a&gt; on January 09, 2025.&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;https://btc-zhtw-review.achow101.com/ja/2025/01/09/release-28.1/&quot;&gt;Bitcoin Core 28.1 リリース&lt;/a&gt; was originally published by Bitcoin Core at &lt;a href=&quot;https://btc-zhtw-review.achow101.com&quot;&gt;Bitcoin Core&lt;/a&gt; on January 09, 2025.&lt;/p&gt;
         </content>
     </entry>
     

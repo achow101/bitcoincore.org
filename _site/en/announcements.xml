@@ -3,8 +3,8 @@
     <channel>
         <title>Bitcoin Core</title>
         <description></description>
-        <link>https://bitcoincore.org</link>
-        <atom:link href="https://bitcoincore.org/en/announcements.xml" rel="self" type="application/rss+xml" />
+        <link>https://btc-zhtw-review.achow101.com</link>
+        <atom:link href="https://btc-zhtw-review.achow101.com/en/announcements.xml" rel="self" type="application/rss+xml" />
         
         
         
@@ -63,8 +63,8 @@ the early returns&lt;/li&gt;
 
 </description>
             <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/05/05/disclose-cve-2024-52911/</guid>
         </item>
         
         <item>
@@ -77,8 +77,8 @@ bug fixes in this release.&lt;/p&gt;
 
 </description>
             <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/04/19/release-31.0/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/04/19/release-31.0/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/04/19/release-31.0/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/04/19/release-31.0/</guid>
         </item>
         
         <item>
@@ -91,8 +91,8 @@ bug fixes in this release.&lt;/p&gt;
 
 </description>
             <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/03/18/release-28.4/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/03/18/release-28.4/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/03/18/release-28.4/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/03/18/release-28.4/</guid>
         </item>
         
         <item>
@@ -105,8 +105,8 @@ bug fixes in this release.&lt;/p&gt;
 
 </description>
             <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/02/10/release-29.3/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/02/10/release-29.3/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/02/10/release-29.3/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/02/10/release-29.3/</guid>
         </item>
         
         <item>
@@ -119,8 +119,8 @@ bug fixes in this release.&lt;/p&gt;
 
 </description>
             <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-            <link>https://bitcoincore.org/en/2026/01/10/release-30.2/</link>
-            <guid isPermaLink="true">https://bitcoincore.org/en/2026/01/10/release-30.2/</guid>
+            <link>https://btc-zhtw-review.achow101.com/en/2026/01/10/release-30.2/</link>
+            <guid isPermaLink="true">https://btc-zhtw-review.achow101.com/en/2026/01/10/release-30.2/</guid>
         </item>
         
     </channel>
