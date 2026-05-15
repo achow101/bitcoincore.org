@@ -65,8 +65,8 @@ defaults:
   - scope:
       path: "_posts/en/posts"
       type: posts
-      lang: en
     values:
+      lang: en
       permalink: /en/:year/:month/:day/:title/
 
 collections:
